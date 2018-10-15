@@ -1,4 +1,4 @@
-#An emulator ATM Manager by WinForm
+#An emulator ATM Manager by C#
 
 ##Members
 - [Bui Ngoc Minh](https://www.facebook.com/AnonsN0r4)
