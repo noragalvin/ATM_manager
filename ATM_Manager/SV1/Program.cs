@@ -16,7 +16,7 @@ namespace SV1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Validation());
+            Application.Run(new Fee());
         }
     }
 }
