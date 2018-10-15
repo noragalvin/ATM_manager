@@ -1,6 +1,6 @@
-#An emulator ATM Manager by C#
+# An emulator ATM Manager by C-Sharp
 
-##Members
+## Members
 - [Bui Ngoc Minh](https://www.facebook.com/AnonsN0r4)
 - [Tran Thi Anh Ngoc](https://www.facebook.com/LittleFoxInRain)
 - [Pham Thi Hien](https://www.facebook.com/profile.php?id=100010878343177)
