@@ -16,5 +16,65 @@ namespace Validate
         {
             InitializeComponent();
         }
+
+        private void btnNumber1_Click(object sender, EventArgs e)
+        {
+            txtPIN.AppendText("1");
+        }
+
+        private void btnNumber2_Click(object sender, EventArgs e)
+        {
+            txtPIN.AppendText("2");
+        }
+
+        private void btnNumber3_Click(object sender, EventArgs e)
+        {
+            txtPIN.AppendText("3");
+        }
+
+        private void btnNumber4_Click(object sender, EventArgs e)
+        {
+            txtPIN.AppendText("4");
+        }
+
+        private void btnNumber5_Click(object sender, EventArgs e)
+        {
+            txtPIN.AppendText("5");
+        }
+
+        private void btnNumber6_Click(object sender, EventArgs e)
+        {
+            txtPIN.AppendText("6");
+        }
+
+        private void btnNumber7_Click(object sender, EventArgs e)
+        {
+            txtPIN.AppendText("7");
+        }
+
+        private void btnNumber8_Click(object sender, EventArgs e)
+        {
+            txtPIN.AppendText("8");
+        }
+
+        private void btnNumber9_Click(object sender, EventArgs e)
+        {
+            txtPIN.AppendText("9");
+        }
+
+        private void btnNumber0_Click(object sender, EventArgs e)
+        {
+            txtPIN.AppendText("0");
+        }
+
+        private void btnNumberEnter_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void EnterPin_Load(object sender, EventArgs e)
+        {
+            txtPIN.PasswordChar = '*';
+        }
     }
 }

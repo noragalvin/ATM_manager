@@ -66,9 +66,9 @@
             this.pnTop = new System.Windows.Forms.Panel();
             this.pnMainBg = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pbTien = new System.Windows.Forms.PictureBox();
             this.pbThe = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pnUnderScreen.SuspendLayout();
             this.pnTopTen.SuspendLayout();
@@ -105,6 +105,7 @@
             this.btnNumber9.TabIndex = 3;
             this.btnNumber9.Text = "9";
             this.btnNumber9.UseVisualStyleBackColor = true;
+            this.btnNumber9.Click += new System.EventHandler(this.btnNumber9_Click);
             // 
             // btnNumberEnter
             // 
@@ -115,6 +116,7 @@
             this.btnNumberEnter.TabIndex = 4;
             this.btnNumberEnter.Text = "Enter";
             this.btnNumberEnter.UseVisualStyleBackColor = false;
+            this.btnNumberEnter.Click += new System.EventHandler(this.btnNumberEnter_Click);
             // 
             // btnNumberClear
             // 
@@ -134,6 +136,7 @@
             this.btnNumber3.TabIndex = 7;
             this.btnNumber3.Text = "3";
             this.btnNumber3.UseVisualStyleBackColor = true;
+            this.btnNumber3.Click += new System.EventHandler(this.btnNumber3_Click);
             // 
             // btnNumber4
             // 
@@ -143,6 +146,7 @@
             this.btnNumber4.TabIndex = 13;
             this.btnNumber4.Text = "4";
             this.btnNumber4.UseVisualStyleBackColor = true;
+            this.btnNumber4.Click += new System.EventHandler(this.btnNumber4_Click);
             // 
             // btnSideBar7
             // 
@@ -242,6 +246,7 @@
             this.btnNumber6.TabIndex = 5;
             this.btnNumber6.Text = "6";
             this.btnNumber6.UseVisualStyleBackColor = true;
+            this.btnNumber6.Click += new System.EventHandler(this.btnNumber6_Click);
             // 
             // btnNumber0
             // 
@@ -251,6 +256,7 @@
             this.btnNumber0.TabIndex = 8;
             this.btnNumber0.Text = "0";
             this.btnNumber0.UseVisualStyleBackColor = true;
+            this.btnNumber0.Click += new System.EventHandler(this.btnNumber0_Click);
             // 
             // btnNumber8
             // 
@@ -260,6 +266,7 @@
             this.btnNumber8.TabIndex = 9;
             this.btnNumber8.Text = "8";
             this.btnNumber8.UseVisualStyleBackColor = true;
+            this.btnNumber8.Click += new System.EventHandler(this.btnNumber8_Click);
             // 
             // btnNumber5
             // 
@@ -269,6 +276,7 @@
             this.btnNumber5.TabIndex = 10;
             this.btnNumber5.Text = "5";
             this.btnNumber5.UseVisualStyleBackColor = true;
+            this.btnNumber5.Click += new System.EventHandler(this.btnNumber5_Click);
             // 
             // btnNumber2
             // 
@@ -278,6 +286,7 @@
             this.btnNumber2.TabIndex = 11;
             this.btnNumber2.Text = "2";
             this.btnNumber2.UseVisualStyleBackColor = true;
+            this.btnNumber2.Click += new System.EventHandler(this.btnNumber2_Click);
             // 
             // btnNumber7
             // 
@@ -287,6 +296,7 @@
             this.btnNumber7.TabIndex = 12;
             this.btnNumber7.Text = "7";
             this.btnNumber7.UseVisualStyleBackColor = true;
+            this.btnNumber7.Click += new System.EventHandler(this.btnNumber7_Click);
             // 
             // btnNumber1
             // 
@@ -296,6 +306,7 @@
             this.btnNumber1.TabIndex = 14;
             this.btnNumber1.Text = "1";
             this.btnNumber1.UseVisualStyleBackColor = true;
+            this.btnNumber1.Click += new System.EventHandler(this.btnNumber1_Click);
             // 
             // lbLogo
             // 
@@ -455,15 +466,6 @@
             this.panel2.Size = new System.Drawing.Size(49, 384);
             this.panel2.TabIndex = 17;
             // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(81, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 44);
-            this.panel3.TabIndex = 1;
-            // 
             // pbTien
             // 
             this.pbTien.Image = global::Validate.Properties.Resources.ChuaCoTien;
@@ -484,6 +486,15 @@
             this.pbThe.TabIndex = 21;
             this.pbThe.TabStop = false;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(81, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(54, 44);
+            this.panel3.TabIndex = 1;
+            // 
             // EnterPin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,6 +506,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "EnterPin";
             this.Text = "EnterPin";
+            this.Load += new System.EventHandler(this.EnterPin_Load);
             this.panel1.ResumeLayout(false);
             this.pnUnderScreen.ResumeLayout(false);
             this.pnTopTen.ResumeLayout(false);

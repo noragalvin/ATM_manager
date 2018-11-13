@@ -6,3 +6,10 @@ D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.Properties.Resou
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\GUIs.csproj.GenerateResource.Cache
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.exe
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.pdb
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\GUIs.csprojResolveAssemblyReference.cache
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.ChooseLanguage.resources
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.DoiPin.resources
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.EnterPin.resources
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.Feature.resources
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.Fee.resources
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.Term.resources

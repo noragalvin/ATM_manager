@@ -44,10 +44,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChooseLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseLanguage.Designer.cs">
+      <DependentUpon>ChooseLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoiPin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiPin.Designer.cs">
+      <DependentUpon>DoiPin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterPin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterPin.Designer.cs">
+      <DependentUpon>EnterPin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature.Designer.cs">
+      <DependentUpon>Feature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fee.Designer.cs">
+      <DependentUpon>Fee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Term.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Term.Designer.cs">
+      <DependentUpon>Term.cs</DependentUpon>
     </Compile>
     <Compile Include="Validate.cs">
       <SubType>Form</SubType>
@@ -57,6 +93,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChooseLanguage.resx">
+      <DependentUpon>ChooseLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoiPin.resx">
+      <DependentUpon>DoiPin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterPin.resx">
+      <DependentUpon>EnterPin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature.resx">
+      <DependentUpon>Feature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fee.resx">
+      <DependentUpon>Fee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Term.resx">
+      <DependentUpon>Term.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Validate.resx">
       <DependentUpon>Validate.cs</DependentUpon>
     </EmbeddedResource>
