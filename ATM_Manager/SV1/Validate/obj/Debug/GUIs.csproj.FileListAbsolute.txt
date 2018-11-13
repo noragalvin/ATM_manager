@@ -1,0 +1,8 @@
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\Validate.exe.config
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\Validate.exe
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\Validate.pdb
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.Validate.resources
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.Properties.Resources.resources
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\GUIs.csproj.GenerateResource.Cache
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.exe
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.pdb

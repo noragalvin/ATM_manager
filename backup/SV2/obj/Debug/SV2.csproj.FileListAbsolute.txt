@@ -1,0 +1,8 @@
+D:\code\ATM_manager\ATM_Manager\SV2\bin\Debug\SV2.exe.config
+D:\code\ATM_manager\ATM_Manager\SV2\bin\Debug\SV2.exe
+D:\code\ATM_manager\ATM_Manager\SV2\bin\Debug\SV2.pdb
+D:\code\ATM_manager\ATM_Manager\SV2\obj\Debug\SV2.Properties.Resources.resources
+D:\code\ATM_manager\ATM_Manager\SV2\obj\Debug\SV2.RutTien.resources
+D:\code\ATM_manager\ATM_Manager\SV2\obj\Debug\SV2.csproj.GenerateResource.Cache
+D:\code\ATM_manager\ATM_Manager\SV2\obj\Debug\SV2.exe
+D:\code\ATM_manager\ATM_Manager\SV2\obj\Debug\SV2.pdb
