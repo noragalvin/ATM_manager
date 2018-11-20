@@ -23,9 +23,10 @@ namespace Validate
         private void pbThe_Click(object sender, EventArgs e)
         {
             pbThe.Image = theVao;
+            this.Hide();
+            ChooseLanguage chooLangForm = new ChooseLanguage();
+            chooLangForm.Show();
         }
-
-
   
     }
 }

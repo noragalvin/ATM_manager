@@ -370,7 +370,8 @@
         private System.Windows.Forms.Panel pnUnderScreen;
         private System.Windows.Forms.Panel pnMainBg;
         private System.Windows.Forms.PictureBox pbTien;
-        private System.Windows.Forms.PictureBox pbThe;
+        public System.Windows.Forms.PictureBox pbThe;
+
 
     }
 }

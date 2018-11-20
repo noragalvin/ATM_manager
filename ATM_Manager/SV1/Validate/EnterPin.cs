@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BULs;
+using DTOs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,10 @@ namespace Validate
 {
     public partial class EnterPin : Form
     {
+        Bitmap theRa = Properties.Resources.TheVao;
+        CardBUL cardBUL = new CardBUL();
+        
+
         public EnterPin()
         {
             InitializeComponent();
@@ -69,12 +75,38 @@ namespace Validate
 
         private void btnNumberEnter_Click(object sender, EventArgs e)
         {
-            
+            CardDTO card = cardBUL.getValidCard(txtPIN.Text);
+            if (card != null)
+            {
+                Feature featureForm = new Feature();
+                this.Hide();
+                featureForm.Show();
+            }
+            else
+            {
+                this.Hide();
+                Validate validateForm = new Validate();
+                validateForm.Show();
+                validateForm.pbThe.Image = theRa;
+            }
         }
 
         private void EnterPin_Load(object sender, EventArgs e)
         {
             txtPIN.PasswordChar = '*';
+        }
+
+        private void btnNumberClear_Click(object sender, EventArgs e)
+        {
+            txtPIN.Clear();
+        }
+
+        private void btnNumberCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Validate validateForm = new Validate();
+            validateForm.Show();
+            validateForm.pbThe.Image = theRa;
         }
     }
 }

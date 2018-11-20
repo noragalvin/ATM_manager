@@ -1,4 +1,5 @@
 ﻿using DALs;
+using DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,10 @@ namespace BULs
 {
     public class CardBUL
     {
-        public bool isValidCard(string pin)
+        CardDAL card = new CardDAL();
+        public CardDTO getValidCard(string pin)
         {
-            return (new CardDAL()).isValidCard(pin);
+            return card.getValidCard(pin);
         }
     }
 }

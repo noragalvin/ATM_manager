@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTOs;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -11,18 +12,30 @@ namespace DALs
     public class CardDAL
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChuoiKetNoi"].ToString()); 
-        public bool isValidCard(string pin)
+        public CardDTO getValidCard(string pin)
         {
-            conn.Open();
-            string querry = "SELECT * FROM tblCard WHERE PIN=@pin";
-            SqlCommand cmd = new SqlCommand(querry, conn);
-            cmd.Parameters.AddWithValue("pin", pin);
-            int isExist = (int)cmd.ExecuteScalar();
-            conn.Close();
-
-            if (isExist > 0)
-                return true;
-            return false;
+            try
+            {
+                conn.Open();
+                string querry = "SELECT * FROM tblCard WHERE PIN=@mapin";
+                SqlCommand cmd = new SqlCommand(querry, conn);
+                cmd.Parameters.AddWithValue("mapin", pin);
+                SqlDataReader dr = cmd.ExecuteReader();
+                dr.Read();
+                CardDTO card = new CardDTO(
+                    dr["CardNO"].ToString(),
+                    int.Parse(dr["Status"].ToString()),
+                    int.Parse(dr["AccountID"].ToString()),
+                    dr["PIN"].ToString(),
+                    dr["StartDate"].ToString(),
+                    dr["ExpiredDate"].ToString(),
+                    int.Parse(dr["Attempt"].ToString()));
+                return card;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }

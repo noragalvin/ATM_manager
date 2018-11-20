@@ -43,6 +43,7 @@
             this.pnTopTen = new System.Windows.Forms.Panel();
             this.lbTopTen2 = new System.Windows.Forms.Label();
             this.lbTopTen1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
             this.btnNumberCancel = new System.Windows.Forms.Button();
             this.btnNumber9 = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@
             this.btnNumber4 = new System.Windows.Forms.Button();
             this.btnNumber1 = new System.Windows.Forms.Button();
             this.pnUnderScreen = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pbTien = new System.Windows.Forms.PictureBox();
             this.pbThe = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -217,6 +217,15 @@
             this.lbTopTen1.Text = "NGÂN HÀNG TMCP ĐẦU TƯ VÀ PHÁT TRIỂN VIỆT NAM";
             this.lbTopTen1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(81, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(54, 44);
+            this.panel3.TabIndex = 1;
+            // 
             // lbLogo
             // 
             this.lbLogo.AutoSize = true;
@@ -275,6 +284,7 @@
             this.btnNumberClear.TabIndex = 6;
             this.btnNumberClear.Text = "Clear";
             this.btnNumberClear.UseVisualStyleBackColor = false;
+            this.btnNumberClear.Click += new System.EventHandler(this.btnNumberClear_Click);
             // 
             // panel2
             // 
@@ -413,15 +423,6 @@
             this.pnUnderScreen.Name = "pnUnderScreen";
             this.pnUnderScreen.Size = new System.Drawing.Size(517, 127);
             this.pnUnderScreen.TabIndex = 27;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(81, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 44);
-            this.panel3.TabIndex = 1;
             // 
             // pbTien
             // 

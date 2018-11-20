@@ -3,3 +3,7 @@ D:\code\ATM_manager\ATM_Manager\SV1\BULs\bin\Debug\BULs.pdb
 D:\code\ATM_manager\ATM_Manager\SV1\BULs\obj\Debug\BULs.csprojResolveAssemblyReference.cache
 D:\code\ATM_manager\ATM_Manager\SV1\BULs\obj\Debug\BULs.dll
 D:\code\ATM_manager\ATM_Manager\SV1\BULs\obj\Debug\BULs.pdb
+D:\code\ATM_manager\ATM_Manager\SV1\BULs\bin\Debug\DALs.dll
+D:\code\ATM_manager\ATM_Manager\SV1\BULs\bin\Debug\DALs.pdb
+D:\code\ATM_manager\ATM_Manager\SV1\BULs\bin\Debug\DTOs.dll
+D:\code\ATM_manager\ATM_Manager\SV1\BULs\bin\Debug\DTOs.pdb

@@ -41,6 +41,7 @@
             this.pnTopTen = new System.Windows.Forms.Panel();
             this.lbTopTen2 = new System.Windows.Forms.Label();
             this.lbTopTen1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
             this.btnNumberCancel = new System.Windows.Forms.Button();
             this.btnNumber9 = new System.Windows.Forms.Button();
@@ -60,15 +61,14 @@
             this.btnSideBar2 = new System.Windows.Forms.Button();
             this.btnSideBar1 = new System.Windows.Forms.Button();
             this.pnUnderScreen = new System.Windows.Forms.Panel();
+            this.pbTien = new System.Windows.Forms.PictureBox();
+            this.pbThe = new System.Windows.Forms.PictureBox();
             this.btnNumber8 = new System.Windows.Forms.Button();
             this.btnNumber5 = new System.Windows.Forms.Button();
             this.btnNumber2 = new System.Windows.Forms.Button();
             this.btnNumber7 = new System.Windows.Forms.Button();
             this.btnNumber4 = new System.Windows.Forms.Button();
             this.btnNumber1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pbTien = new System.Windows.Forms.PictureBox();
-            this.pbThe = new System.Windows.Forms.PictureBox();
             this.pnMainBg.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnTopTen.SuspendLayout();
@@ -219,6 +219,15 @@
             this.lbTopTen1.Text = "NGÂN HÀNG TMCP ĐẦU TƯ VÀ PHÁT TRIỂN VIỆT NAM";
             this.lbTopTen1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(81, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(54, 44);
+            this.panel3.TabIndex = 1;
+            // 
             // lbLogo
             // 
             this.lbLogo.AutoSize = true;
@@ -357,6 +366,7 @@
             this.btnSideBar4.Size = new System.Drawing.Size(37, 23);
             this.btnSideBar4.TabIndex = 0;
             this.btnSideBar4.UseVisualStyleBackColor = true;
+            this.btnSideBar4.Click += new System.EventHandler(this.btnSideBar4_Click);
             // 
             // btnSideBar3
             // 
@@ -365,6 +375,7 @@
             this.btnSideBar3.Size = new System.Drawing.Size(37, 23);
             this.btnSideBar3.TabIndex = 0;
             this.btnSideBar3.UseVisualStyleBackColor = true;
+            this.btnSideBar3.Click += new System.EventHandler(this.btnSideBar3_Click);
             // 
             // btnSideBar2
             // 
@@ -404,6 +415,26 @@
             this.pnUnderScreen.Name = "pnUnderScreen";
             this.pnUnderScreen.Size = new System.Drawing.Size(517, 127);
             this.pnUnderScreen.TabIndex = 11;
+            // 
+            // pbTien
+            // 
+            this.pbTien.Image = global::Validate.Properties.Resources.ChuaCoTien;
+            this.pbTien.Location = new System.Drawing.Point(312, 66);
+            this.pbTien.Name = "pbTien";
+            this.pbTien.Size = new System.Drawing.Size(174, 50);
+            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTien.TabIndex = 16;
+            this.pbTien.TabStop = false;
+            // 
+            // pbThe
+            // 
+            this.pbThe.Image = global::Validate.Properties.Resources.TheRa;
+            this.pbThe.Location = new System.Drawing.Point(312, 10);
+            this.pbThe.Name = "pbThe";
+            this.pbThe.Size = new System.Drawing.Size(174, 50);
+            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbThe.TabIndex = 17;
+            this.pbThe.TabStop = false;
             // 
             // btnNumber8
             // 
@@ -458,35 +489,6 @@
             this.btnNumber1.TabIndex = 14;
             this.btnNumber1.Text = "1";
             this.btnNumber1.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(81, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 44);
-            this.panel3.TabIndex = 1;
-            // 
-            // pbTien
-            // 
-            this.pbTien.Image = global::Validate.Properties.Resources.ChuaCoTien;
-            this.pbTien.Location = new System.Drawing.Point(312, 66);
-            this.pbTien.Name = "pbTien";
-            this.pbTien.Size = new System.Drawing.Size(174, 50);
-            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTien.TabIndex = 16;
-            this.pbTien.TabStop = false;
-            // 
-            // pbThe
-            // 
-            this.pbThe.Image = global::Validate.Properties.Resources.TheRa;
-            this.pbThe.Location = new System.Drawing.Point(312, 10);
-            this.pbThe.Name = "pbThe";
-            this.pbThe.Size = new System.Drawing.Size(174, 50);
-            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThe.TabIndex = 17;
-            this.pbThe.TabStop = false;
             // 
             // ChooseLanguage
             // 

@@ -1,0 +1,7 @@
+D:\code\ATM_manager\ATM_Manager\SV2\DALs\bin\Debug\DALs.dll
+D:\code\ATM_manager\ATM_Manager\SV2\DALs\bin\Debug\DALs.pdb
+D:\code\ATM_manager\ATM_Manager\SV2\DALs\bin\Debug\DTOs.dll
+D:\code\ATM_manager\ATM_Manager\SV2\DALs\bin\Debug\DTOs.pdb
+D:\code\ATM_manager\ATM_Manager\SV2\DALs\obj\Debug\DALs.csprojResolveAssemblyReference.cache
+D:\code\ATM_manager\ATM_Manager\SV2\DALs\obj\Debug\DALs.dll
+D:\code\ATM_manager\ATM_Manager\SV2\DALs\obj\Debug\DALs.pdb

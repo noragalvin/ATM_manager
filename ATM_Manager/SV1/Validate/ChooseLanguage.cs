@@ -16,5 +16,21 @@ namespace Validate
         {
             InitializeComponent();
         }
+
+
+
+        private void btnSideBar3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Term termForm = new Term();
+            termForm.Show();
+        }
+
+        private void btnSideBar4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Term termForm = new Term();
+            termForm.Show();
+        }
     }
 }

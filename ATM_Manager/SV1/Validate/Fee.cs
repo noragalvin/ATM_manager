@@ -16,5 +16,12 @@ namespace Validate
         {
             InitializeComponent();
         }
+
+        private void btnNumberEnter_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EnterPin enterPinForm = new EnterPin();
+            enterPinForm.Show();
+        }
     }
 }

@@ -1,4 +1,3 @@
-D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\Validate.exe.config
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\Validate.exe
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\Validate.pdb
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.Validate.resources
@@ -13,3 +12,10 @@ D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.EnterPin.resourc
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.Feature.resources
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.Fee.resources
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.Term.resources
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\BULs.dll
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\DALs.dll
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\DTOs.dll
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\BULs.pdb
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\DALs.pdb
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\DTOs.pdb
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\Validate.exe.config

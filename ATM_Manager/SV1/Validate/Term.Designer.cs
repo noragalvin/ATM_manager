@@ -37,6 +37,8 @@
             this.btnSideBar1 = new System.Windows.Forms.Button();
             this.btnSideBar5 = new System.Windows.Forms.Button();
             this.pnUnderScreen = new System.Windows.Forms.Panel();
+            this.pbTien = new System.Windows.Forms.PictureBox();
+            this.pbThe = new System.Windows.Forms.PictureBox();
             this.btnNumberCancel = new System.Windows.Forms.Button();
             this.btnNumber9 = new System.Windows.Forms.Button();
             this.btnNumberEnter = new System.Windows.Forms.Button();
@@ -61,18 +63,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnTop = new System.Windows.Forms.Panel();
-            this.pnMainBg = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pbTien = new System.Windows.Forms.PictureBox();
-            this.pbThe = new System.Windows.Forms.PictureBox();
+            this.pnMainBg = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pnUnderScreen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnTopTen.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnMainBg.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSideBar6
@@ -101,6 +101,7 @@
             this.btnSideBar4.Size = new System.Drawing.Size(37, 23);
             this.btnSideBar4.TabIndex = 0;
             this.btnSideBar4.UseVisualStyleBackColor = true;
+            this.btnSideBar4.Click += new System.EventHandler(this.btnSideBar4_Click);
             // 
             // btnSideBar3
             // 
@@ -156,6 +157,26 @@
             this.pnUnderScreen.Name = "pnUnderScreen";
             this.pnUnderScreen.Size = new System.Drawing.Size(517, 127);
             this.pnUnderScreen.TabIndex = 15;
+            // 
+            // pbTien
+            // 
+            this.pbTien.Image = global::Validate.Properties.Resources.ChuaCoTien;
+            this.pbTien.Location = new System.Drawing.Point(316, 69);
+            this.pbTien.Name = "pbTien";
+            this.pbTien.Size = new System.Drawing.Size(174, 50);
+            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTien.TabIndex = 26;
+            this.pbTien.TabStop = false;
+            // 
+            // pbThe
+            // 
+            this.pbThe.Image = global::Validate.Properties.Resources.TheRa;
+            this.pbThe.Location = new System.Drawing.Point(316, 13);
+            this.pbThe.Name = "pbThe";
+            this.pbThe.Size = new System.Drawing.Size(174, 50);
+            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbThe.TabIndex = 27;
+            this.pbThe.TabStop = false;
             // 
             // btnNumberCancel
             // 
@@ -393,6 +414,15 @@
             this.pnTop.Size = new System.Drawing.Size(517, 50);
             this.pnTop.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(81, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(54, 44);
+            this.panel3.TabIndex = 1;
+            // 
             // pnMainBg
             // 
             this.pnMainBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -405,35 +435,6 @@
             this.pnMainBg.Name = "pnMainBg";
             this.pnMainBg.Size = new System.Drawing.Size(517, 349);
             this.pnMainBg.TabIndex = 14;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(81, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 44);
-            this.panel3.TabIndex = 1;
-            // 
-            // pbTien
-            // 
-            this.pbTien.Image = global::Validate.Properties.Resources.ChuaCoTien;
-            this.pbTien.Location = new System.Drawing.Point(316, 69);
-            this.pbTien.Name = "pbTien";
-            this.pbTien.Size = new System.Drawing.Size(174, 50);
-            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTien.TabIndex = 26;
-            this.pbTien.TabStop = false;
-            // 
-            // pbThe
-            // 
-            this.pbThe.Image = global::Validate.Properties.Resources.TheRa;
-            this.pbThe.Location = new System.Drawing.Point(316, 13);
-            this.pbThe.Name = "pbThe";
-            this.pbThe.Size = new System.Drawing.Size(174, 50);
-            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThe.TabIndex = 27;
-            this.pbThe.TabStop = false;
             // 
             // Term
             // 
@@ -448,6 +449,8 @@
             this.Text = "Term";
             this.panel1.ResumeLayout(false);
             this.pnUnderScreen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
             this.panel2.ResumeLayout(false);
             this.pnTopTen.ResumeLayout(false);
             this.pnTopTen.PerformLayout();
@@ -455,8 +458,6 @@
             this.pnTop.PerformLayout();
             this.pnMainBg.ResumeLayout(false);
             this.pnMainBg.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -48,6 +48,8 @@
             this.btnSideBar2 = new System.Windows.Forms.Button();
             this.btnSideBar1 = new System.Windows.Forms.Button();
             this.pnUnderScreen = new System.Windows.Forms.Panel();
+            this.pbTien = new System.Windows.Forms.PictureBox();
+            this.pbThe = new System.Windows.Forms.PictureBox();
             this.btnNumber8 = new System.Windows.Forms.Button();
             this.btnNumber5 = new System.Windows.Forms.Button();
             this.btnNumber2 = new System.Windows.Forms.Button();
@@ -73,19 +75,17 @@
             this.pnTopTen = new System.Windows.Forms.Panel();
             this.lbTopTen2 = new System.Windows.Forms.Label();
             this.lbTopTen1 = new System.Windows.Forms.Label();
-            this.lbLogo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pbTien = new System.Windows.Forms.PictureBox();
-            this.pbThe = new System.Windows.Forms.PictureBox();
+            this.lbLogo = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnUnderScreen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
             this.pnMainBg.SuspendLayout();
             this.tlpFee.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnTopTen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNumberCancel
@@ -116,6 +116,7 @@
             this.btnNumberEnter.TabIndex = 4;
             this.btnNumberEnter.Text = "Enter";
             this.btnNumberEnter.UseVisualStyleBackColor = false;
+            this.btnNumberEnter.Click += new System.EventHandler(this.btnNumberEnter_Click);
             // 
             // btnNumber6
             // 
@@ -271,6 +272,26 @@
             this.pnUnderScreen.Name = "pnUnderScreen";
             this.pnUnderScreen.Size = new System.Drawing.Size(517, 127);
             this.pnUnderScreen.TabIndex = 15;
+            // 
+            // pbTien
+            // 
+            this.pbTien.Image = global::Validate.Properties.Resources.ChuaCoTien;
+            this.pbTien.Location = new System.Drawing.Point(307, 65);
+            this.pbTien.Name = "pbTien";
+            this.pbTien.Size = new System.Drawing.Size(174, 50);
+            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTien.TabIndex = 24;
+            this.pbTien.TabStop = false;
+            // 
+            // pbThe
+            // 
+            this.pbThe.Image = global::Validate.Properties.Resources.TheRa;
+            this.pbThe.Location = new System.Drawing.Point(307, 9);
+            this.pbThe.Name = "pbThe";
+            this.pbThe.Size = new System.Drawing.Size(174, 50);
+            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbThe.TabIndex = 25;
+            this.pbThe.TabStop = false;
             // 
             // btnNumber8
             // 
@@ -552,6 +573,15 @@
             this.lbTopTen1.Text = "NGÂN HÀNG TMCP ĐẦU TƯ VÀ PHÁT TRIỂN VIỆT NAM";
             this.lbTopTen1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(81, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(54, 44);
+            this.panel3.TabIndex = 1;
+            // 
             // lbLogo
             // 
             this.lbLogo.AutoSize = true;
@@ -562,35 +592,6 @@
             this.lbLogo.Size = new System.Drawing.Size(82, 31);
             this.lbLogo.TabIndex = 0;
             this.lbLogo.Text = "BIDV";
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(81, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 44);
-            this.panel3.TabIndex = 1;
-            // 
-            // pbTien
-            // 
-            this.pbTien.Image = global::Validate.Properties.Resources.ChuaCoTien;
-            this.pbTien.Location = new System.Drawing.Point(307, 65);
-            this.pbTien.Name = "pbTien";
-            this.pbTien.Size = new System.Drawing.Size(174, 50);
-            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTien.TabIndex = 24;
-            this.pbTien.TabStop = false;
-            // 
-            // pbThe
-            // 
-            this.pbThe.Image = global::Validate.Properties.Resources.TheRa;
-            this.pbThe.Location = new System.Drawing.Point(307, 9);
-            this.pbThe.Name = "pbThe";
-            this.pbThe.Size = new System.Drawing.Size(174, 50);
-            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThe.TabIndex = 25;
-            this.pbThe.TabStop = false;
             // 
             // Fee
             // 
@@ -606,6 +607,8 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnUnderScreen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
             this.pnMainBg.ResumeLayout(false);
             this.pnMainBg.PerformLayout();
             this.tlpFee.ResumeLayout(false);
@@ -614,8 +617,6 @@
             this.pnTop.PerformLayout();
             this.pnTopTen.ResumeLayout(false);
             this.pnTopTen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
             this.ResumeLayout(false);
 
         }

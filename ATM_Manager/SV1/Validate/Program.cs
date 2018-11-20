@@ -16,7 +16,7 @@ namespace Validate
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EnterPin());
+            Application.Run(new Validate());
         }
     }
 }

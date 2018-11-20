@@ -16,5 +16,10 @@ namespace Validate
         {
             InitializeComponent();
         }
+
+        private void btnNumberClear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
