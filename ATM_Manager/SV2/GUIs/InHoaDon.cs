@@ -20,9 +20,12 @@ namespace GUIs
 
         private void btnSideBar3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Confirmation confirmationForm = new Confirmation();
-            confirmationForm.Show();
+            (new Bill()).Show();
+        }
+
+        private void btnSideBar4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

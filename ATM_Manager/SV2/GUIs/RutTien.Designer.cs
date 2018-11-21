@@ -106,6 +106,7 @@
             this.btnSideBar3.Size = new System.Drawing.Size(37, 23);
             this.btnSideBar3.TabIndex = 0;
             this.btnSideBar3.UseVisualStyleBackColor = true;
+            this.btnSideBar3.Click += new System.EventHandler(this.btnSideBar3_Click);
             // 
             // btnSideBar2
             // 

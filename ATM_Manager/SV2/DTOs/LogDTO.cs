@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTOs
 {
-    public class Log
+    public class LogDTO
     {
         public int LogID { get; set; }
         public int LogTypeID { get; set; }
@@ -16,8 +16,8 @@ namespace DTOs
         public int Amout { get; set; }
         public string Details { get; set; }
         public string CardNoTo { get; set; }
-        public Log() { }
-        public Log(int logID, int logTypeID, int atmID, string cardNo, string logDate, int amout, string details, string cardNoTo)
+        public LogDTO() { }
+        public LogDTO(int logID, int logTypeID, int atmID, string cardNo, string logDate, int amout, string details, string cardNoTo)
         {
             this.LogID = logID;
             this.LogTypeID = logTypeID;

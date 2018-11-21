@@ -17,6 +17,7 @@ namespace GUIs
         StockBUL stockBUL = new StockBUL();
         System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
         Loading loadingForm;
+        LogBUL logBUL = new LogBUL();
         
 
         private void TimerEventProcessor(Object myObject, EventArgs myEventArgs) {
@@ -24,10 +25,19 @@ namespace GUIs
             if (!CheckOpened("loadingForm"))
             {
                 loadingForm.Hide();
-                Confirmation confirmationForm;
-                confirmationForm = new Confirmation(errorMessage);
-                confirmationForm.Closed += (s, args) => this.Close();
-                confirmationForm.Show();
+                if (errorMessage != null)
+                {
+                    Confirmation confirmationForm = new Confirmation(errorMessage);
+                    confirmationForm.Closed += (s, args) => this.Close();
+                    confirmationForm.Show();
+                }
+                else
+                {
+                    InHoaDon inHoaDonForm = new InHoaDon();
+                    inHoaDonForm.Closed += (s, args) => this.Close();
+                    inHoaDonForm.Show();
+                }
+                
             }
         }
 
@@ -39,31 +49,46 @@ namespace GUIs
         private void btnSideBar5_Click(object sender, EventArgs e)
         {
             int status = withDraw(200000);
-            processWithDraw(status);
+            string created_at = DateTime.Now.ToString();
+            string cardNumber = "123";
+            int atm_id = 1;
+            processWithDraw(status, atm_id, cardNumber, created_at, 200000);
         }
 
         private void btnSideBar6_Click(object sender, EventArgs e)
         {
             int status = withDraw(500000);
-            processWithDraw(status);
+            string created_at = DateTime.Now.ToString();
+            string cardNumber = "123";
+            int atm_id = 1;
+            processWithDraw(status, atm_id, cardNumber, created_at, 500000);
         }
 
         private void btnSideBar7_Click(object sender, EventArgs e)
         {
             int status = withDraw(1000000);
-            processWithDraw(status);
+            string created_at = DateTime.Now.ToString();
+            string cardNumber = "123";
+            int atm_id = 1;
+            processWithDraw(status, atm_id, cardNumber, created_at, 1000000);
         }
 
         private void btnSideBar1_Click(object sender, EventArgs e)
         {
             int status = withDraw(2000000);
-            processWithDraw(status);
+            string created_at = DateTime.Now.ToString();
+            string cardNumber = "123";
+            int atm_id = 1;
+            processWithDraw(status, atm_id, cardNumber, created_at, 2000000);
         }
 
         private void btnSideBar2_Click(object sender, EventArgs e)
         {
             int status = withDraw(5000000);
-            processWithDraw(status);
+            string created_at = DateTime.Now.ToString();
+            string cardNumber = "123";
+            int atm_id = 1;
+            processWithDraw(status, atm_id, cardNumber, created_at, 5000000);
         }
 
         private int withDraw(int money)
@@ -71,7 +96,7 @@ namespace GUIs
             return stockBUL.WithDraw(money);
         }
 
-        private void processWithDraw(int status)
+        private void processWithDraw(int status, int atm_id, string cardNumber, string created_at, int amount)
         {
             switch (status)
             {
@@ -123,7 +148,7 @@ namespace GUIs
                     myTimer.Tick += new EventHandler(TimerEventProcessor);
                     myTimer.Interval = 2000;
                     myTimer.Start();
-
+                    logBUL.StoreLog(atm_id, cardNumber, created_at, amount);
                     break;
             }
         }
@@ -139,6 +164,11 @@ namespace GUIs
                 }
             }
             return false;
+        }
+
+        private void btnSideBar3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
