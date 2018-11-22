@@ -74,6 +74,11 @@
     <Compile Include="DoiPin.Designer.cs">
       <DependentUpon>DoiPin.cs</DependentUpon>
     </Compile>
+    <Compile Include="en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>en.resx</DependentUpon>
+    </Compile>
     <Compile Include="EnterPin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +116,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vi.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChooseLanguage.resx">
       <DependentUpon>ChooseLanguage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoiPin.resx">
       <DependentUpon>DoiPin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>en.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="EnterPin.resx">
       <DependentUpon>EnterPin.cs</DependentUpon>
@@ -136,6 +150,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vi.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>vi.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

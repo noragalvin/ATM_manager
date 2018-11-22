@@ -19,3 +19,5 @@ D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\BULs.pdb
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\DALs.pdb
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\DTOs.pdb
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\Validate.exe.config
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.en.resources
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.vi.resources

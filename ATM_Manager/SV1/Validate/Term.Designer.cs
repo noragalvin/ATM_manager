@@ -59,9 +59,9 @@
             this.lbTopTen2 = new System.Windows.Forms.Label();
             this.lbTopTen1 = new System.Windows.Forms.Label();
             this.pnTopTen = new System.Windows.Forms.Panel();
-            this.btnContinue = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblContent = new System.Windows.Forms.Label();
             this.pnTop = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnMainBg = new System.Windows.Forms.Panel();
@@ -368,18 +368,18 @@
             this.pnTopTen.Size = new System.Drawing.Size(372, 39);
             this.pnTopTen.TabIndex = 2;
             // 
-            // btnContinue
+            // btnNext
             // 
-            this.btnContinue.BackColor = System.Drawing.Color.Blue;
-            this.btnContinue.ForeColor = System.Drawing.Color.White;
-            this.btnContinue.Location = new System.Drawing.Point(409, 300);
-            this.btnContinue.Margin = new System.Windows.Forms.Padding(0);
-            this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(101, 23);
-            this.btnContinue.TabIndex = 3;
-            this.btnContinue.Text = "TIẾP TỤC";
-            this.btnContinue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContinue.UseVisualStyleBackColor = false;
+            this.btnNext.BackColor = System.Drawing.Color.Blue;
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(409, 300);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(0);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(101, 23);
+            this.btnNext.TabIndex = 3;
+            this.btnNext.Text = "TIẾP TỤC";
+            this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNext.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -390,17 +390,17 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "chup 4 cái anh. ok";
             // 
-            // label1
+            // lblContent
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(15, 53);
-            this.label1.MaximumSize = new System.Drawing.Size(490, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(474, 135);
-            this.label1.TabIndex = 1;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.lblContent.AutoSize = true;
+            this.lblContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContent.ForeColor = System.Drawing.Color.Blue;
+            this.lblContent.Location = new System.Drawing.Point(15, 53);
+            this.lblContent.MaximumSize = new System.Drawing.Size(490, 0);
+            this.lblContent.Name = "lblContent";
+            this.lblContent.Size = new System.Drawing.Size(474, 135);
+            this.lblContent.TabIndex = 1;
+            this.lblContent.Text = resources.GetString("lblContent.Text");
             // 
             // pnTop
             // 
@@ -427,9 +427,9 @@
             // 
             this.pnMainBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnMainBg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnMainBg.Controls.Add(this.btnContinue);
+            this.pnMainBg.Controls.Add(this.btnNext);
             this.pnMainBg.Controls.Add(this.label2);
-            this.pnMainBg.Controls.Add(this.label1);
+            this.pnMainBg.Controls.Add(this.lblContent);
             this.pnMainBg.Controls.Add(this.pnTop);
             this.pnMainBg.Location = new System.Drawing.Point(59, 14);
             this.pnMainBg.Name = "pnMainBg";
@@ -447,6 +447,7 @@
             this.Controls.Add(this.pnMainBg);
             this.Name = "Term";
             this.Text = "Term";
+            this.Load += new System.EventHandler(this.Term_Load);
             this.panel1.ResumeLayout(false);
             this.pnUnderScreen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
@@ -493,9 +494,9 @@
         private System.Windows.Forms.Label lbTopTen2;
         private System.Windows.Forms.Label lbTopTen1;
         private System.Windows.Forms.Panel pnTopTen;
-        private System.Windows.Forms.Button btnContinue;
+        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblContent;
         private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Panel pnMainBg;
         private System.Windows.Forms.PictureBox pbTien;

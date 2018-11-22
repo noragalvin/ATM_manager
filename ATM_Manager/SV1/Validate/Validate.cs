@@ -24,8 +24,12 @@ namespace Validate
         {
             pbThe.Image = theVao;
             this.Hide();
-            ChooseLanguage chooLangForm = new ChooseLanguage();
-            chooLangForm.Show();
+            (new EnterPin()).Show();
+        }
+
+        private void Validate_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
         }
   
     }

@@ -333,6 +333,7 @@
             this.Controls.Add(this.pnMainBg);
             this.Name = "Validate";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Validate_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnUnderScreen.ResumeLayout(false);

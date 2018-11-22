@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseLanguage));
             this.pnMainBg = new System.Windows.Forms.Panel();
+            this.lblNameEn = new System.Windows.Forms.Label();
             this.btnEN = new System.Windows.Forms.Button();
             this.btnVI = new System.Windows.Forms.Button();
             this.lbSelectLangEN = new System.Windows.Forms.Label();
             this.lbSelectLangVI = new System.Windows.Forms.Label();
-            this.lbName = new System.Windows.Forms.Label();
+            this.lblNameVi = new System.Windows.Forms.Label();
             this.lbWelcomeEnglish = new System.Windows.Forms.Label();
             this.lbWelcomeVN = new System.Windows.Forms.Label();
             this.pnTop = new System.Windows.Forms.Panel();
@@ -83,11 +84,12 @@
             // 
             this.pnMainBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnMainBg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnMainBg.Controls.Add(this.lblNameEn);
             this.pnMainBg.Controls.Add(this.btnEN);
             this.pnMainBg.Controls.Add(this.btnVI);
             this.pnMainBg.Controls.Add(this.lbSelectLangEN);
             this.pnMainBg.Controls.Add(this.lbSelectLangVI);
-            this.pnMainBg.Controls.Add(this.lbName);
+            this.pnMainBg.Controls.Add(this.lblNameVi);
             this.pnMainBg.Controls.Add(this.lbWelcomeEnglish);
             this.pnMainBg.Controls.Add(this.lbWelcomeVN);
             this.pnMainBg.Controls.Add(this.pnTop);
@@ -95,6 +97,16 @@
             this.pnMainBg.Name = "pnMainBg";
             this.pnMainBg.Size = new System.Drawing.Size(517, 349);
             this.pnMainBg.TabIndex = 10;
+            // 
+            // lblNameEn
+            // 
+            this.lblNameEn.AutoSize = true;
+            this.lblNameEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameEn.ForeColor = System.Drawing.Color.Purple;
+            this.lblNameEn.Location = new System.Drawing.Point(286, 112);
+            this.lblNameEn.Name = "lblNameEn";
+            this.lblNameEn.Size = new System.Drawing.Size(0, 20);
+            this.lblNameEn.TabIndex = 9;
             // 
             // btnEN
             // 
@@ -142,16 +154,15 @@
             this.lbSelectLangVI.TabIndex = 5;
             this.lbSelectLangVI.Text = "VUI LÒNG LỰA CHỌN NGÔN NGỮ:";
             // 
-            // lbName
+            // lblNameVi
             // 
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.ForeColor = System.Drawing.Color.Purple;
-            this.lbName.Location = new System.Drawing.Point(282, 68);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(133, 20);
-            this.lbName.TabIndex = 3;
-            this.lbName.Text = "BUI NGOC MINH";
+            this.lblNameVi.AutoSize = true;
+            this.lblNameVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameVi.ForeColor = System.Drawing.Color.Purple;
+            this.lblNameVi.Location = new System.Drawing.Point(286, 68);
+            this.lblNameVi.Name = "lblNameVi";
+            this.lblNameVi.Size = new System.Drawing.Size(0, 20);
+            this.lblNameVi.TabIndex = 3;
             // 
             // lbWelcomeEnglish
             // 
@@ -501,6 +512,7 @@
             this.Controls.Add(this.pnUnderScreen);
             this.Name = "ChooseLanguage";
             this.Text = "ChooseLanguage";
+            this.Load += new System.EventHandler(this.ChooseLanguage_Load);
             this.pnMainBg.ResumeLayout(false);
             this.pnMainBg.PerformLayout();
             this.pnTop.ResumeLayout(false);
@@ -523,7 +535,7 @@
         private System.Windows.Forms.Button btnVI;
         private System.Windows.Forms.Label lbSelectLangEN;
         private System.Windows.Forms.Label lbSelectLangVI;
-        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lblNameVi;
         private System.Windows.Forms.Label lbWelcomeEnglish;
         private System.Windows.Forms.Label lbWelcomeVN;
         private System.Windows.Forms.Panel pnTop;
@@ -558,5 +570,6 @@
         private System.Windows.Forms.Button btnNumber1;
         private System.Windows.Forms.PictureBox pbTien;
         private System.Windows.Forms.PictureBox pbThe;
+        private System.Windows.Forms.Label lblNameEn;
     }
 }

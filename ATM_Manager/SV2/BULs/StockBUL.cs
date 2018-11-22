@@ -23,13 +23,15 @@ namespace BULs
             int total = 0;
             foreach (StockDTO item in stock)
             {
-                if (item.MoneyID == 1)
-                    total += item.Quantity*50000;
+                if(item.MoneyID == 1)
+                    total += item.Quantity * 20000;
                 if (item.MoneyID == 2)
-                    total += item.Quantity*100000;
+                    total += item.Quantity*50000;
                 if (item.MoneyID == 3)
-                    total += item.Quantity*200000;
+                    total += item.Quantity*100000;
                 if (item.MoneyID == 4)
+                    total += item.Quantity*200000;
+                if (item.MoneyID == 5)
                     total += item.Quantity*500000;
             }
             return total;
@@ -88,6 +90,7 @@ namespace BULs
                 return 3; //So tien trong cay ATM khong du
             }
 
+            int number20 = GetNumberOfMoney(20);
             int number50 = GetNumberOfMoney(50);
             int number100 = GetNumberOfMoney(100);
             int number200 = GetNumberOfMoney(200);
@@ -150,6 +153,21 @@ namespace BULs
                     number50 = number50 - soToTienTieuThu;
                     money = money - soToTienTieuThu * 50000;
                     UpdateNumberOfMoney(50, number50);
+                }
+            }
+            if (money / 50000 > 0 && number20 > 0)
+            {
+                int soToTienTieuThu = money / 20000;
+                if (soToTienTieuThu >= number50)
+                {
+                    money = money - number20 * 20000;
+                    UpdateNumberOfMoney(20, 0);
+                }
+                else
+                {
+                    number20 = number20 - soToTienTieuThu;
+                    money = money - soToTienTieuThu * 20000;
+                    UpdateNumberOfMoney(20, number20);
                 }
             }
 

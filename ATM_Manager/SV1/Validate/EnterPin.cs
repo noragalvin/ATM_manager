@@ -78,9 +78,8 @@ namespace Validate
             CardDTO card = cardBUL.getValidCard(txtPIN.Text);
             if (card != null)
             {
-                Feature featureForm = new Feature();
+                (new ChooseLanguage(card)).Show();
                 this.Hide();
-                featureForm.Show();
             }
             else
             {
@@ -94,6 +93,7 @@ namespace Validate
         private void EnterPin_Load(object sender, EventArgs e)
         {
             txtPIN.PasswordChar = '*';
+            this.CenterToScreen();
         }
 
         private void btnNumberClear_Click(object sender, EventArgs e)

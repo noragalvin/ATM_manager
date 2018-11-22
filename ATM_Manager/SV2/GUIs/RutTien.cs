@@ -48,50 +48,50 @@ namespace GUIs
 
         private void btnSideBar5_Click(object sender, EventArgs e)
         {
-            int status = withDraw(200000);
+            int status = checkWithDraw(200000);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "123";
+            string cardNumber = "45010005597808";
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 200000);
         }
 
         private void btnSideBar6_Click(object sender, EventArgs e)
         {
-            int status = withDraw(500000);
+            int status = checkWithDraw(500000);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "123";
+            string cardNumber = "45010005597808";
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 500000);
         }
 
         private void btnSideBar7_Click(object sender, EventArgs e)
         {
-            int status = withDraw(1000000);
+            int status = checkWithDraw(1000000);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "123";
+            string cardNumber = "45010005597808";
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 1000000);
         }
 
         private void btnSideBar1_Click(object sender, EventArgs e)
         {
-            int status = withDraw(2000000);
+            int status = checkWithDraw(2000000);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "123";
+            string cardNumber = "45010005597808";
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 2000000);
         }
 
         private void btnSideBar2_Click(object sender, EventArgs e)
         {
-            int status = withDraw(5000000);
+            int status = checkWithDraw(5000000);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "123";
+            string cardNumber = "45010005597808";
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 5000000);
         }
 
-        private int withDraw(int money)
+        private int checkWithDraw(int money)
         {
             return stockBUL.WithDraw(money);
         }

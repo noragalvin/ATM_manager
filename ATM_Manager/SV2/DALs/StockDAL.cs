@@ -57,10 +57,11 @@ namespace DALs
         {
             conn.Open();
             switch(moneyValue){
-                case 50: moneyValue = 1; break;
-                case 100: moneyValue = 2; break;
-                case 200: moneyValue = 3; break;
-                case 500: moneyValue = 4; break;
+                case 20: moneyValue = 1; break;
+                case 50: moneyValue = 2; break;
+                case 100: moneyValue = 3; break;
+                case 200: moneyValue = 4; break;
+                case 500: moneyValue = 5; break;
             }
             string query = "SELECT Quantity FROM tblStock WHERE MoneyID=@id";
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -84,10 +85,11 @@ namespace DALs
             int id = 0;
             switch (value)
             {
-                case 50: id = 1; break;
-                case 100: id = 2; break;
-                case 200: id = 3; break;
-                case 500: id = 4; break;
+                case 20: id = 1; break;
+                case 50: id = 2; break;
+                case 100: id = 3; break;
+                case 200: id = 4; break;
+                case 500: id = 5; break;
             }
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("num", number);

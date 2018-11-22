@@ -17,15 +17,16 @@ namespace DALs
             try
             {
                 conn.Open();
-                string querry = "SELECT * FROM tblCard WHERE PIN=@mapin";
-                SqlCommand cmd = new SqlCommand(querry, conn);
+                string query = "SELECT tblCard.*, tblAccount.CustID, tblCustomer.Name FROM tblCard, tblAccount, tblCustomer WHERE tblCard.PIN=@mapin AND tblCard.AccountID = tblAccount.AccountID AND tblAccount.CustID = tblCustomer.CustID";
+                //string query = "SELECT tblCard.*, tblCustomer.Name"
+                SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("mapin", pin);
                 SqlDataReader dr = cmd.ExecuteReader();
                 dr.Read();
                 CardDTO card = new CardDTO(
                     dr["CardNO"].ToString(),
                     int.Parse(dr["Status"].ToString()),
-                    int.Parse(dr["AccountID"].ToString()),
+                    dr["Name"].ToString(),
                     dr["PIN"].ToString(),
                     dr["StartDate"].ToString(),
                     dr["ExpiredDate"].ToString(),
@@ -34,6 +35,7 @@ namespace DALs
             }
             catch (Exception)
             {
+                //throw;
                 return null;
             }
         }
