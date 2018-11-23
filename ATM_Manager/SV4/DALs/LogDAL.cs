@@ -15,7 +15,7 @@ namespace DALs
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChuoiKetNoi"].ToString());
 
-        public void GetLog(DataSet data)
+        public void GetLog(DataSet data, string cardNumber)
         {
             /*
             conn.Open();
@@ -40,10 +40,20 @@ namespace DALs
             conn.Close();
             return list;
              * */
-            
-            string query = "SELECT TOP 10 * FROM tblLog ORDER BY LogID DESC";
-            SqlDataAdapter da = new SqlDataAdapter(query, conn);
-            da.Fill(data, data.Tables[0].TableName);
+
+            try
+            {
+                string query = "SELECT TOP 10 * FROM tblLog WHERE CardNo=@card ORDER BY LogID DESC";
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                da.SelectCommand.Parameters.AddWithValue("card", cardNumber);
+                da.Fill(data, data.Tables[0].TableName);
+            }
+            catch (Exception)
+            {
+                return;
+            }
         }
+
+        
     }
 }

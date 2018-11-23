@@ -16,3 +16,5 @@ D:\code\ATM_manager\ATM_Manager\SV4\SV4\obj\Debug\RdlCompile.cache
 D:\code\ATM_manager\ATM_Manager\SV4\SV4\obj\Debug\RdlCompile.compiled
 D:\code\ATM_manager\ATM_Manager\SV4\SV4\obj\Debug\SV4.exe
 D:\code\ATM_manager\ATM_Manager\SV4\SV4\obj\Debug\SV4.pdb
+D:\code\ATM_manager\ATM_Manager\SV4\SV4\obj\Debug\SV4.Confirmation.resources
+D:\code\ATM_manager\ATM_Manager\SV4\SV4\obj\Debug\SV4.VanTinSoDu.resources

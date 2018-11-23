@@ -12,6 +12,7 @@ namespace SV4
 {
     public partial class Feature : Form
     {
+        string stk = "45010005597808";
         public Feature()
         {
             InitializeComponent();
@@ -30,7 +31,8 @@ namespace SV4
 
         private void btnSideBar1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            (new VanTinSoDu(stk)).Show();
         }
     }
 }

@@ -177,7 +177,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -201,7 +200,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.60417in</Top>
+        <Top>0.31944in</Top>
         <Left>0.24875in</Left>
         <Height>0.39584in</Height>
         <Width>4.625in</Width>
@@ -241,7 +240,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.875in</Height>
+    <Height>0.77083in</Height>
     <Style />
   </Body>
   <Width>5.20833in</Width>

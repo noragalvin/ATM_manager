@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,16 +26,16 @@ namespace SV4
         private void InSaoKe_Load(object sender, EventArgs e)
         {
             ATMManagerDataSet data = new ATMManagerDataSet();
+            string cardNumber = "45010005597808";
+            logBUL.GetLog(data, cardNumber);
 
-            logBUL.GetLog(data);
-
-            for (int intCount = 0; intCount < data.Tables[0].Rows.Count; intCount++)
+            for (int i = 0; i < data.Tables[0].Rows.Count; i++)
             {
-
-                if (data.Tables[0].Rows[intCount]["LogTypeID"].ToString() == "2")
+                if (data.Tables[0].Rows[i]["LogTypeID"].ToString() == "2")
                 {
-                    data.Tables[0].Rows[intCount]["Amout"] = -int.Parse(data.Tables[0].Rows[intCount]["Amout"].ToString());
+                    data.Tables[0].Rows[i]["Amout"] = -int.Parse(data.Tables[0].Rows[i]["Amout"].ToString());
                 }
+
             }
 
             data.Tables[0].AcceptChanges();
@@ -46,5 +47,13 @@ namespace SV4
             this.reportViewer1.RefreshReport();
             this.CenterToScreen();
         }
+
+        private void btnSideBar4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            (new Confirmation()).Show();
+        }
+
+
     }
 }

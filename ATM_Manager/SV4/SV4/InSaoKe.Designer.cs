@@ -92,6 +92,7 @@
             this.btnSideBar4.Size = new System.Drawing.Size(37, 23);
             this.btnSideBar4.TabIndex = 0;
             this.btnSideBar4.UseVisualStyleBackColor = true;
+            this.btnSideBar4.Click += new System.EventHandler(this.btnSideBar4_Click);
             // 
             // btnSideBar2
             // 

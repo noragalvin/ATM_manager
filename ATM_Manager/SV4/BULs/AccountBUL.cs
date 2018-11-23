@@ -2,21 +2,20 @@
 using DTOs;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BULs
 {
-    public class LogBUL
+    
+    public class AccountBUL
     {
-        LogDAL logDAL = new LogDAL();
         AccountDAL accountDAL = new AccountDAL();
 
-        public void GetLog(DataSet data, string cardNumber)
+        public AccountDTO VanTinSoDu(string stk)
         {
-            logDAL.GetLog(data, cardNumber);
+            return accountDAL.VanTinSoDu(stk);
         }
     }
 }
