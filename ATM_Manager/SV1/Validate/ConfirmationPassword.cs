@@ -1,4 +1,5 @@
-﻿using DTOs;
+﻿using BULs;
+using DTOs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,24 +13,22 @@ using System.Windows.Forms;
 
 namespace Validate
 {
-    public partial class DoiPin : Form
+    public partial class ConfirmationPassword : Form
     {
         private ResourceManager rm;
         private CardDTO card;
+        private string newPassword;
+        private CardBUL cardBUL = new CardBUL();
 
-        public DoiPin(ResourceManager rm, CardDTO card = null)
+        public ConfirmationPassword(ResourceManager rm, CardDTO card, string newPassword)
         {
             this.rm = rm;
             this.card = card;
+            this.newPassword = newPassword;
             InitializeComponent();
         }
 
-        private void btnNumberClear_Click(object sender, EventArgs e)
-        {
-            txtPin.Clear();
-        }
-
-        private void DoiPin_Load(object sender, EventArgs e)
+        private void ConfirmationPassword_Load(object sender, EventArgs e)
         {
             txtPin.PasswordChar = '*';
             this.CenterToScreen();
@@ -85,23 +84,26 @@ namespace Validate
             txtPin.AppendText("0");
         }
 
-        private void btnNumberCancel_Click(object sender, EventArgs e)
+        private void btnNumberClear_Click(object sender, EventArgs e)
         {
-            this.Close();
+            txtPin.Clear();
         }
 
         private void btnNumberEnter_Click(object sender, EventArgs e)
         {
-            if (txtPin.Text == card.PIN)
+            if (txtPin.Text == this.newPassword)
             {
-                this.Hide();
-                (new NewPassword(this.rm, this.card)).Show();
+                cardBUL.UpdatePIN(card.CardNo, txtPin.Text);
+                
             }
-            else
-            {
-                this.Hide();
-                (new Validate()).Show();
-            }
+            this.Hide();
+            (new Validate()).Show();
+        }
+
+        private void btnNumberCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            (new Validate()).Show();
         }
     }
 }

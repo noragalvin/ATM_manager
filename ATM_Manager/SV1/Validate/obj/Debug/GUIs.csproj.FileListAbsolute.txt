@@ -21,3 +21,5 @@ D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\DTOs.pdb
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\bin\Debug\Validate.exe.config
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.en.resources
 D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.vi.resources
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.ConfirmationPassword.resources
+D:\code\ATM_manager\ATM_Manager\SV1\Validate\obj\Debug\Validate.NewPassword.resources

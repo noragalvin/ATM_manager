@@ -12,24 +12,19 @@ using System.Windows.Forms;
 
 namespace Validate
 {
-    public partial class DoiPin : Form
+    public partial class NewPassword : Form
     {
         private ResourceManager rm;
         private CardDTO card;
 
-        public DoiPin(ResourceManager rm, CardDTO card = null)
+        public NewPassword(ResourceManager rm, CardDTO card = null)
         {
             this.rm = rm;
             this.card = card;
             InitializeComponent();
         }
 
-        private void btnNumberClear_Click(object sender, EventArgs e)
-        {
-            txtPin.Clear();
-        }
-
-        private void DoiPin_Load(object sender, EventArgs e)
+        private void NewPassword_Load(object sender, EventArgs e)
         {
             txtPin.PasswordChar = '*';
             this.CenterToScreen();
@@ -85,23 +80,21 @@ namespace Validate
             txtPin.AppendText("0");
         }
 
+        private void btnNumberClear_Click(object sender, EventArgs e)
+        {
+            txtPin.Clear();
+        }
+
         private void btnNumberCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            (new Validate()).Show();
         }
 
         private void btnNumberEnter_Click(object sender, EventArgs e)
         {
-            if (txtPin.Text == card.PIN)
-            {
-                this.Hide();
-                (new NewPassword(this.rm, this.card)).Show();
-            }
-            else
-            {
-                this.Hide();
-                (new Validate()).Show();
-            }
+            this.Hide();
+            (new ConfirmationPassword(this.rm, this.card, txtPin.Text)).Show();
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Validate
     {
         Bitmap theRa = Properties.Resources.TheVao;
         CardBUL cardBUL = new CardBUL();
+        private string stk = "45010005597808";
         
 
         public EnterPin()
@@ -75,7 +76,7 @@ namespace Validate
 
         private void btnNumberEnter_Click(object sender, EventArgs e)
         {
-            CardDTO card = cardBUL.getValidCard(txtPIN.Text);
+            CardDTO card = cardBUL.getValidCard(txtPIN.Text, this.stk);
             if (card != null)
             {
                 (new ChooseLanguage(card)).Show();

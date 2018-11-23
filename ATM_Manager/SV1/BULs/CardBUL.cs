@@ -11,9 +11,14 @@ namespace BULs
     public class CardBUL
     {
         CardDAL card = new CardDAL();
-        public CardDTO getValidCard(string pin)
+        public CardDTO getValidCard(string pin, string stk)
         {
-            return card.getValidCard(pin);
+            return card.getValidCard(pin, stk);
+        }
+
+        public void UpdatePIN(string stk, string pin)
+        {
+            card.UpdatePIN(stk, pin);
         }
     }
 }
