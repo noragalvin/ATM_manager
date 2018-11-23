@@ -23,5 +23,10 @@ namespace GUIs
             RutTien rutTienForm = new RutTien();
             rutTienForm.Show();
         }
+
+        private void Feature_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
     }
 }

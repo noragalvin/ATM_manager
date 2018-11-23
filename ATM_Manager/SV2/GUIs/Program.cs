@@ -16,7 +16,7 @@ namespace GUIs
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RutTien());
+            Application.Run(new Feature());
         }
     }
 }

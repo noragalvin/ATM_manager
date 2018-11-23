@@ -484,6 +484,7 @@
             this.Controls.Add(this.pnMainBg);
             this.Name = "Feature";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Feature_Load);
             this.panel2.ResumeLayout(false);
             this.pnUnderScreen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
