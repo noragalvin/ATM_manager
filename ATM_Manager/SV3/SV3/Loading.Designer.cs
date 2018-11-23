@@ -36,16 +36,13 @@
             this.pnTopTen = new System.Windows.Forms.Panel();
             this.lbTopTen2 = new System.Windows.Forms.Label();
             this.lbTopTen1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
             this.btnSideBar4 = new System.Windows.Forms.Button();
             this.btnSideBar3 = new System.Windows.Forms.Button();
             this.btnSideBar2 = new System.Windows.Forms.Button();
             this.btnSideBar1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbTien = new System.Windows.Forms.PictureBox();
             this.pnUnderScreen = new System.Windows.Forms.Panel();
-            this.pbThe = new System.Windows.Forms.PictureBox();
             this.btnNumberCancel = new System.Windows.Forms.Button();
             this.btnNumber9 = new System.Windows.Forms.Button();
             this.btnNumberEnter = new System.Windows.Forms.Button();
@@ -64,14 +61,17 @@
             this.btnSideBar7 = new System.Windows.Forms.Button();
             this.btnSideBar6 = new System.Windows.Forms.Button();
             this.btnSideBar5 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pbTien = new System.Windows.Forms.PictureBox();
+            this.pbThe = new System.Windows.Forms.PictureBox();
             this.pnMainBg.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnTopTen.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
             this.pnUnderScreen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
             this.SuspendLayout();
             // 
             // pnMainBg
@@ -152,15 +152,6 @@
             this.lbTopTen1.Text = "NGÂN HÀNG TMCP ĐẦU TƯ VÀ PHÁT TRIỂN VIỆT NAM";
             this.lbTopTen1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(81, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 44);
-            this.panel3.TabIndex = 1;
-            // 
             // lbLogo
             // 
             this.lbLogo.AutoSize = true;
@@ -215,15 +206,6 @@
             this.panel1.Size = new System.Drawing.Size(49, 384);
             this.panel1.TabIndex = 28;
             // 
-            // pbTien
-            // 
-            this.pbTien.Location = new System.Drawing.Point(301, 67);
-            this.pbTien.Name = "pbTien";
-            this.pbTien.Size = new System.Drawing.Size(174, 50);
-            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTien.TabIndex = 26;
-            this.pbTien.TabStop = false;
-            // 
             // pnUnderScreen
             // 
             this.pnUnderScreen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -246,15 +228,6 @@
             this.pnUnderScreen.Name = "pnUnderScreen";
             this.pnUnderScreen.Size = new System.Drawing.Size(517, 127);
             this.pnUnderScreen.TabIndex = 27;
-            // 
-            // pbThe
-            // 
-            this.pbThe.Location = new System.Drawing.Point(301, 11);
-            this.pbThe.Name = "pbThe";
-            this.pbThe.Size = new System.Drawing.Size(174, 50);
-            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThe.TabIndex = 27;
-            this.pbThe.TabStop = false;
             // 
             // btnNumberCancel
             // 
@@ -419,6 +392,33 @@
             this.btnSideBar5.TabIndex = 0;
             this.btnSideBar5.UseVisualStyleBackColor = true;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(81, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(54, 44);
+            this.panel3.TabIndex = 1;
+            // 
+            // pbTien
+            // 
+            this.pbTien.Location = new System.Drawing.Point(301, 67);
+            this.pbTien.Name = "pbTien";
+            this.pbTien.Size = new System.Drawing.Size(174, 50);
+            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTien.TabIndex = 26;
+            this.pbTien.TabStop = false;
+            // 
+            // pbThe
+            // 
+            this.pbThe.Location = new System.Drawing.Point(301, 11);
+            this.pbThe.Name = "pbThe";
+            this.pbThe.Size = new System.Drawing.Size(174, 50);
+            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbThe.TabIndex = 27;
+            this.pbThe.TabStop = false;
+            // 
             // Loading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,6 +430,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "Loading";
             this.Text = "Loading";
+            this.Load += new System.EventHandler(this.Loading_Load);
             this.pnMainBg.ResumeLayout(false);
             this.pnMainBg.PerformLayout();
             this.pnTop.ResumeLayout(false);
@@ -437,10 +438,10 @@
             this.pnTopTen.ResumeLayout(false);
             this.pnTopTen.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
             this.pnUnderScreen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
             this.ResumeLayout(false);
 
         }

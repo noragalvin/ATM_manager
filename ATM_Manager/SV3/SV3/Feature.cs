@@ -16,5 +16,17 @@ namespace SV3
         {
             InitializeComponent();
         }
+
+        private void btnSideBar6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            (new NhapSTK()).Show();
+            
+        }
+
+        private void Feature_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
     }
 }

@@ -1,0 +1,17 @@
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\SV3.exe.config
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\SV3.exe
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\SV3.pdb
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\GUIs.csprojResolveAssemblyReference.cache
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\SV3.Feature.resources
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\SV3.Loading.resources
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\SV3.NhapSTK.resources
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\SV3.Properties.Resources.resources
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\GUIs.csproj.GenerateResource.Cache
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\SV3.exe
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\SV3.pdb
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\SV3.SoTienChuyen.resources
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\BULs.dll
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\DALs.dll
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\BULs.pdb
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\DALs.pdb
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\SV3.Confirmation.resources

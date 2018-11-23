@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Confirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmation.Designer.cs">
+      <DependentUpon>Confirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoTienChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoTienChuyen.Designer.cs">
+      <DependentUpon>SoTienChuyen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Confirmation.resx">
+      <DependentUpon>Confirmation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Feature.resx">
       <DependentUpon>Feature.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,7 +96,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SoTienChuyen.resx">
+      <DependentUpon>SoTienChuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +113,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChuaCoTien.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TheRa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TheVao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TienRa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BULs\BULs.csproj">
+      <Project>{13edd63e-4016-41a3-98d3-557d84396ed8}</Project>
+      <Name>BULs</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -16,5 +16,10 @@ namespace SV3
         {
             InitializeComponent();
         }
+
+        private void Loading_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
     }
 }

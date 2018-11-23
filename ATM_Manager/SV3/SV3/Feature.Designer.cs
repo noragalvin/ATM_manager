@@ -29,131 +29,96 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Feature));
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnOther = new System.Windows.Forms.Button();
-            this.btn5000 = new System.Windows.Forms.Button();
-            this.btn1000 = new System.Windows.Forms.Button();
-            this.btn200 = new System.Windows.Forms.Button();
-            this.btn2000 = new System.Windows.Forms.Button();
+            this.btnSideBar4 = new System.Windows.Forms.Button();
+            this.btnSideBar2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSideBar3 = new System.Windows.Forms.Button();
+            this.btnSideBar1 = new System.Windows.Forms.Button();
             this.pbTien = new System.Windows.Forms.PictureBox();
             this.pbThe = new System.Windows.Forms.PictureBox();
-            this.btnNumberCancel = new System.Windows.Forms.Button();
-            this.btnNumber9 = new System.Windows.Forms.Button();
-            this.btnNumberEnter = new System.Windows.Forms.Button();
-            this.btnNumber6 = new System.Windows.Forms.Button();
-            this.btnNumberClear = new System.Windows.Forms.Button();
-            this.btnNumber3 = new System.Windows.Forms.Button();
-            this.btnNumber0 = new System.Windows.Forms.Button();
-            this.btnNumber8 = new System.Windows.Forms.Button();
-            this.btnNumber5 = new System.Windows.Forms.Button();
-            this.btnNumber2 = new System.Windows.Forms.Button();
-            this.btnNumber7 = new System.Windows.Forms.Button();
-            this.btnNumber4 = new System.Windows.Forms.Button();
-            this.btn500 = new System.Windows.Forms.Button();
+            this.pnMainBg = new System.Windows.Forms.Panel();
+            this.btnDoiPin = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
+            this.btnChuyenKhoan = new System.Windows.Forms.Button();
+            this.btnVanTin = new System.Windows.Forms.Button();
+            this.btnRutTien = new System.Windows.Forms.Button();
             this.pnTop = new System.Windows.Forms.Panel();
             this.pnTopTen = new System.Windows.Forms.Panel();
             this.lbTopTen2 = new System.Windows.Forms.Label();
             this.lbTopTen1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnNumber1 = new System.Windows.Forms.Button();
+            this.btnNumberCancel = new System.Windows.Forms.Button();
+            this.btnNumber9 = new System.Windows.Forms.Button();
+            this.btnNumberEnter = new System.Windows.Forms.Button();
+            this.btnNumber6 = new System.Windows.Forms.Button();
+            this.btnNumber3 = new System.Windows.Forms.Button();
+            this.btnNumber7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSideBar8 = new System.Windows.Forms.Button();
             this.btnSideBar7 = new System.Windows.Forms.Button();
             this.btnSideBar6 = new System.Windows.Forms.Button();
             this.btnSideBar5 = new System.Windows.Forms.Button();
             this.pnUnderScreen = new System.Windows.Forms.Panel();
-            this.btnSideBar4 = new System.Windows.Forms.Button();
-            this.btnSideBar3 = new System.Windows.Forms.Button();
-            this.btnSideBar2 = new System.Windows.Forms.Button();
-            this.btnSideBar1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pnMainBg = new System.Windows.Forms.Panel();
+            this.btnNumberClear = new System.Windows.Forms.Button();
+            this.btnNumber0 = new System.Windows.Forms.Button();
+            this.btnNumber8 = new System.Windows.Forms.Button();
+            this.btnNumber5 = new System.Windows.Forms.Button();
+            this.btnNumber2 = new System.Windows.Forms.Button();
+            this.btnNumber4 = new System.Windows.Forms.Button();
+            this.btnNumber1 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
+            this.pnMainBg.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnTopTen.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnUnderScreen.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.pnMainBg.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // btnSideBar4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "XIN MỜI LỰA CHỌN SỐ TIỀN";
+            this.btnSideBar4.Location = new System.Drawing.Point(3, 298);
+            this.btnSideBar4.Name = "btnSideBar4";
+            this.btnSideBar4.Size = new System.Drawing.Size(37, 23);
+            this.btnSideBar4.TabIndex = 0;
+            this.btnSideBar4.UseVisualStyleBackColor = true;
             // 
-            // btnOther
+            // btnSideBar2
             // 
-            this.btnOther.BackColor = System.Drawing.Color.Blue;
-            this.btnOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOther.ForeColor = System.Drawing.Color.White;
-            this.btnOther.Location = new System.Drawing.Point(397, 252);
-            this.btnOther.Name = "btnOther";
-            this.btnOther.Size = new System.Drawing.Size(118, 23);
-            this.btnOther.TabIndex = 1;
-            this.btnOther.Text = "SỐ KHÁC";
-            this.btnOther.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOther.UseVisualStyleBackColor = false;
+            this.btnSideBar2.Location = new System.Drawing.Point(4, 198);
+            this.btnSideBar2.Name = "btnSideBar2";
+            this.btnSideBar2.Size = new System.Drawing.Size(37, 23);
+            this.btnSideBar2.TabIndex = 0;
+            this.btnSideBar2.UseVisualStyleBackColor = true;
             // 
-            // btn5000
+            // panel1
             // 
-            this.btn5000.BackColor = System.Drawing.Color.Blue;
-            this.btn5000.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5000.ForeColor = System.Drawing.Color.White;
-            this.btn5000.Location = new System.Drawing.Point(397, 203);
-            this.btn5000.Name = "btn5000";
-            this.btn5000.Size = new System.Drawing.Size(118, 23);
-            this.btn5000.TabIndex = 1;
-            this.btn5000.Text = "5.000.000";
-            this.btn5000.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn5000.UseVisualStyleBackColor = false;
+            this.panel1.Controls.Add(this.btnSideBar4);
+            this.panel1.Controls.Add(this.btnSideBar3);
+            this.panel1.Controls.Add(this.btnSideBar2);
+            this.panel1.Controls.Add(this.btnSideBar1);
+            this.panel1.Location = new System.Drawing.Point(582, 18);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(49, 384);
+            this.panel1.TabIndex = 28;
             // 
-            // btn1000
+            // btnSideBar3
             // 
-            this.btn1000.BackColor = System.Drawing.Color.Blue;
-            this.btn1000.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1000.ForeColor = System.Drawing.Color.White;
-            this.btn1000.Location = new System.Drawing.Point(-2, 254);
-            this.btn1000.Name = "btn1000";
-            this.btn1000.Size = new System.Drawing.Size(122, 23);
-            this.btn1000.TabIndex = 1;
-            this.btn1000.Text = "1.000.000";
-            this.btn1000.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn1000.UseVisualStyleBackColor = false;
+            this.btnSideBar3.Location = new System.Drawing.Point(4, 248);
+            this.btnSideBar3.Name = "btnSideBar3";
+            this.btnSideBar3.Size = new System.Drawing.Size(37, 23);
+            this.btnSideBar3.TabIndex = 0;
+            this.btnSideBar3.UseVisualStyleBackColor = true;
             // 
-            // btn200
+            // btnSideBar1
             // 
-            this.btn200.BackColor = System.Drawing.Color.Blue;
-            this.btn200.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn200.ForeColor = System.Drawing.Color.White;
-            this.btn200.Location = new System.Drawing.Point(0, 151);
-            this.btn200.Name = "btn200";
-            this.btn200.Size = new System.Drawing.Size(122, 23);
-            this.btn200.TabIndex = 1;
-            this.btn200.Text = "200.000";
-            this.btn200.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn200.UseVisualStyleBackColor = false;
-            // 
-            // btn2000
-            // 
-            this.btn2000.BackColor = System.Drawing.Color.Blue;
-            this.btn2000.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2000.ForeColor = System.Drawing.Color.White;
-            this.btn2000.Location = new System.Drawing.Point(397, 151);
-            this.btn2000.Name = "btn2000";
-            this.btn2000.Size = new System.Drawing.Size(118, 23);
-            this.btn2000.TabIndex = 1;
-            this.btn2000.Text = "2.000.000";
-            this.btn2000.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn2000.UseVisualStyleBackColor = false;
+            this.btnSideBar1.Location = new System.Drawing.Point(4, 148);
+            this.btnSideBar1.Name = "btnSideBar1";
+            this.btnSideBar1.Size = new System.Drawing.Size(37, 23);
+            this.btnSideBar1.TabIndex = 0;
+            this.btnSideBar1.UseVisualStyleBackColor = true;
             // 
             // pbTien
             // 
@@ -161,7 +126,7 @@
             this.pbTien.Name = "pbTien";
             this.pbTien.Size = new System.Drawing.Size(174, 50);
             this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTien.TabIndex = 24;
+            this.pbTien.TabIndex = 22;
             this.pbTien.TabStop = false;
             // 
             // pbThe
@@ -170,132 +135,90 @@
             this.pbThe.Name = "pbThe";
             this.pbThe.Size = new System.Drawing.Size(174, 50);
             this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThe.TabIndex = 25;
+            this.pbThe.TabIndex = 23;
             this.pbThe.TabStop = false;
             // 
-            // btnNumberCancel
+            // pnMainBg
             // 
-            this.btnNumberCancel.BackColor = System.Drawing.Color.Yellow;
-            this.btnNumberCancel.Location = new System.Drawing.Point(226, 69);
-            this.btnNumberCancel.Name = "btnNumberCancel";
-            this.btnNumberCancel.Size = new System.Drawing.Size(50, 23);
-            this.btnNumberCancel.TabIndex = 2;
-            this.btnNumberCancel.Text = "Cancel";
-            this.btnNumberCancel.UseVisualStyleBackColor = false;
+            this.pnMainBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnMainBg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnMainBg.Controls.Add(this.btnDoiPin);
+            this.pnMainBg.Controls.Add(this.btnIn);
+            this.pnMainBg.Controls.Add(this.btnChuyenKhoan);
+            this.pnMainBg.Controls.Add(this.btnVanTin);
+            this.pnMainBg.Controls.Add(this.btnRutTien);
+            this.pnMainBg.Controls.Add(this.pnTop);
+            this.pnMainBg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnMainBg.ForeColor = System.Drawing.Color.Blue;
+            this.pnMainBg.Location = new System.Drawing.Point(59, 14);
+            this.pnMainBg.Name = "pnMainBg";
+            this.pnMainBg.Size = new System.Drawing.Size(517, 349);
+            this.pnMainBg.TabIndex = 26;
             // 
-            // btnNumber9
+            // btnDoiPin
             // 
-            this.btnNumber9.Location = new System.Drawing.Point(190, 69);
-            this.btnNumber9.Name = "btnNumber9";
-            this.btnNumber9.Size = new System.Drawing.Size(30, 23);
-            this.btnNumber9.TabIndex = 3;
-            this.btnNumber9.Text = "9";
-            this.btnNumber9.UseVisualStyleBackColor = true;
+            this.btnDoiPin.BackColor = System.Drawing.Color.Blue;
+            this.btnDoiPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiPin.ForeColor = System.Drawing.Color.White;
+            this.btnDoiPin.Location = new System.Drawing.Point(397, 252);
+            this.btnDoiPin.Name = "btnDoiPin";
+            this.btnDoiPin.Size = new System.Drawing.Size(118, 23);
+            this.btnDoiPin.TabIndex = 1;
+            this.btnDoiPin.Text = "Đổi PIN";
+            this.btnDoiPin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoiPin.UseVisualStyleBackColor = false;
             // 
-            // btnNumberEnter
+            // btnIn
             // 
-            this.btnNumberEnter.BackColor = System.Drawing.Color.Green;
-            this.btnNumberEnter.Location = new System.Drawing.Point(226, 40);
-            this.btnNumberEnter.Name = "btnNumberEnter";
-            this.btnNumberEnter.Size = new System.Drawing.Size(50, 23);
-            this.btnNumberEnter.TabIndex = 4;
-            this.btnNumberEnter.Text = "Enter";
-            this.btnNumberEnter.UseVisualStyleBackColor = false;
+            this.btnIn.BackColor = System.Drawing.Color.Blue;
+            this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.ForeColor = System.Drawing.Color.White;
+            this.btnIn.Location = new System.Drawing.Point(397, 203);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(118, 23);
+            this.btnIn.TabIndex = 1;
+            this.btnIn.Text = "In sao kê rút gọn";
+            this.btnIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIn.UseVisualStyleBackColor = false;
             // 
-            // btnNumber6
+            // btnChuyenKhoan
             // 
-            this.btnNumber6.Location = new System.Drawing.Point(190, 40);
-            this.btnNumber6.Name = "btnNumber6";
-            this.btnNumber6.Size = new System.Drawing.Size(30, 23);
-            this.btnNumber6.TabIndex = 5;
-            this.btnNumber6.Text = "6";
-            this.btnNumber6.UseVisualStyleBackColor = true;
+            this.btnChuyenKhoan.BackColor = System.Drawing.Color.Blue;
+            this.btnChuyenKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuyenKhoan.ForeColor = System.Drawing.Color.White;
+            this.btnChuyenKhoan.Location = new System.Drawing.Point(0, 201);
+            this.btnChuyenKhoan.Name = "btnChuyenKhoan";
+            this.btnChuyenKhoan.Size = new System.Drawing.Size(122, 23);
+            this.btnChuyenKhoan.TabIndex = 1;
+            this.btnChuyenKhoan.Text = "Chuyển khoản";
+            this.btnChuyenKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChuyenKhoan.UseVisualStyleBackColor = false;
             // 
-            // btnNumberClear
+            // btnVanTin
             // 
-            this.btnNumberClear.BackColor = System.Drawing.Color.Red;
-            this.btnNumberClear.Location = new System.Drawing.Point(226, 11);
-            this.btnNumberClear.Name = "btnNumberClear";
-            this.btnNumberClear.Size = new System.Drawing.Size(50, 23);
-            this.btnNumberClear.TabIndex = 6;
-            this.btnNumberClear.Text = "Clear";
-            this.btnNumberClear.UseVisualStyleBackColor = false;
+            this.btnVanTin.BackColor = System.Drawing.Color.Blue;
+            this.btnVanTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVanTin.ForeColor = System.Drawing.Color.White;
+            this.btnVanTin.Location = new System.Drawing.Point(397, 151);
+            this.btnVanTin.Name = "btnVanTin";
+            this.btnVanTin.Size = new System.Drawing.Size(118, 23);
+            this.btnVanTin.TabIndex = 1;
+            this.btnVanTin.Text = "Vấn tin số dư";
+            this.btnVanTin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVanTin.UseVisualStyleBackColor = false;
             // 
-            // btnNumber3
+            // btnRutTien
             // 
-            this.btnNumber3.Location = new System.Drawing.Point(190, 11);
-            this.btnNumber3.Name = "btnNumber3";
-            this.btnNumber3.Size = new System.Drawing.Size(30, 23);
-            this.btnNumber3.TabIndex = 7;
-            this.btnNumber3.Text = "3";
-            this.btnNumber3.UseVisualStyleBackColor = true;
-            // 
-            // btnNumber0
-            // 
-            this.btnNumber0.Location = new System.Drawing.Point(154, 98);
-            this.btnNumber0.Name = "btnNumber0";
-            this.btnNumber0.Size = new System.Drawing.Size(30, 23);
-            this.btnNumber0.TabIndex = 8;
-            this.btnNumber0.Text = "0";
-            this.btnNumber0.UseVisualStyleBackColor = true;
-            // 
-            // btnNumber8
-            // 
-            this.btnNumber8.Location = new System.Drawing.Point(154, 69);
-            this.btnNumber8.Name = "btnNumber8";
-            this.btnNumber8.Size = new System.Drawing.Size(30, 23);
-            this.btnNumber8.TabIndex = 9;
-            this.btnNumber8.Text = "8";
-            this.btnNumber8.UseVisualStyleBackColor = true;
-            // 
-            // btnNumber5
-            // 
-            this.btnNumber5.Location = new System.Drawing.Point(154, 40);
-            this.btnNumber5.Name = "btnNumber5";
-            this.btnNumber5.Size = new System.Drawing.Size(30, 23);
-            this.btnNumber5.TabIndex = 10;
-            this.btnNumber5.Text = "5";
-            this.btnNumber5.UseVisualStyleBackColor = true;
-            // 
-            // btnNumber2
-            // 
-            this.btnNumber2.Location = new System.Drawing.Point(154, 11);
-            this.btnNumber2.Name = "btnNumber2";
-            this.btnNumber2.Size = new System.Drawing.Size(30, 23);
-            this.btnNumber2.TabIndex = 11;
-            this.btnNumber2.Text = "2";
-            this.btnNumber2.UseVisualStyleBackColor = true;
-            // 
-            // btnNumber7
-            // 
-            this.btnNumber7.Location = new System.Drawing.Point(118, 69);
-            this.btnNumber7.Name = "btnNumber7";
-            this.btnNumber7.Size = new System.Drawing.Size(30, 23);
-            this.btnNumber7.TabIndex = 12;
-            this.btnNumber7.Text = "7";
-            this.btnNumber7.UseVisualStyleBackColor = true;
-            // 
-            // btnNumber4
-            // 
-            this.btnNumber4.Location = new System.Drawing.Point(118, 40);
-            this.btnNumber4.Name = "btnNumber4";
-            this.btnNumber4.Size = new System.Drawing.Size(30, 23);
-            this.btnNumber4.TabIndex = 13;
-            this.btnNumber4.Text = "4";
-            this.btnNumber4.UseVisualStyleBackColor = true;
-            // 
-            // btn500
-            // 
-            this.btn500.BackColor = System.Drawing.Color.Blue;
-            this.btn500.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn500.ForeColor = System.Drawing.Color.White;
-            this.btn500.Location = new System.Drawing.Point(-2, 202);
-            this.btn500.Name = "btn500";
-            this.btn500.Size = new System.Drawing.Size(122, 23);
-            this.btn500.TabIndex = 1;
-            this.btn500.Text = "500.000";
-            this.btn500.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn500.UseVisualStyleBackColor = false;
+            this.btnRutTien.BackColor = System.Drawing.Color.Blue;
+            this.btnRutTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRutTien.ForeColor = System.Drawing.Color.White;
+            this.btnRutTien.Location = new System.Drawing.Point(0, 149);
+            this.btnRutTien.Name = "btnRutTien";
+            this.btnRutTien.Size = new System.Drawing.Size(122, 23);
+            this.btnRutTien.TabIndex = 1;
+            this.btnRutTien.Text = "Rút tiền";
+            this.btnRutTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutTien.UseVisualStyleBackColor = false;
             // 
             // pnTop
             // 
@@ -361,27 +284,61 @@
             this.lbLogo.TabIndex = 0;
             this.lbLogo.Text = "BIDV";
             // 
-            // btnCancel
+            // btnNumberCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Red;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(397, 300);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(118, 23);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "HỦY GIAO DỊCH";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnNumberCancel.BackColor = System.Drawing.Color.Yellow;
+            this.btnNumberCancel.Location = new System.Drawing.Point(226, 69);
+            this.btnNumberCancel.Name = "btnNumberCancel";
+            this.btnNumberCancel.Size = new System.Drawing.Size(50, 23);
+            this.btnNumberCancel.TabIndex = 2;
+            this.btnNumberCancel.Text = "Cancel";
+            this.btnNumberCancel.UseVisualStyleBackColor = false;
             // 
-            // btnNumber1
+            // btnNumber9
             // 
-            this.btnNumber1.Location = new System.Drawing.Point(118, 11);
-            this.btnNumber1.Name = "btnNumber1";
-            this.btnNumber1.Size = new System.Drawing.Size(30, 23);
-            this.btnNumber1.TabIndex = 14;
-            this.btnNumber1.Text = "1";
-            this.btnNumber1.UseVisualStyleBackColor = true;
+            this.btnNumber9.Location = new System.Drawing.Point(190, 69);
+            this.btnNumber9.Name = "btnNumber9";
+            this.btnNumber9.Size = new System.Drawing.Size(30, 23);
+            this.btnNumber9.TabIndex = 3;
+            this.btnNumber9.Text = "9";
+            this.btnNumber9.UseVisualStyleBackColor = true;
+            // 
+            // btnNumberEnter
+            // 
+            this.btnNumberEnter.BackColor = System.Drawing.Color.Green;
+            this.btnNumberEnter.Location = new System.Drawing.Point(226, 40);
+            this.btnNumberEnter.Name = "btnNumberEnter";
+            this.btnNumberEnter.Size = new System.Drawing.Size(50, 23);
+            this.btnNumberEnter.TabIndex = 4;
+            this.btnNumberEnter.Text = "Enter";
+            this.btnNumberEnter.UseVisualStyleBackColor = false;
+            // 
+            // btnNumber6
+            // 
+            this.btnNumber6.Location = new System.Drawing.Point(190, 40);
+            this.btnNumber6.Name = "btnNumber6";
+            this.btnNumber6.Size = new System.Drawing.Size(30, 23);
+            this.btnNumber6.TabIndex = 5;
+            this.btnNumber6.Text = "6";
+            this.btnNumber6.UseVisualStyleBackColor = true;
+            // 
+            // btnNumber3
+            // 
+            this.btnNumber3.Location = new System.Drawing.Point(190, 11);
+            this.btnNumber3.Name = "btnNumber3";
+            this.btnNumber3.Size = new System.Drawing.Size(30, 23);
+            this.btnNumber3.TabIndex = 7;
+            this.btnNumber3.Text = "3";
+            this.btnNumber3.UseVisualStyleBackColor = true;
+            // 
+            // btnNumber7
+            // 
+            this.btnNumber7.Location = new System.Drawing.Point(118, 69);
+            this.btnNumber7.Name = "btnNumber7";
+            this.btnNumber7.Size = new System.Drawing.Size(30, 23);
+            this.btnNumber7.TabIndex = 12;
+            this.btnNumber7.Text = "7";
+            this.btnNumber7.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -417,6 +374,7 @@
             this.btnSideBar6.Size = new System.Drawing.Size(37, 23);
             this.btnSideBar6.TabIndex = 0;
             this.btnSideBar6.UseVisualStyleBackColor = true;
+            this.btnSideBar6.Click += new System.EventHandler(this.btnSideBar6_Click);
             // 
             // btnSideBar5
             // 
@@ -449,138 +407,137 @@
             this.pnUnderScreen.Size = new System.Drawing.Size(517, 127);
             this.pnUnderScreen.TabIndex = 27;
             // 
-            // btnSideBar4
+            // btnNumberClear
             // 
-            this.btnSideBar4.Location = new System.Drawing.Point(3, 298);
-            this.btnSideBar4.Name = "btnSideBar4";
-            this.btnSideBar4.Size = new System.Drawing.Size(37, 23);
-            this.btnSideBar4.TabIndex = 0;
-            this.btnSideBar4.UseVisualStyleBackColor = true;
+            this.btnNumberClear.BackColor = System.Drawing.Color.Red;
+            this.btnNumberClear.Location = new System.Drawing.Point(226, 11);
+            this.btnNumberClear.Name = "btnNumberClear";
+            this.btnNumberClear.Size = new System.Drawing.Size(50, 23);
+            this.btnNumberClear.TabIndex = 6;
+            this.btnNumberClear.Text = "Clear";
+            this.btnNumberClear.UseVisualStyleBackColor = false;
             // 
-            // btnSideBar3
+            // btnNumber0
             // 
-            this.btnSideBar3.Location = new System.Drawing.Point(4, 248);
-            this.btnSideBar3.Name = "btnSideBar3";
-            this.btnSideBar3.Size = new System.Drawing.Size(37, 23);
-            this.btnSideBar3.TabIndex = 0;
-            this.btnSideBar3.UseVisualStyleBackColor = true;
+            this.btnNumber0.Location = new System.Drawing.Point(154, 98);
+            this.btnNumber0.Name = "btnNumber0";
+            this.btnNumber0.Size = new System.Drawing.Size(30, 23);
+            this.btnNumber0.TabIndex = 8;
+            this.btnNumber0.Text = "0";
+            this.btnNumber0.UseVisualStyleBackColor = true;
             // 
-            // btnSideBar2
+            // btnNumber8
             // 
-            this.btnSideBar2.Location = new System.Drawing.Point(4, 198);
-            this.btnSideBar2.Name = "btnSideBar2";
-            this.btnSideBar2.Size = new System.Drawing.Size(37, 23);
-            this.btnSideBar2.TabIndex = 0;
-            this.btnSideBar2.UseVisualStyleBackColor = true;
+            this.btnNumber8.Location = new System.Drawing.Point(154, 69);
+            this.btnNumber8.Name = "btnNumber8";
+            this.btnNumber8.Size = new System.Drawing.Size(30, 23);
+            this.btnNumber8.TabIndex = 9;
+            this.btnNumber8.Text = "8";
+            this.btnNumber8.UseVisualStyleBackColor = true;
             // 
-            // btnSideBar1
+            // btnNumber5
             // 
-            this.btnSideBar1.Location = new System.Drawing.Point(4, 148);
-            this.btnSideBar1.Name = "btnSideBar1";
-            this.btnSideBar1.Size = new System.Drawing.Size(37, 23);
-            this.btnSideBar1.TabIndex = 0;
-            this.btnSideBar1.UseVisualStyleBackColor = true;
+            this.btnNumber5.Location = new System.Drawing.Point(154, 40);
+            this.btnNumber5.Name = "btnNumber5";
+            this.btnNumber5.Size = new System.Drawing.Size(30, 23);
+            this.btnNumber5.TabIndex = 10;
+            this.btnNumber5.Text = "5";
+            this.btnNumber5.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // btnNumber2
             // 
-            this.panel1.Controls.Add(this.btnSideBar4);
-            this.panel1.Controls.Add(this.btnSideBar3);
-            this.panel1.Controls.Add(this.btnSideBar2);
-            this.panel1.Controls.Add(this.btnSideBar1);
-            this.panel1.Location = new System.Drawing.Point(582, 18);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(49, 384);
-            this.panel1.TabIndex = 28;
+            this.btnNumber2.Location = new System.Drawing.Point(154, 11);
+            this.btnNumber2.Name = "btnNumber2";
+            this.btnNumber2.Size = new System.Drawing.Size(30, 23);
+            this.btnNumber2.TabIndex = 11;
+            this.btnNumber2.Text = "2";
+            this.btnNumber2.UseVisualStyleBackColor = true;
             // 
-            // pnMainBg
+            // btnNumber4
             // 
-            this.pnMainBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnMainBg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnMainBg.Controls.Add(this.label1);
-            this.pnMainBg.Controls.Add(this.btnCancel);
-            this.pnMainBg.Controls.Add(this.btnOther);
-            this.pnMainBg.Controls.Add(this.btn5000);
-            this.pnMainBg.Controls.Add(this.btn1000);
-            this.pnMainBg.Controls.Add(this.btn200);
-            this.pnMainBg.Controls.Add(this.btn2000);
-            this.pnMainBg.Controls.Add(this.btn500);
-            this.pnMainBg.Controls.Add(this.pnTop);
-            this.pnMainBg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnMainBg.ForeColor = System.Drawing.Color.Blue;
-            this.pnMainBg.Location = new System.Drawing.Point(59, 14);
-            this.pnMainBg.Name = "pnMainBg";
-            this.pnMainBg.Size = new System.Drawing.Size(517, 349);
-            this.pnMainBg.TabIndex = 26;
+            this.btnNumber4.Location = new System.Drawing.Point(118, 40);
+            this.btnNumber4.Name = "btnNumber4";
+            this.btnNumber4.Size = new System.Drawing.Size(30, 23);
+            this.btnNumber4.TabIndex = 13;
+            this.btnNumber4.Text = "4";
+            this.btnNumber4.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // btnNumber1
+            // 
+            this.btnNumber1.Location = new System.Drawing.Point(118, 11);
+            this.btnNumber1.Name = "btnNumber1";
+            this.btnNumber1.Size = new System.Drawing.Size(30, 23);
+            this.btnNumber1.TabIndex = 14;
+            this.btnNumber1.Text = "1";
+            this.btnNumber1.UseVisualStyleBackColor = true;
+            // 
+            // Feature
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 511);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pnUnderScreen);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnMainBg);
-            this.Name = "Form1";
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnUnderScreen);
+            this.Name = "Feature";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Feature_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
+            this.pnMainBg.ResumeLayout(false);
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.pnTopTen.ResumeLayout(false);
             this.pnTopTen.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.pnUnderScreen.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.pnMainBg.ResumeLayout(false);
-            this.pnMainBg.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnOther;
-        private System.Windows.Forms.Button btn5000;
-        private System.Windows.Forms.Button btn1000;
-        private System.Windows.Forms.Button btn200;
-        private System.Windows.Forms.Button btn2000;
+        private System.Windows.Forms.Button btnSideBar4;
+        private System.Windows.Forms.Button btnSideBar2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSideBar3;
+        private System.Windows.Forms.Button btnSideBar1;
         private System.Windows.Forms.PictureBox pbTien;
         private System.Windows.Forms.PictureBox pbThe;
-        private System.Windows.Forms.Button btnNumberCancel;
-        private System.Windows.Forms.Button btnNumber9;
-        private System.Windows.Forms.Button btnNumberEnter;
-        private System.Windows.Forms.Button btnNumber6;
-        private System.Windows.Forms.Button btnNumberClear;
-        private System.Windows.Forms.Button btnNumber3;
-        private System.Windows.Forms.Button btnNumber0;
-        private System.Windows.Forms.Button btnNumber8;
-        private System.Windows.Forms.Button btnNumber5;
-        private System.Windows.Forms.Button btnNumber2;
-        private System.Windows.Forms.Button btnNumber7;
-        private System.Windows.Forms.Button btnNumber4;
-        private System.Windows.Forms.Button btn500;
+        private System.Windows.Forms.Panel pnMainBg;
+        private System.Windows.Forms.Button btnDoiPin;
+        private System.Windows.Forms.Button btnIn;
+        private System.Windows.Forms.Button btnChuyenKhoan;
+        private System.Windows.Forms.Button btnVanTin;
+        private System.Windows.Forms.Button btnRutTien;
         private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Panel pnTopTen;
         private System.Windows.Forms.Label lbTopTen2;
         private System.Windows.Forms.Label lbTopTen1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lbLogo;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnNumber1;
+        private System.Windows.Forms.Button btnNumberCancel;
+        private System.Windows.Forms.Button btnNumber9;
+        private System.Windows.Forms.Button btnNumberEnter;
+        private System.Windows.Forms.Button btnNumber6;
+        private System.Windows.Forms.Button btnNumber3;
+        private System.Windows.Forms.Button btnNumber7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSideBar8;
         private System.Windows.Forms.Button btnSideBar7;
         private System.Windows.Forms.Button btnSideBar6;
         private System.Windows.Forms.Button btnSideBar5;
         private System.Windows.Forms.Panel pnUnderScreen;
-        private System.Windows.Forms.Button btnSideBar4;
-        private System.Windows.Forms.Button btnSideBar3;
-        private System.Windows.Forms.Button btnSideBar2;
-        private System.Windows.Forms.Button btnSideBar1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel pnMainBg;
+        private System.Windows.Forms.Button btnNumberClear;
+        private System.Windows.Forms.Button btnNumber0;
+        private System.Windows.Forms.Button btnNumber8;
+        private System.Windows.Forms.Button btnNumber5;
+        private System.Windows.Forms.Button btnNumber2;
+        private System.Windows.Forms.Button btnNumber4;
+        private System.Windows.Forms.Button btnNumber1;
+
     }
 }
 

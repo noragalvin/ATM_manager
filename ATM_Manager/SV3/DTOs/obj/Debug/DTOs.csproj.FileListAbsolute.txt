@@ -1,0 +1,5 @@
+D:\code\ATM_manager\ATM_Manager\SV3\DTOs\obj\Debug\DTOs.csprojResolveAssemblyReference.cache
+D:\code\ATM_manager\ATM_Manager\SV3\DTOs\bin\Debug\DTOs.dll
+D:\code\ATM_manager\ATM_Manager\SV3\DTOs\bin\Debug\DTOs.pdb
+D:\code\ATM_manager\ATM_Manager\SV3\DTOs\obj\Debug\DTOs.dll
+D:\code\ATM_manager\ATM_Manager\SV3\DTOs\obj\Debug\DTOs.pdb
