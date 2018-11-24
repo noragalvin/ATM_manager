@@ -31,5 +31,86 @@ namespace DALs
             return null;
             //return new WithDrawLimitDTO(int.Parse(dr["Value"].ToString()));
         }
+
+        public void ChuyenKhoan(string stkChuyen, string stkNhan, int soTien)
+        {
+            try
+            {
+                conn.Open();
+                string query = "SELECT Balance FROM tblAccount WHERE AccountNo=@stk";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("stk", stkChuyen);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    int soTienConLai = int.Parse(dr["Balance"].ToString()) - soTien;
+                    UpdateMoney(stkChuyen, soTienConLai);
+
+
+                    cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("stk", stkNhan);
+                    dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        int soTienNhan = int.Parse(dr["Balance"].ToString()) + soTien;
+                        UpdateMoney(stkNhan, soTienNhan);
+
+                        LogDAL logDAL = new LogDAL();
+                        string description = "";
+                        string created_at = DateTime.Now.ToString();
+                        logDAL.StoreLog(1, stkChuyen, created_at, soTien, 2, description, stkNhan);
+                    }
+                }
+
+                conn.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void UpdateMoney(string stk, int money)
+        {
+            try
+            {
+                string query = "UPDATE tblAccount SET Balance=@balance WHERE AccountNo=@stk";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("balance", money);
+                cmd.Parameters.AddWithValue("stk", stk);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public AccountDTO VanTinSoDu(string accountNo)
+        {
+            try
+            {
+                conn.Open();
+                string query = "SELECT * FROM tblAccount WHERE AccountNo=@accNo";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("accNo", accountNo);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    AccountDTO acc = new AccountDTO(
+                        dr["AccountNo"].ToString(),
+                        int.Parse(dr["Balance"].ToString()));
+                    conn.Close();
+                    return acc;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

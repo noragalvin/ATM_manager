@@ -30,3 +30,7 @@ D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.Confirmation.re
 D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.InHoaDon.resources
 D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.Loading.resources
 D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.RutTien.resources
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.NhapSTK.resources
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.SoTienChuyen.resources
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.InSaoKe.resources
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.VanTinSoDu.resources

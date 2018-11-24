@@ -40,6 +40,8 @@
             this.btnSideBar6 = new System.Windows.Forms.Button();
             this.btnSideBar5 = new System.Windows.Forms.Button();
             this.pnUnderScreen = new System.Windows.Forms.Panel();
+            this.pbTien = new System.Windows.Forms.PictureBox();
+            this.pbThe = new System.Windows.Forms.PictureBox();
             this.btnNumberClear = new System.Windows.Forms.Button();
             this.btnNumber0 = new System.Windows.Forms.Button();
             this.btnNumber8 = new System.Windows.Forms.Button();
@@ -63,18 +65,17 @@
             this.pnTopTen = new System.Windows.Forms.Panel();
             this.lbTopTen2 = new System.Windows.Forms.Label();
             this.lbTopTen1 = new System.Windows.Forms.Label();
-            this.lbLogo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pbTien = new System.Windows.Forms.PictureBox();
-            this.pbThe = new System.Windows.Forms.PictureBox();
+            this.lbLogo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.pnUnderScreen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnMainBg.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnTopTen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNumberCancel
@@ -158,6 +159,7 @@
             this.btnSideBar6.Size = new System.Drawing.Size(37, 23);
             this.btnSideBar6.TabIndex = 0;
             this.btnSideBar6.UseVisualStyleBackColor = true;
+            this.btnSideBar6.Click += new System.EventHandler(this.btnSideBar6_Click);
             // 
             // btnSideBar5
             // 
@@ -190,6 +192,26 @@
             this.pnUnderScreen.Name = "pnUnderScreen";
             this.pnUnderScreen.Size = new System.Drawing.Size(517, 127);
             this.pnUnderScreen.TabIndex = 23;
+            // 
+            // pbTien
+            // 
+            this.pbTien.Image = global::GUIs.Properties.Resources.ChuaCoTien;
+            this.pbTien.Location = new System.Drawing.Point(312, 67);
+            this.pbTien.Name = "pbTien";
+            this.pbTien.Size = new System.Drawing.Size(174, 50);
+            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTien.TabIndex = 26;
+            this.pbTien.TabStop = false;
+            // 
+            // pbThe
+            // 
+            this.pbThe.Image = global::GUIs.Properties.Resources.TheRa;
+            this.pbThe.Location = new System.Drawing.Point(312, 11);
+            this.pbThe.Name = "pbThe";
+            this.pbThe.Size = new System.Drawing.Size(174, 50);
+            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbThe.TabIndex = 27;
+            this.pbThe.TabStop = false;
             // 
             // btnNumberClear
             // 
@@ -288,6 +310,7 @@
             this.btnSideBar2.Size = new System.Drawing.Size(37, 23);
             this.btnSideBar2.TabIndex = 0;
             this.btnSideBar2.UseVisualStyleBackColor = true;
+            this.btnSideBar2.Click += new System.EventHandler(this.btnSideBar2_Click);
             // 
             // panel1
             // 
@@ -307,11 +330,13 @@
             this.btnSideBar1.Size = new System.Drawing.Size(37, 23);
             this.btnSideBar1.TabIndex = 0;
             this.btnSideBar1.UseVisualStyleBackColor = true;
+            this.btnSideBar1.Click += new System.EventHandler(this.btnSideBar1_Click);
             // 
             // pnMainBg
             // 
             this.pnMainBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnMainBg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnMainBg.Controls.Add(this.label1);
             this.pnMainBg.Controls.Add(this.btnDoiPin);
             this.pnMainBg.Controls.Add(this.btnIn);
             this.pnMainBg.Controls.Add(this.btnChuyenKhoan);
@@ -434,6 +459,15 @@
             this.lbTopTen1.Text = "NGÂN HÀNG TMCP ĐẦU TƯ VÀ PHÁT TRIỂN VIỆT NAM";
             this.lbTopTen1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(81, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(54, 44);
+            this.panel3.TabIndex = 1;
+            // 
             // lbLogo
             // 
             this.lbLogo.AutoSize = true;
@@ -445,34 +479,15 @@
             this.lbLogo.TabIndex = 0;
             this.lbLogo.Text = "BIDV";
             // 
-            // panel3
+            // label1
             // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(81, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 44);
-            this.panel3.TabIndex = 1;
-            // 
-            // pbTien
-            // 
-            this.pbTien.Image = global::GUIs.Properties.Resources.ChuaCoTien;
-            this.pbTien.Location = new System.Drawing.Point(312, 67);
-            this.pbTien.Name = "pbTien";
-            this.pbTien.Size = new System.Drawing.Size(174, 50);
-            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTien.TabIndex = 26;
-            this.pbTien.TabStop = false;
-            // 
-            // pbThe
-            // 
-            this.pbThe.Image = global::GUIs.Properties.Resources.TheRa;
-            this.pbThe.Location = new System.Drawing.Point(312, 11);
-            this.pbThe.Name = "pbThe";
-            this.pbThe.Size = new System.Drawing.Size(174, 50);
-            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThe.TabIndex = 27;
-            this.pbThe.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(140, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(251, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Xin vui lòng lựa chọn giao dịch";
             // 
             // Feature
             // 
@@ -488,14 +503,15 @@
             this.Load += new System.EventHandler(this.Feature_Load);
             this.panel2.ResumeLayout(false);
             this.pnUnderScreen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
             this.panel1.ResumeLayout(false);
             this.pnMainBg.ResumeLayout(false);
+            this.pnMainBg.PerformLayout();
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.pnTopTen.ResumeLayout(false);
             this.pnTopTen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -540,5 +556,6 @@
         private System.Windows.Forms.Label lbLogo;
         private System.Windows.Forms.PictureBox pbTien;
         private System.Windows.Forms.PictureBox pbThe;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -49,6 +49,7 @@
             this.pnTopTen = new System.Windows.Forms.Panel();
             this.lbTopTen2 = new System.Windows.Forms.Label();
             this.lbTopTen1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
             this.btnNumberCancel = new System.Windows.Forms.Button();
             this.btnNumber9 = new System.Windows.Forms.Button();
@@ -70,13 +71,12 @@
             this.btnSideBar2 = new System.Windows.Forms.Button();
             this.btnSideBar1 = new System.Windows.Forms.Button();
             this.pnUnderScreen = new System.Windows.Forms.Panel();
+            this.pbTien = new System.Windows.Forms.PictureBox();
+            this.pbThe = new System.Windows.Forms.PictureBox();
             this.btnNumber8 = new System.Windows.Forms.Button();
             this.btnNumber5 = new System.Windows.Forms.Button();
             this.btnNumber7 = new System.Windows.Forms.Button();
             this.btnNumber1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pbTien = new System.Windows.Forms.PictureBox();
-            this.pbThe = new System.Windows.Forms.PictureBox();
             this.pnMainBg.SuspendLayout();
             this.tlpFee.SuspendLayout();
             this.pnTop.SuspendLayout();
@@ -145,7 +145,7 @@
             this.lblEnterRight.AutoSize = true;
             this.lblEnterRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnterRight.ForeColor = System.Drawing.Color.Blue;
-            this.lblEnterRight.Location = new System.Drawing.Point(303, 298);
+            this.lblEnterRight.Location = new System.Drawing.Point(270, 298);
             this.lblEnterRight.Name = "lblEnterRight";
             this.lblEnterRight.Size = new System.Drawing.Size(69, 13);
             this.lblEnterRight.TabIndex = 6;
@@ -156,7 +156,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(256, 298);
+            this.label9.Location = new System.Drawing.Point(223, 298);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 5;
@@ -167,11 +167,11 @@
             this.lblEnterLeft.AutoSize = true;
             this.lblEnterLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnterLeft.ForeColor = System.Drawing.Color.Blue;
-            this.lblEnterLeft.Location = new System.Drawing.Point(159, 298);
+            this.lblEnterLeft.Location = new System.Drawing.Point(190, 298);
             this.lblEnterLeft.Name = "lblEnterLeft";
-            this.lblEnterLeft.Size = new System.Drawing.Size(104, 13);
+            this.lblEnterLeft.Size = new System.Drawing.Size(36, 13);
             this.lblEnterLeft.TabIndex = 4;
-            this.lblEnterLeft.Text = "Quý khách chọn ";
+            this.lblEnterLeft.Text = "Chọn";
             // 
             // lblNote
             // 
@@ -322,6 +322,15 @@
             this.lbTopTen1.TabIndex = 2;
             this.lbTopTen1.Text = "NGÂN HÀNG TMCP ĐẦU TƯ VÀ PHÁT TRIỂN VIỆT NAM";
             this.lbTopTen1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(81, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(54, 44);
+            this.panel3.TabIndex = 1;
             // 
             // lbLogo
             // 
@@ -529,6 +538,26 @@
             this.pnUnderScreen.Size = new System.Drawing.Size(517, 127);
             this.pnUnderScreen.TabIndex = 19;
             // 
+            // pbTien
+            // 
+            this.pbTien.Image = global::GUIs.Properties.Resources.ChuaCoTien;
+            this.pbTien.Location = new System.Drawing.Point(307, 67);
+            this.pbTien.Name = "pbTien";
+            this.pbTien.Size = new System.Drawing.Size(174, 50);
+            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTien.TabIndex = 26;
+            this.pbTien.TabStop = false;
+            // 
+            // pbThe
+            // 
+            this.pbThe.Image = global::GUIs.Properties.Resources.TheRa;
+            this.pbThe.Location = new System.Drawing.Point(307, 11);
+            this.pbThe.Name = "pbThe";
+            this.pbThe.Size = new System.Drawing.Size(174, 50);
+            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbThe.TabIndex = 27;
+            this.pbThe.TabStop = false;
+            // 
             // btnNumber8
             // 
             this.btnNumber8.Location = new System.Drawing.Point(154, 67);
@@ -564,35 +593,6 @@
             this.btnNumber1.TabIndex = 14;
             this.btnNumber1.Text = "1";
             this.btnNumber1.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(81, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 44);
-            this.panel3.TabIndex = 1;
-            // 
-            // pbTien
-            // 
-            this.pbTien.Image = global::GUIs.Properties.Resources.ChuaCoTien;
-            this.pbTien.Location = new System.Drawing.Point(307, 67);
-            this.pbTien.Name = "pbTien";
-            this.pbTien.Size = new System.Drawing.Size(174, 50);
-            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTien.TabIndex = 26;
-            this.pbTien.TabStop = false;
-            // 
-            // pbThe
-            // 
-            this.pbThe.Image = global::GUIs.Properties.Resources.TheRa;
-            this.pbThe.Location = new System.Drawing.Point(307, 11);
-            this.pbThe.Name = "pbThe";
-            this.pbThe.Size = new System.Drawing.Size(174, 50);
-            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThe.TabIndex = 27;
-            this.pbThe.TabStop = false;
             // 
             // Fee
             // 

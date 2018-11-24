@@ -13,7 +13,7 @@ namespace DALs
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChuoiKetNoi"].ToString());
 
-        public void StoreLog(int atm_id, string cardNumber, string created_at, int amount, string description = "", string toCard = null)
+        public void StoreLog(int atm_id, string cardNumber, string created_at, int amount, string description = null, string toCard = null)
         {
             try
             {

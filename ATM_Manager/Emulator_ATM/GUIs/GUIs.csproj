@@ -111,6 +111,12 @@
     <Compile Include="InHoaDon.Designer.cs">
       <DependentUpon>InHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="InSaoKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InSaoKe.Designer.cs">
+      <DependentUpon>InSaoKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     <Compile Include="NewPassword.Designer.cs">
       <DependentUpon>NewPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhapSTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapSTK.Designer.cs">
+      <DependentUpon>NhapSTK.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RutTien.cs">
@@ -130,6 +142,12 @@
     </Compile>
     <Compile Include="RutTien.Designer.cs">
       <DependentUpon>RutTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoTienChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoTienChuyen.Designer.cs">
+      <DependentUpon>SoTienChuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="Term.cs">
       <SubType>Form</SubType>
@@ -142,6 +160,12 @@
     </Compile>
     <Compile Include="Validate.Designer.cs">
       <DependentUpon>Validate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VanTinSoDu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VanTinSoDu.Designer.cs">
+      <DependentUpon>VanTinSoDu.cs</DependentUpon>
     </Compile>
     <Compile Include="vi.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -179,11 +203,17 @@
     <EmbeddedResource Include="InHoaDon.resx">
       <DependentUpon>InHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InSaoKe.resx">
+      <DependentUpon>InSaoKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewPassword.resx">
       <DependentUpon>NewPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapSTK.resx">
+      <DependentUpon>NhapSTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -195,15 +225,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ReportBill.rdlc" />
     <EmbeddedResource Include="RutTien.resx">
       <DependentUpon>RutTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoTienChuyen.resx">
+      <DependentUpon>SoTienChuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Term.resx">
       <DependentUpon>Term.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Validate.resx">
       <DependentUpon>Validate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VanTinSoDu.resx">
+      <DependentUpon>VanTinSoDu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vi.resx">
       <Generator>ResXFileCodeGenerator</Generator>

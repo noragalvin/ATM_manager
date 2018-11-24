@@ -157,7 +157,7 @@ namespace GUIs
                     myTimer.Tick += new EventHandler(TimerEventProcessor);
                     myTimer.Interval = 2000;
                     myTimer.Start();
-                    logBUL.StoreLog(atm_id, cardNumber, created_at, amount);
+                    logBUL.StoreLog(atm_id, cardNumber, created_at, amount, 1);
                     break;
             }
         }
@@ -183,6 +183,8 @@ namespace GUIs
         private void RutTien_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            btnOther.Text = rm.GetString("rutTien_txt1");
+            btnCancel.Text = rm.GetString("rutTien.txt2");
         }
 
         private void btnSideBar4_Click(object sender, EventArgs e)

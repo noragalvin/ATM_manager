@@ -29,6 +29,9 @@ namespace GUIs
         private void Loading_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            label1.Text = rm.GetString("loading_txt1");
+            label2.Text = rm.GetString("loading_txt2");
+
         }
     }
 }

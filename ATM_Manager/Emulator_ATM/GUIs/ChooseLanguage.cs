@@ -28,14 +28,14 @@ namespace GUIs
 
         private void btnSideBar3_Click(object sender, EventArgs e)
         {
-            this.rm = new ResourceManager("Validate.vi", Assembly.GetExecutingAssembly());
+            this.rm = new ResourceManager("GUIs.vi", Assembly.GetExecutingAssembly());
             this.Hide();
             (new Term(this.rm, this.card, this.accountNo)).Show();
         }
 
         private void btnSideBar4_Click(object sender, EventArgs e)
         {
-            this.rm = new ResourceManager("Validate.en", Assembly.GetExecutingAssembly());
+            this.rm = new ResourceManager("GUIs.en", Assembly.GetExecutingAssembly());
             this.Hide();
             (new Term(this.rm, this.card, this.accountNo)).Show();
         }

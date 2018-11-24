@@ -35,6 +35,9 @@ namespace GUIs
         {
             txtPin.PasswordChar = '*';
             this.CenterToScreen();
+            label1.Text = rm.GetString("doiPin_txt1");
+            label2.Text = rm.GetString("confirmPass_txt2");
+            label3.Text = rm.GetString("confirmPass_txt3");
         }
 
         private void btnNumber1_Click(object sender, EventArgs e)

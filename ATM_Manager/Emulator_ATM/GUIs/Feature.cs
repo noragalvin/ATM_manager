@@ -29,6 +29,12 @@ namespace GUIs
         private void Feature_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            label1.Text = rm.GetString("feature_txt1");
+            btnRutTien.Text = rm.GetString("feature_txt2");
+            btnChuyenKhoan.Text = rm.GetString("feature_txt3");
+            btnVanTin.Text = rm.GetString("feature_txt4");
+            btnIn.Text = rm.GetString("feature_txt5");
+            btnDoiPin.Text = rm.GetString("feature_txt6");
         }
 
         private void btnSideBar3_Click(object sender, EventArgs e)
@@ -41,6 +47,24 @@ namespace GUIs
         {
             this.Hide();
             (new RutTien(this.rm, this.card, this.accountNo)).Show();
+        }
+
+        private void btnSideBar6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            (new NhapSTK(this.rm, this.card, this.accountNo)).Show();
+        }
+
+        private void btnSideBar1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            (new VanTinSoDu(this.rm, this.card, this.accountNo)).Show();
+        }
+
+        private void btnSideBar2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            (new InSaoKe(this.rm, this.card, this.accountNo)).Show();
         }
     }
 }

@@ -64,6 +64,10 @@ namespace GUIs
 
         private void InHoaDon_Load(object sender, EventArgs e)
         {
+            lbWelcomeVN.Text = rm.GetString("in_txt1");
+            btnYes.Text = rm.GetString("yes");
+            btnNo.Text = rm.GetString("no");
+
             this.CenterToScreen();
         }
     }

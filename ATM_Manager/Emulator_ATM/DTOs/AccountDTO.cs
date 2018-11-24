@@ -19,5 +19,10 @@ namespace DTOs
         {
             this.Balance = balance;
         }
+        public AccountDTO(string accountNo, int balance)
+        {
+            this.AccountNo = accountNo;
+            this.Balance = balance;
+        }
     }
 }

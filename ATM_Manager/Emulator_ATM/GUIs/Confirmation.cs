@@ -37,12 +37,17 @@ namespace GUIs
 
         private void btnSideBar4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            (new Validate()).Show();
         }
 
         private void Confirmation_Load(object sender, EventArgs e)
         {
             lbError.Text = this.errorMessage;
+            lbWelcomeVN.Text = rm.GetString("confirmation_txt1");
+            btnYes.Text = rm.GetString("yes");
+            btnNo.Text = rm.GetString("no");
+            this.CenterToScreen();
         }
     }
 }
