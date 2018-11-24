@@ -18,7 +18,7 @@ namespace BULs
             logDAL.StoreLog(atm_id, cardNumber, created_at, amount, type, description, toCard);
         }
 
-        public LogDTO GetLastLog(int cardNo)
+        public LogDTO GetLastLog(string cardNo)
         {
             return logDAL.GetLastLog(cardNo);
         }

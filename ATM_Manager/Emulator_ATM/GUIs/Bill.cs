@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,11 +17,15 @@ namespace GUIs
     public partial class Bill : Form
     {
         LogBUL logBUL = new LogBUL();
-        private int cardNo;
+        private ResourceManager rm;
+        private CardDTO card;
+        private string accountNo;
 
-        public Bill(int cardNo = 0)
+        public Bill(ResourceManager rm, CardDTO card = null, string accountNo = null)
         {
-            this.cardNo = cardNo;
+            this.rm = rm;
+            this.card = card;
+            this.accountNo = accountNo;
             InitializeComponent();
         }
 
@@ -34,7 +39,7 @@ namespace GUIs
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            LogDTO log = logBUL.GetLastLog(cardNo);
+            LogDTO log = logBUL.GetLastLog(accountNo);
             reportViewer1.LocalReport.SetParameters(new ReportParameter[] {
                 new ReportParameter("time", log.LogDate),
                 new ReportParameter("atmID", log.ATMID.ToString()),

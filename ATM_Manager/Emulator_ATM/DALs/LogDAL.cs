@@ -14,12 +14,12 @@ namespace DALs
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChuoiKetNoi"].ToString());
 
-        public LogDTO GetLastLog(int cardNo)
+        public LogDTO GetLastLog(string cardNo)
         {
             try
             {
                 conn.Open();
-                string query = "SELECT TOP 1 * FROM tblLog ORDER BY LogID DESC";
+                string query = "SELECT TOP 1 * FROM tblLog WHERE CardNo=@cardNum ORDER BY LogID DESC";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("cardNum", cardNo);
                 SqlDataReader dr = cmd.ExecuteReader();

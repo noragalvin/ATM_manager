@@ -31,7 +31,7 @@ namespace GUIs
         private void TimerEventProcessor(Object myObject, EventArgs myEventArgs)
         {
             myTimer.Stop();
-            (new Bill()).Show();
+            (new Bill(this.rm, this.card, this.accountNo)).Show();
         }
 
 
