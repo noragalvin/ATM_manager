@@ -79,15 +79,23 @@ namespace Validate
             CardDTO card = cardBUL.getValidCard(txtPIN.Text, this.stk);
             if (card != null)
             {
-                (new ChooseLanguage(card)).Show();
-                this.Hide();
+                if (card.Attemp > 5)
+                {
+                    MessageBox.Show("Tài khoản của bạn đã bị khóa");
+                    this.Hide();
+                    (new Validate()).Show();
+                }
+                else
+                {
+                    (new ChooseLanguage(card)).Show();
+                    this.Hide();
+                }
+                
             }
             else
             {
                 this.Hide();
-                Validate validateForm = new Validate();
-                validateForm.Show();
-                validateForm.pbThe.Image = theRa;
+                (new Validate()).Show();
             }
         }
 

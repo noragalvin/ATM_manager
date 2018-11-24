@@ -92,7 +92,8 @@ namespace GUIs
 
         private void btnNumberCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Bitmap coTien = Properties.Resources.TienRa;
+            (new Validate(coTien)).Show();
         }
 
         private void btnNumberEnter_Click(object sender, EventArgs e)

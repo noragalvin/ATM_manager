@@ -16,43 +16,65 @@ namespace DALs
 
         public LogDTO GetLastLog(int cardNo)
         {
-            conn.Open();
-            string query = "SELECT TOP 1 * FROM tblLog ORDER BY LogID DESC";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("cardNum", cardNo);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
+            try
             {
-                return (new LogDTO(
-                    int.Parse(dr["LogID"].ToString()),
-                    int.Parse(dr["LogTypeID"].ToString()),
-                    int.Parse(dr["ATMID"].ToString()),
-                    dr["CardNo"].ToString(),
-                    dr["LogDate"].ToString(),
-                    int.Parse(dr["amout"].ToString()),
-                    dr["details"].ToString(),
-                    dr["cardNoTo"].ToString()
-                    ));
-            }
+                conn.Open();
+                string query = "SELECT TOP 1 * FROM tblLog ORDER BY LogID DESC";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("cardNum", cardNo);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    return (new LogDTO(
+                        int.Parse(dr["LogID"].ToString()),
+                        int.Parse(dr["LogTypeID"].ToString()),
+                        int.Parse(dr["ATMID"].ToString()),
+                        dr["CardNo"].ToString(),
+                        dr["LogDate"].ToString(),
+                        int.Parse(dr["amout"].ToString()),
+                        dr["details"].ToString(),
+                        dr["cardNoTo"].ToString()
+                        ));
+                }
 
-            conn.Close();
-            return null;
+                conn.Close();
+                return null;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public void StoreLog(int atm_id, string cardNumber, string created_at, int amount, int type = 1, string description = null, string toCard = null)
         {
-            conn.Open();
-            string query = "INSERT INTO tblLog(LogTypeID, ATMID, CardNo, LogDate, Amout, Details, CardNoTo) VALUES(@type, @atmID, @cardNo, @logDate, @amout, @details, @cardNoTo)";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("type", type);
-            cmd.Parameters.AddWithValue("atmID", atm_id);
-            cmd.Parameters.AddWithValue("cardNo", cardNumber);
-            cmd.Parameters.AddWithValue("logDate", created_at);
-            cmd.Parameters.AddWithValue("amout", amount);
-            cmd.Parameters.AddWithValue("details", description);
-            cmd.Parameters.AddWithValue("cardNoTo", toCard);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                conn.Open();
+                string query = "INSERT INTO tblLog(LogTypeID, ATMID, CardNo, LogDate, Amout, Details, CardNoTo) VALUES(@type, @atmID, @cardNo, @logDate, @amout, @des, @cardNoTo)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("type", type);
+                cmd.Parameters.AddWithValue("atmID", atm_id);
+                cmd.Parameters.AddWithValue("cardNo", cardNumber);
+                cmd.Parameters.AddWithValue("logDate", created_at);
+                cmd.Parameters.AddWithValue("amout", amount);
+                if (description == null)
+                {
+                    cmd.Parameters.AddWithValue("des", description).Value = DBNull.Value;
+                }
+                if (toCard == null)
+                {
+                    cmd.Parameters.AddWithValue("cardNoTo", toCard).Value = DBNull.Value;
+                }
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
         }
 
         public void GetLog(DataSet data, string cardNumber)

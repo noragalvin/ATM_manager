@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InSaoKe));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.tblLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ATMManagerDataSet = new GUIs.ATMManagerDataSet();
             this.btnNumberCancel = new System.Windows.Forms.Button();
             this.btnNumberEnter = new System.Windows.Forms.Button();
             this.btnNumber3 = new System.Windows.Forms.Button();
@@ -55,20 +57,20 @@
             this.pnTopTen = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
             this.pnMainBg = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnSideBar3 = new System.Windows.Forms.Button();
             this.btnSideBar1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSideBar4 = new System.Windows.Forms.Button();
             this.btnSideBar2 = new System.Windows.Forms.Button();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tblLogTableAdapter = new GUIs.ATMManagerDataSetTableAdapters.tblLogTableAdapter();
             this.pbTien = new System.Windows.Forms.PictureBox();
             this.pbThe = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.ATMManagerDataSet = new GUIs.ATMManagerDataSet();
-            this.tblLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblLogTableAdapter = new GUIs.ATMManagerDataSetTableAdapters.tblLogTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLogBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ATMManagerDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnUnderScreen.SuspendLayout();
             this.pnTopTen.SuspendLayout();
@@ -77,9 +79,17 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ATMManagerDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblLogBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tblLogBindingSource
+            // 
+            this.tblLogBindingSource.DataMember = "tblLog";
+            this.tblLogBindingSource.DataSource = this.ATMManagerDataSet;
+            // 
+            // ATMManagerDataSet
+            // 
+            this.ATMManagerDataSet.DataSetName = "ATMManagerDataSet";
+            this.ATMManagerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnNumberCancel
             // 
@@ -325,6 +335,15 @@
             this.pnTop.Size = new System.Drawing.Size(517, 50);
             this.pnTop.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(81, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(54, 44);
+            this.panel3.TabIndex = 1;
+            // 
             // lbLogo
             // 
             this.lbLogo.AutoSize = true;
@@ -349,6 +368,17 @@
             this.pnMainBg.Name = "pnMainBg";
             this.pnMainBg.Size = new System.Drawing.Size(517, 349);
             this.pnMainBg.TabIndex = 30;
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "LogData";
+            reportDataSource1.Value = this.tblLogBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "GUIs.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(3, 51);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(512, 263);
+            this.reportViewer1.TabIndex = 34;
             // 
             // btnSideBar3
             // 
@@ -394,57 +424,29 @@
             this.btnSideBar2.TabIndex = 0;
             this.btnSideBar2.UseVisualStyleBackColor = true;
             // 
-            // reportViewer1
+            // tblLogTableAdapter
             // 
-            reportDataSource3.Name = "LogData";
-            reportDataSource3.Value = this.tblLogBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "GUIs.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(3, 51);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(512, 263);
-            this.reportViewer1.TabIndex = 34;
+            this.tblLogTableAdapter.ClearBeforeFill = true;
             // 
             // pbTien
             // 
+            this.pbTien.Image = global::GUIs.Properties.Resources.ChuaCoTien;
             this.pbTien.Location = new System.Drawing.Point(312, 67);
             this.pbTien.Name = "pbTien";
             this.pbTien.Size = new System.Drawing.Size(174, 50);
             this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTien.TabIndex = 22;
+            this.pbTien.TabIndex = 28;
             this.pbTien.TabStop = false;
             // 
             // pbThe
             // 
+            this.pbThe.Image = global::GUIs.Properties.Resources.TheRa;
             this.pbThe.Location = new System.Drawing.Point(312, 11);
             this.pbThe.Name = "pbThe";
             this.pbThe.Size = new System.Drawing.Size(174, 50);
             this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThe.TabIndex = 23;
+            this.pbThe.TabIndex = 29;
             this.pbThe.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(81, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 44);
-            this.panel3.TabIndex = 1;
-            // 
-            // ATMManagerDataSet
-            // 
-            this.ATMManagerDataSet.DataSetName = "ATMManagerDataSet";
-            this.ATMManagerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblLogBindingSource
-            // 
-            this.tblLogBindingSource.DataMember = "tblLog";
-            this.tblLogBindingSource.DataSource = this.ATMManagerDataSet;
-            // 
-            // tblLogTableAdapter
-            // 
-            this.tblLogTableAdapter.ClearBeforeFill = true;
             // 
             // InSaoKe
             // 
@@ -458,6 +460,8 @@
             this.Name = "InSaoKe";
             this.Text = "InSaoKe";
             this.Load += new System.EventHandler(this.InSaoKe_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tblLogBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ATMManagerDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.pnUnderScreen.ResumeLayout(false);
             this.pnTopTen.ResumeLayout(false);
@@ -468,8 +472,6 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ATMManagerDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblLogBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,8 +489,6 @@
         private System.Windows.Forms.Button btnSideBar6;
         private System.Windows.Forms.Button btnSideBar5;
         private System.Windows.Forms.Panel pnUnderScreen;
-        private System.Windows.Forms.PictureBox pbTien;
-        private System.Windows.Forms.PictureBox pbThe;
         private System.Windows.Forms.Button btnNumber9;
         private System.Windows.Forms.Button btnNumber6;
         private System.Windows.Forms.Button btnNumberClear;
@@ -514,5 +514,7 @@
         private System.Windows.Forms.BindingSource tblLogBindingSource;
         private ATMManagerDataSet ATMManagerDataSet;
         private ATMManagerDataSetTableAdapters.tblLogTableAdapter tblLogTableAdapter;
+        private System.Windows.Forms.PictureBox pbTien;
+        private System.Windows.Forms.PictureBox pbThe;
     }
 }

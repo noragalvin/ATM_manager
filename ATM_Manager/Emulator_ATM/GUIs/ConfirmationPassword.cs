@@ -111,7 +111,8 @@ namespace GUIs
         private void btnNumberCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            (new Validate()).Show();
+            Bitmap coTien = Properties.Resources.TienRa;
+            (new Validate(coTien)).Show();
         }
     }
 }

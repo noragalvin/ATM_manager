@@ -49,6 +49,7 @@
             this.btnNumber0 = new System.Windows.Forms.Button();
             this.lblContent = new System.Windows.Forms.Label();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnMainBg = new System.Windows.Forms.Panel();
             this.btnNumber8 = new System.Windows.Forms.Button();
             this.btnNumber5 = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@
             this.btnSideBar2 = new System.Windows.Forms.Button();
             this.btnSideBar1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pbTien = new System.Windows.Forms.PictureBox();
             this.pbThe = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
@@ -273,6 +273,15 @@
             this.pnTop.Size = new System.Drawing.Size(517, 50);
             this.pnTop.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(81, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(54, 44);
+            this.panel3.TabIndex = 1;
+            // 
             // pnMainBg
             // 
             this.pnMainBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -407,33 +416,24 @@
             this.panel1.Size = new System.Drawing.Size(49, 384);
             this.panel1.TabIndex = 20;
             // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(81, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 44);
-            this.panel3.TabIndex = 1;
-            // 
             // pbTien
             // 
             this.pbTien.Image = global::GUIs.Properties.Resources.ChuaCoTien;
-            this.pbTien.Location = new System.Drawing.Point(312, 67);
+            this.pbTien.Location = new System.Drawing.Point(300, 69);
             this.pbTien.Name = "pbTien";
             this.pbTien.Size = new System.Drawing.Size(174, 50);
             this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTien.TabIndex = 26;
+            this.pbTien.TabIndex = 28;
             this.pbTien.TabStop = false;
             // 
             // pbThe
             // 
             this.pbThe.Image = global::GUIs.Properties.Resources.TheRa;
-            this.pbThe.Location = new System.Drawing.Point(312, 11);
+            this.pbThe.Location = new System.Drawing.Point(300, 13);
             this.pbThe.Name = "pbThe";
             this.pbThe.Size = new System.Drawing.Size(174, 50);
             this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThe.TabIndex = 27;
+            this.pbThe.TabIndex = 29;
             this.pbThe.TabStop = false;
             // 
             // Term
