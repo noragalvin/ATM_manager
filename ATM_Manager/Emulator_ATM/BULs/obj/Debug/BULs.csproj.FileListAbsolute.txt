@@ -1,0 +1,9 @@
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\BULs\bin\Debug\BULs.dll
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\BULs\bin\Debug\BULs.pdb
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\BULs\bin\Debug\DALs.dll
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\BULs\bin\Debug\DTOs.dll
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\BULs\bin\Debug\DALs.pdb
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\BULs\bin\Debug\DTOs.pdb
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\BULs\obj\Debug\BULs.csprojResolveAssemblyReference.cache
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\BULs\obj\Debug\BULs.dll
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\BULs\obj\Debug\BULs.pdb
