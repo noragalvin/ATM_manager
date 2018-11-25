@@ -65,7 +65,7 @@ namespace GUIs
 
         private void btnSideBar3_Click(object sender, EventArgs e)
         {
-            (new Loading(this.rm, this.card, this.accountNo)).Show();
+            (new Confirmation(this.rm, this.card, this.accountNo)).Show();
             this.Hide();
             myTimer.Tick += new EventHandler(TimerEventProcessor);
             myTimer.Interval = 2000;

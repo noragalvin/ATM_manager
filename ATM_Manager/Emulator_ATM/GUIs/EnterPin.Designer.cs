@@ -37,11 +37,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtPIN = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnNumberCancel = new System.Windows.Forms.Button();
             this.btnNumber9 = new System.Windows.Forms.Button();
             this.btnNumberEnter = new System.Windows.Forms.Button();
@@ -61,22 +61,23 @@
             this.btnSideBar1 = new System.Windows.Forms.Button();
             this.btnNumber2 = new System.Windows.Forms.Button();
             this.pnUnderScreen = new System.Windows.Forms.Panel();
+            this.pbTien = new System.Windows.Forms.PictureBox();
+            this.pbThe = new System.Windows.Forms.PictureBox();
             this.btnNumber8 = new System.Windows.Forms.Button();
             this.btnNumber5 = new System.Windows.Forms.Button();
             this.btnNumber7 = new System.Windows.Forms.Button();
             this.btnNumber1 = new System.Windows.Forms.Button();
             this.pnMainBg = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pbTien = new System.Windows.Forms.PictureBox();
-            this.pbThe = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnTopTen.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnUnderScreen.SuspendLayout();
-            this.pnMainBg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
+            this.pnMainBg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbLogo
@@ -165,15 +166,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Chọn";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(235, 241);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Panel anh?";
-            // 
             // txtPIN
             // 
             this.txtPIN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -216,6 +208,15 @@
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(517, 50);
             this.pnTop.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(81, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(54, 44);
+            this.panel3.TabIndex = 1;
             // 
             // btnNumberCancel
             // 
@@ -409,6 +410,26 @@
             this.pnUnderScreen.Size = new System.Drawing.Size(517, 127);
             this.pnUnderScreen.TabIndex = 19;
             // 
+            // pbTien
+            // 
+            this.pbTien.Image = global::GUIs.Properties.Resources.ChuaCoTien;
+            this.pbTien.Location = new System.Drawing.Point(312, 67);
+            this.pbTien.Name = "pbTien";
+            this.pbTien.Size = new System.Drawing.Size(174, 50);
+            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTien.TabIndex = 26;
+            this.pbTien.TabStop = false;
+            // 
+            // pbThe
+            // 
+            this.pbThe.Image = global::GUIs.Properties.Resources.TheRa;
+            this.pbThe.Location = new System.Drawing.Point(312, 11);
+            this.pbThe.Name = "pbThe";
+            this.pbThe.Size = new System.Drawing.Size(174, 50);
+            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbThe.TabIndex = 27;
+            this.pbThe.TabStop = false;
+            // 
             // btnNumber8
             // 
             this.btnNumber8.Location = new System.Drawing.Point(154, 69);
@@ -453,10 +474,10 @@
             // 
             this.pnMainBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnMainBg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnMainBg.Controls.Add(this.pictureBox1);
             this.pnMainBg.Controls.Add(this.label6);
             this.pnMainBg.Controls.Add(this.label5);
             this.pnMainBg.Controls.Add(this.label4);
-            this.pnMainBg.Controls.Add(this.label3);
             this.pnMainBg.Controls.Add(this.txtPIN);
             this.pnMainBg.Controls.Add(this.label2);
             this.pnMainBg.Controls.Add(this.label1);
@@ -468,34 +489,15 @@
             this.pnMainBg.Size = new System.Drawing.Size(517, 349);
             this.pnMainBg.TabIndex = 18;
             // 
-            // panel3
+            // pictureBox1
             // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(81, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 44);
-            this.panel3.TabIndex = 1;
-            // 
-            // pbTien
-            // 
-            this.pbTien.Image = global::GUIs.Properties.Resources.ChuaCoTien;
-            this.pbTien.Location = new System.Drawing.Point(312, 67);
-            this.pbTien.Name = "pbTien";
-            this.pbTien.Size = new System.Drawing.Size(174, 50);
-            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTien.TabIndex = 26;
-            this.pbTien.TabStop = false;
-            // 
-            // pbThe
-            // 
-            this.pbThe.Image = global::GUIs.Properties.Resources.TheRa;
-            this.pbThe.Location = new System.Drawing.Point(312, 11);
-            this.pbThe.Name = "pbThe";
-            this.pbThe.Size = new System.Drawing.Size(174, 50);
-            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThe.TabIndex = 27;
-            this.pbThe.TabStop = false;
+            this.pictureBox1.Image = global::GUIs.Properties.Resources.TheVao1;
+            this.pictureBox1.Location = new System.Drawing.Point(188, 169);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // EnterPin
             // 
@@ -516,10 +518,11 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnUnderScreen.ResumeLayout(false);
-            this.pnMainBg.ResumeLayout(false);
-            this.pnMainBg.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
+            this.pnMainBg.ResumeLayout(false);
+            this.pnMainBg.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -534,7 +537,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPIN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -566,5 +568,6 @@
         private System.Windows.Forms.Panel pnMainBg;
         private System.Windows.Forms.PictureBox pbTien;
         private System.Windows.Forms.PictureBox pbThe;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

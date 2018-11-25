@@ -10,17 +10,19 @@ using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 using BULs;
 using DTOs;
+using System.Globalization;
 
 namespace GUIs
 {
     public partial class Bill : Form
     {
         LogBUL logBUL = new LogBUL();
-        private int cardNo;
+        private string accountNo;
+        AccountBUL accountBUL = new AccountBUL();
 
-        public Bill(int cardNo = 0)
+        public Bill(string accountNo = null)
         {
-            this.cardNo = cardNo;
+            this.accountNo = accountNo;
             InitializeComponent();
         }
 
@@ -36,17 +38,24 @@ namespace GUIs
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            LogDTO log = logBUL.GetLastLog(cardNo);
+            LogDTO log = logBUL.GetLastLog(accountNo);
+            AccountDTO account = accountBUL.GetAccount(accountNo);
             reportViewer1.LocalReport.SetParameters(new ReportParameter[] {
                 new ReportParameter("time", log.LogDate),
                 new ReportParameter("atmID", log.ATMID.ToString()),
                 new ReportParameter("logNo", log.LogID.ToString()),
                 new ReportParameter("cardNumber", log.CardNo),
-                new ReportParameter("money", log.Amout.ToString()),
-                new ReportParameter("soDu", "1"),
+                new ReportParameter("money", CurrencyFormat(log.Amout.ToString())),
+                new ReportParameter("soDu", CurrencyFormat(account.Balance.ToString())),
             });
 
             reportViewer1.RefreshReport();
+        }
+
+        public string CurrencyFormat(string currency)
+        {
+            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+            return double.Parse(currency).ToString("#,###", cul.NumberFormat) + " VND";
         }
     }
 }

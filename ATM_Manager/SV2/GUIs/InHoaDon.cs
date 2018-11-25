@@ -12,8 +12,10 @@ namespace GUIs
 {
     public partial class InHoaDon : Form
     {
-        public InHoaDon()
+        private string accountNo;
+        public InHoaDon(string accountNo = null)
         {
+            this.accountNo = accountNo;
             InitializeComponent();
         }
 
@@ -22,7 +24,7 @@ namespace GUIs
         private void TimerEventProcessor(Object myObject, EventArgs myEventArgs)
         {
             myTimer.Stop();
-            (new Bill()).Show();
+            (new Bill(this.accountNo)).Show();
         }
 
 

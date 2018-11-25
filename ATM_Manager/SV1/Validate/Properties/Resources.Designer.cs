@@ -63,6 +63,46 @@ namespace Validate.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _43257224_274603099836336_6554517283681599488_n {
+            get {
+                object obj = ResourceManager.GetObject("43257224_274603099836336_6554517283681599488_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _43257453_192032011712566_2398838809337790464_n {
+            get {
+                object obj = ResourceManager.GetObject("43257453_192032011712566_2398838809337790464_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _43270287_366467137232184_2241026382144471040_n {
+            get {
+                object obj = ResourceManager.GetObject("43270287_366467137232184_2241026382144471040_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _43304722_310085009792076_4728394534856163328_n {
+            get {
+                object obj = ResourceManager.GetObject("43304722_310085009792076_4728394534856163328_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChuaCoTien {
             get {
                 object obj = ResourceManager.GetObject("ChuaCoTien", resourceCulture);
@@ -86,6 +126,16 @@ namespace Validate.Properties {
         internal static System.Drawing.Bitmap TheVao {
             get {
                 object obj = ResourceManager.GetObject("TheVao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TheVao1 {
+            get {
+                object obj = ResourceManager.GetObject("TheVao1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

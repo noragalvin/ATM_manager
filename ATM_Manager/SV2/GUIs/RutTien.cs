@@ -18,7 +18,7 @@ namespace GUIs
         System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
         Loading loadingForm;
         LogBUL logBUL = new LogBUL();
-        string accountNo = "4501005597808";
+        string accountNo = "45010005597808";
         
 
         private void TimerEventProcessor(Object myObject, EventArgs myEventArgs) {
@@ -34,7 +34,7 @@ namespace GUIs
                 }
                 else
                 {
-                    InHoaDon inHoaDonForm = new InHoaDon();
+                    InHoaDon inHoaDonForm = new InHoaDon(this.accountNo);
                     inHoaDonForm.Closed += (s, args) => this.Close();
                     inHoaDonForm.Show();
                 }
@@ -51,7 +51,7 @@ namespace GUIs
         {
             int status = checkWithDraw(200000, this.accountNo);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "45010005597808";
+            string cardNumber = this.accountNo;
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 200000);
         }
@@ -60,7 +60,7 @@ namespace GUIs
         {
             int status = checkWithDraw(500000, this.accountNo);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "45010005597808";
+            string cardNumber = this.accountNo;
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 500000);
         }
@@ -69,7 +69,7 @@ namespace GUIs
         {
             int status = checkWithDraw(1000000, this.accountNo);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "45010005597808";
+            string cardNumber = this.accountNo;
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 1000000);
         }
@@ -78,7 +78,7 @@ namespace GUIs
         {
             int status = checkWithDraw(2000000, this.accountNo);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "45010005597808";
+            string cardNumber = this.accountNo;
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 2000000);
         }
@@ -87,7 +87,7 @@ namespace GUIs
         {
             int status = checkWithDraw(5000000, this.accountNo);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "45010005597808";
+            string cardNumber = this.accountNo;
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 5000000);
         }

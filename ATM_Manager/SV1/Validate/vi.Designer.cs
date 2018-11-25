@@ -61,11 +61,272 @@ namespace Validate {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quý khách có muốn tiếp tục thực hiện giao dịch?.
+        /// </summary>
+        internal static string confirmation_txt1 {
+            get {
+                return ResourceManager.GetString("confirmation_txt1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vui lòng nhập lại mã PIN.
+        /// </summary>
+        internal static string confirmPass_txt1 {
+            get {
+                return ResourceManager.GetString("confirmPass_txt1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Bấm Enter để đồng ý, Clear để nhập lại).
+        /// </summary>
+        internal static string confirmPass_txt2 {
+            get {
+                return ResourceManager.GetString("confirmPass_txt2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Ấn Cancel để hủy bỏ).
+        /// </summary>
+        internal static string confirmPass_txt3 {
+            get {
+                return ResourceManager.GetString("confirmPass_txt3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vui lòng nhập số PIN hiện tại.
+        /// </summary>
+        internal static string doiPin_txt1 {
+            get {
+                return ResourceManager.GetString("doiPin_txt1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quý khách hãy nhập số PIN sau đó ấn enter.
+        /// </summary>
+        internal static string enterPin_txt1 {
+            get {
+                return ResourceManager.GetString("enterPin_txt1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Quý khách lưu ý dùng tay che bàn phím tránh bị lỗ mã PIN).
+        /// </summary>
+        internal static string enterPin_txt2 {
+            get {
+                return ResourceManager.GetString("enterPin_txt2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chọn.
+        /// </summary>
+        internal static string enterPin_txt3 {
+            get {
+                return ResourceManager.GetString("enterPin_txt3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to để thoát.
+        /// </summary>
+        internal static string enterPin_txt4 {
+            get {
+                return ResourceManager.GetString("enterPin_txt4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Xin vui lòng lựa chọn giao dịch.
+        /// </summary>
+        internal static string feature_txt1 {
+            get {
+                return ResourceManager.GetString("feature_txt1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rút tiền.
+        /// </summary>
+        internal static string feature_txt2 {
+            get {
+                return ResourceManager.GetString("feature_txt2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chuyển khoản.
+        /// </summary>
+        internal static string feature_txt3 {
+            get {
+                return ResourceManager.GetString("feature_txt3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vấn tin số dư.
+        /// </summary>
+        internal static string feature_txt4 {
+            get {
+                return ResourceManager.GetString("feature_txt4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In sao kê rút gọn.
+        /// </summary>
+        internal static string feature_txt5 {
+            get {
+                return ResourceManager.GetString("feature_txt5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Đổi pin.
+        /// </summary>
+        internal static string feature_txt6 {
+            get {
+                return ResourceManager.GetString("feature_txt6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chọn.
+        /// </summary>
+        internal static string fee_cancelLeft {
+            get {
+                return ResourceManager.GetString("fee_cancelLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to để thoát.
+        /// </summary>
+        internal static string fee_cancelRight {
+            get {
+                return ResourceManager.GetString("fee_cancelRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chọn.
+        /// </summary>
+        internal static string fee_enterLeft {
+            get {
+                return ResourceManager.GetString("fee_enterLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to để tiếp tục.
+        /// </summary>
+        internal static string fee_enterRight {
+            get {
+                return ResourceManager.GetString("fee_enterRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BIDV xin thông báo quý khách hàng về mức phí giao dịch thực hiện trên ATM như sau.
+        /// </summary>
+        internal static string fee_txt1 {
+            get {
+                return ResourceManager.GetString("fee_txt1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phí rút tiền.
+        /// </summary>
+        internal static string fee_txt2 {
+            get {
+                return ResourceManager.GetString("fee_txt2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phí chuyển khoản.
+        /// </summary>
+        internal static string fee_txt3 {
+            get {
+                return ResourceManager.GetString("fee_txt3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phí in hóa đơn.
+        /// </summary>
+        internal static string fee_txt4 {
+            get {
+                return ResourceManager.GetString("fee_txt4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1000 vnd/giao dịch (áp dụng từ 15/09/2016).
+        /// </summary>
+        internal static string fee_txt5 {
+            get {
+                return ResourceManager.GetString("fee_txt5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0.05% số tiền chuyển, tối thiểu 2000 vnd, tối đa 20000 vnd.
+        /// </summary>
+        internal static string fee_txt6 {
+            get {
+                return ResourceManager.GetString("fee_txt6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lưu ý mức phí trên chưa bao gồm 10% VAT.
+        /// </summary>
+        internal static string fee_txt7 {
+            get {
+                return ResourceManager.GetString("fee_txt7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 500 vnd/giao dịch.
+        /// </summary>
+        internal static string fee_txt8 {
+            get {
+                return ResourceManager.GetString("fee_txt8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vui lòng nhập số PIN mới.
+        /// </summary>
+        internal static string newPass_txt1 {
+            get {
+                return ResourceManager.GetString("newPass_txt1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tiếp tục.
         /// </summary>
-        internal static string term_btnNext {
+        internal static string next {
             get {
-                return ResourceManager.GetString("term_btnNext", resourceCulture);
+                return ResourceManager.GetString("next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Không.
+        /// </summary>
+        internal static string no {
+            get {
+                return ResourceManager.GetString("no", resourceCulture);
             }
         }
         
@@ -79,9 +340,18 @@ namespace Validate {
         ///- Không thực hiện giao dịch nếu phát hiện các dấu hiệu bất thường.
         ///- Gọi số 19009247 để kiểm tra và xử lý..
         /// </summary>
-        internal static string term_lblContent {
+        internal static string term_txt1 {
             get {
-                return ResourceManager.GetString("term_lblContent", resourceCulture);
+                return ResourceManager.GetString("term_txt1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Có.
+        /// </summary>
+        internal static string yes {
+            get {
+                return ResourceManager.GetString("yes", resourceCulture);
             }
         }
     }

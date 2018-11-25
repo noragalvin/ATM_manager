@@ -13,29 +13,37 @@ namespace DALs
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChuoiKetNoi"].ToString());
 
-        public LogDTO GetLastLog(int cardNo)
+        public LogDTO GetLastLog(string cardNo)
         {
-            conn.Open();
-            string query = "SELECT TOP 1 * FROM tblLog ORDER BY LogID DESC";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("cardNum", cardNo);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
+            try
             {
-                return (new LogDTO(
-                    int.Parse(dr["LogID"].ToString()),
-                    int.Parse(dr["LogTypeID"].ToString()),
-                    int.Parse(dr["ATMID"].ToString()),
-                    dr["CardNo"].ToString(),
-                    dr["LogDate"].ToString(),
-                    int.Parse(dr["amout"].ToString()),
-                    dr["details"].ToString(),
-                    dr["cardNoTo"].ToString()
-                    ));
-            }
+                conn.Open();
+                string query = "SELECT TOP 1 * FROM tblLog WHERE CardNo=@cardNum ORDER BY LogID DESC";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("cardNum", cardNo);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    return (new LogDTO(
+                        int.Parse(dr["LogID"].ToString()),
+                        int.Parse(dr["LogTypeID"].ToString()),
+                        int.Parse(dr["ATMID"].ToString()),
+                        dr["CardNo"].ToString(),
+                        dr["LogDate"].ToString(),
+                        int.Parse(dr["amout"].ToString()),
+                        dr["details"].ToString(),
+                        dr["cardNoTo"].ToString()
+                        ));
+                }
 
-            conn.Close();
-            return null;
+                conn.Close();
+                return null;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public void StoreLog(int atm_id, string cardNumber, string created_at, int amount, string description = "", int toCard = 0)

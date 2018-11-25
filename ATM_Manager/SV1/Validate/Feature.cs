@@ -27,6 +27,12 @@ namespace Validate
         private void Feature_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            btnRutTien.Text = rm.GetString("feature_txt2");
+            btnChuyenKhoan.Text = rm.GetString("feature_txt3");
+            btnVanTin.Text = rm.GetString("feature_txt4");
+            btnIn.Text = rm.GetString("feature_txt5");
+            btnDoiPin.Text = rm.GetString("feature_txt6");
+
         }
 
         private void btnSideBar3_Click(object sender, EventArgs e)

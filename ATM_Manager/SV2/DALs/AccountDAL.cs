@@ -14,7 +14,7 @@ namespace DALs
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChuoiKetNoi"].ToString());
 
 
-        public AccountDTO GetAccount(string accountNo)
+        public AccountDTO GetAccount(string accNum)
         {
             {
                 try
@@ -22,7 +22,7 @@ namespace DALs
                     conn.Open();
                     string query = "SELECT * FROM tblAccount WHERE AccountNo=@accNo";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("accNo", accountNo);
+                    cmd.Parameters.AddWithValue("accNo", accNum);
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
@@ -37,8 +37,8 @@ namespace DALs
                 }
                 catch (Exception)
                 {
-
-                    return null;
+                    throw;
+                    //return null;
                 }
             }
         }

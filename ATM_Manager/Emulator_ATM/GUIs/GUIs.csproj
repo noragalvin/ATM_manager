@@ -311,6 +311,21 @@
       <Name>DTOs</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TheVao1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43257224_274603099836336_6554517283681599488_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43257453_192032011712566_2398838809337790464_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43270287_366467137232184_2241026382144471040_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43304722_310085009792076_4728394534856163328_n.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

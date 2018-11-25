@@ -32,8 +32,8 @@ namespace Validate
 
         private void Term_Load(object sender, EventArgs e)
         {
-            lblContent.Text = rm.GetString("term_lblContent");
-            btnNext.Text = rm.GetString("term_btnNext");
+            lblContent.Text = rm.GetString("term_txt1");
+            btnNext.Text = rm.GetString("next");
             this.CenterToScreen();
         }
     }

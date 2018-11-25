@@ -117,10 +117,97 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="term_btnNext" xml:space="preserve">
+  <data name="confirmation_txt1" xml:space="preserve">
+    <value>Quý khách có muốn tiếp tục thực hiện giao dịch?</value>
+  </data>
+  <data name="confirmPass_txt1" xml:space="preserve">
+    <value>Vui lòng nhập lại mã PIN</value>
+  </data>
+  <data name="confirmPass_txt2" xml:space="preserve">
+    <value>(Bấm Enter để đồng ý, Clear để nhập lại)</value>
+  </data>
+  <data name="confirmPass_txt3" xml:space="preserve">
+    <value>(Ấn Cancel để hủy bỏ)</value>
+  </data>
+  <data name="doiPin_txt1" xml:space="preserve">
+    <value>Vui lòng nhập số PIN hiện tại</value>
+  </data>
+  <data name="enterPin_txt1" xml:space="preserve">
+    <value>Quý khách hãy nhập số PIN sau đó ấn enter</value>
+  </data>
+  <data name="enterPin_txt2" xml:space="preserve">
+    <value>(Quý khách lưu ý dùng tay che bàn phím tránh bị lỗ mã PIN)</value>
+  </data>
+  <data name="enterPin_txt3" xml:space="preserve">
+    <value>Chọn</value>
+  </data>
+  <data name="enterPin_txt4" xml:space="preserve">
+    <value>để thoát</value>
+  </data>
+  <data name="feature_txt1" xml:space="preserve">
+    <value>Xin vui lòng lựa chọn giao dịch</value>
+  </data>
+  <data name="feature_txt2" xml:space="preserve">
+    <value>Rút tiền</value>
+  </data>
+  <data name="feature_txt3" xml:space="preserve">
+    <value>Chuyển khoản</value>
+  </data>
+  <data name="feature_txt4" xml:space="preserve">
+    <value>Vấn tin số dư</value>
+  </data>
+  <data name="feature_txt5" xml:space="preserve">
+    <value>In sao kê rút gọn</value>
+  </data>
+  <data name="feature_txt6" xml:space="preserve">
+    <value>Đổi pin</value>
+  </data>
+  <data name="fee_cancelLeft" xml:space="preserve">
+    <value>chọn</value>
+  </data>
+  <data name="fee_cancelRight" xml:space="preserve">
+    <value>để thoát</value>
+  </data>
+  <data name="fee_enterLeft" xml:space="preserve">
+    <value>Chọn</value>
+  </data>
+  <data name="fee_enterRight" xml:space="preserve">
+    <value>để tiếp tục</value>
+  </data>
+  <data name="fee_txt1" xml:space="preserve">
+    <value>BIDV xin thông báo quý khách hàng về mức phí giao dịch thực hiện trên ATM như sau</value>
+  </data>
+  <data name="fee_txt2" xml:space="preserve">
+    <value>Phí rút tiền</value>
+  </data>
+  <data name="fee_txt3" xml:space="preserve">
+    <value>Phí chuyển khoản</value>
+  </data>
+  <data name="fee_txt4" xml:space="preserve">
+    <value>Phí in hóa đơn</value>
+  </data>
+  <data name="fee_txt5" xml:space="preserve">
+    <value>1000 vnd/giao dịch (áp dụng từ 15/09/2016)</value>
+  </data>
+  <data name="fee_txt6" xml:space="preserve">
+    <value>0.05% số tiền chuyển, tối thiểu 2000 vnd, tối đa 20000 vnd</value>
+  </data>
+  <data name="fee_txt7" xml:space="preserve">
+    <value>Lưu ý mức phí trên chưa bao gồm 10% VAT</value>
+  </data>
+  <data name="fee_txt8" xml:space="preserve">
+    <value>500 vnd/giao dịch</value>
+  </data>
+  <data name="newPass_txt1" xml:space="preserve">
+    <value>Vui lòng nhập số PIN mới</value>
+  </data>
+  <data name="next" xml:space="preserve">
     <value>Tiếp tục</value>
   </data>
-  <data name="term_lblContent" xml:space="preserve">
+  <data name="no" xml:space="preserve">
+    <value>Không</value>
+  </data>
+  <data name="term_txt1" xml:space="preserve">
     <value>TRƯỚC KHI THỰC HIỆN GIAO DỊCH, QUÝ KHÁCH NÊN:
 - Quan sát kĩ máy ATM để phát hiện việc máy bị gắn thiết bị đánh cắp dữ liệu. Đặc biệt chú ý tới một số điểm sau (hình dưới):
 1. Bàn phím ATM.
@@ -129,5 +216,8 @@
 4. Vỏ máy ATM.
 - Không thực hiện giao dịch nếu phát hiện các dấu hiệu bất thường.
 - Gọi số 19009247 để kiểm tra và xử lý.</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Có</value>
   </data>
 </root>

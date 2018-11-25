@@ -117,10 +117,110 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="term_btnNext" xml:space="preserve">
+  <data name="confirmation_txt1" xml:space="preserve">
+    <value>Do you want to continue the transaction?</value>
+  </data>
+  <data name="confirmPass_txt1" xml:space="preserve">
+    <value>Please re-enter PIN</value>
+  </data>
+  <data name="confirmPass_txt2" xml:space="preserve">
+    <value>(Press Enter to accept, Clear to re-enter)</value>
+  </data>
+  <data name="confirmPass_txt3" xml:space="preserve">
+    <value>(Press Cancel to cancel)</value>
+  </data>
+  <data name="doiPin_txt1" xml:space="preserve">
+    <value>Please enter the current PIN</value>
+  </data>
+  <data name="enterPin_txt1" xml:space="preserve">
+    <value>Please enter your PIN code then press ENTER</value>
+  </data>
+  <data name="enterPin_txt2" xml:space="preserve">
+    <value>(Mind using your hand to hide the keyboard avoid being exposed PIN code)</value>
+  </data>
+  <data name="enterPin_txt3" xml:space="preserve">
+    <value>Press</value>
+  </data>
+  <data name="enterPin_txt4" xml:space="preserve">
+    <value>to cancel</value>
+  </data>
+  <data name="feature_txt1" xml:space="preserve">
+    <value>Please select the transaction</value>
+  </data>
+  <data name="feature_txt2" xml:space="preserve">
+    <value>Drawing</value>
+  </data>
+  <data name="feature_txt3" xml:space="preserve">
+    <value>Transfering</value>
+  </data>
+  <data name="feature_txt4" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="feature_txt5" xml:space="preserve">
+    <value>Print statics</value>
+  </data>
+  <data name="feature_txt6" xml:space="preserve">
+    <value>Change PIN</value>
+  </data>
+  <data name="fee_cancelLeft" xml:space="preserve">
+    <value>press</value>
+  </data>
+  <data name="fee_cancelRight" xml:space="preserve">
+    <value>to cancel</value>
+  </data>
+  <data name="fee_enterLeft" xml:space="preserve">
+    <value>Press</value>
+  </data>
+  <data name="fee_enterRight" xml:space="preserve">
+    <value>to continue</value>
+  </data>
+  <data name="fee_txt1" xml:space="preserve">
+    <value>BIDV notify you about fee of transaction executing on ATM</value>
+  </data>
+  <data name="fee_txt2" xml:space="preserve">
+    <value>Fee of drawing</value>
+  </data>
+  <data name="fee_txt3" xml:space="preserve">
+    <value>Fee of transfering</value>
+  </data>
+  <data name="fee_txt4" xml:space="preserve">
+    <value>Fee of printing bill</value>
+  </data>
+  <data name="fee_txt5" xml:space="preserve">
+    <value>1000 vnd/ transaction ( apply from 15/09/2016)</value>
+  </data>
+  <data name="fee_txt6" xml:space="preserve">
+    <value>0.05% money transered, minimum 2000 vnd, maximum 20000 vnd</value>
+  </data>
+  <data name="fee_txt7" xml:space="preserve">
+    <value>Note: Fee not including 10% VAT</value>
+  </data>
+  <data name="fee_txt8" xml:space="preserve">
+    <value>500 vnd/transaction</value>
+  </data>
+  <data name="in_txt1" xml:space="preserve">
+    <value>Do you want to print bill?</value>
+  </data>
+  <data name="newPass_txt1" xml:space="preserve">
+    <value>Please enter new PIN</value>
+  </data>
+  <data name="next" xml:space="preserve">
     <value>Next</value>
   </data>
-  <data name="term_lblContent" xml:space="preserve">
-    <value>The content is translated in English</value>
+  <data name="no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="term_txt1" xml:space="preserve">
+    <value>BEFORE EXECUTING TRANSACTION YOU SHOULD
+- Observe ATM machine carefully to detect the machine appended device stealing data. Especially note something following (picture below)
+1. ATM keyboard
+2.Head reader
+3.Location of camera to steal Pin code
+4.Coat of ATM machine
+- Don’t execute transaction if you detect unusual signal
+- Please call 19009247 to check and handling</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Yes</value>
   </data>
 </root>
