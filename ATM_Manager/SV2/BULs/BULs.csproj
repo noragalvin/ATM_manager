@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountBUL.cs" />
     <Compile Include="LogBUL.cs" />
     <Compile Include="StockBUL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

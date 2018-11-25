@@ -29,9 +29,9 @@ namespace GUIs
             if (!CheckOpened("loadingForm"))
             {
                 loadingForm.Hide();
-                Confirmation confirmationForm = new Confirmation(this.rm, this.card, this.stk_chuyen_tien);
-                confirmationForm.Closed += (s, args) => this.Close();
-                confirmationForm.Show();
+                InHoaDonChuyenTien billChuyenTienForm = new InHoaDonChuyenTien(this.rm, this.card, this.stk_chuyen_tien);
+                billChuyenTienForm.Closed += (s, args) => this.Close();
+                billChuyenTienForm.Show();
 
             }
         }

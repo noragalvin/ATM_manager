@@ -35,5 +35,38 @@ namespace DALs
                 throw;
             }
         }
+
+        public LogDTO GetLastLog(string cardNo)
+        {
+            try
+            {
+                conn.Open();
+                string query = "SELECT TOP 1 * FROM tblLog WHERE CardNo=@cardNum ORDER BY LogID DESC";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("cardNum", cardNo);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    return (new LogDTO(
+                        int.Parse(dr["LogID"].ToString()),
+                        int.Parse(dr["LogTypeID"].ToString()),
+                        int.Parse(dr["ATMID"].ToString()),
+                        dr["CardNo"].ToString(),
+                        dr["LogDate"].ToString(),
+                        int.Parse(dr["amout"].ToString()),
+                        dr["details"].ToString(),
+                        dr["cardNoTo"].ToString()
+                        ));
+                }
+
+                conn.Close();
+                return null;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        }
     }
 }

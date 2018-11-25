@@ -14,7 +14,7 @@ namespace GUIs
     {
         Bitmap theVao = Properties.Resources.TheRa;
         Bitmap coTien;
-        private string accountNo = "45010005597808";
+        private string accountNo = "11111111";
 
         public Validate(Bitmap coTien = null)
         {

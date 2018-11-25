@@ -58,6 +58,12 @@
     <Compile Include="Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
+    <Compile Include="BillChuyenTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillChuyenTien.Designer.cs">
+      <DependentUpon>BillChuyenTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChooseLanguage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,12 @@
     </Compile>
     <Compile Include="InHoaDon.Designer.cs">
       <DependentUpon>InHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InHoaDonChuyenTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InHoaDonChuyenTien.Designer.cs">
+      <DependentUpon>InHoaDonChuyenTien.cs</DependentUpon>
     </Compile>
     <Compile Include="InSaoKe.cs">
       <SubType>Form</SubType>
@@ -175,6 +187,9 @@
     <EmbeddedResource Include="Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BillChuyenTien.resx">
+      <DependentUpon>BillChuyenTien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChooseLanguage.resx">
       <DependentUpon>ChooseLanguage.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +218,9 @@
     <EmbeddedResource Include="InHoaDon.resx">
       <DependentUpon>InHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InHoaDonChuyenTien.resx">
+      <DependentUpon>InHoaDonChuyenTien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InSaoKe.resx">
       <DependentUpon>InSaoKe.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +244,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportChuyenTien.rdlc" />
     <EmbeddedResource Include="ReportBill.rdlc" />
     <EmbeddedResource Include="RutTien.resx">
       <DependentUpon>RutTien.cs</DependentUpon>

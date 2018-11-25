@@ -1,4 +1,5 @@
 ﻿using DALs;
+using DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,11 @@ namespace BULs
         public void ChuyenKhoan(string stkChuyen, string stkNhan, int soTien)
         {
             accountDAL.ChuyenKhoan(stkChuyen, stkNhan, soTien);
+        }
+
+        public AccountDTO GetAccount(string accountNo)
+        {
+            return accountDAL.GetAccount(accountNo);
         }
     }
 }

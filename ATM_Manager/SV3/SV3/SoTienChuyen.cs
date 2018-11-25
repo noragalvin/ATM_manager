@@ -25,9 +25,9 @@ namespace SV3
             if (!CheckOpened("loadingForm"))
             {
                 loadingForm.Hide();
-                Confirmation confirmationForm = new Confirmation();
-                confirmationForm.Closed += (s, args) => this.Close();
-                confirmationForm.Show();
+                InHoaDonChuyenTien inHoaDonForm = new InHoaDonChuyenTien();
+                inHoaDonForm.Closed += (s, args) => this.Close();
+                inHoaDonForm.Show();
 
             }
         }

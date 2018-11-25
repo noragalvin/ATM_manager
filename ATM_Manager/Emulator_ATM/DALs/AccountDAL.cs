@@ -120,5 +120,35 @@ namespace DALs
                 return null;
             }
         }
+
+        public AccountDTO GetAccount(string accountNo)
+        {
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM tblAccount WHERE AccountNo=@accNo";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("accNo", accountNo);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+
+                        AccountDTO accountDTO = new AccountDTO(
+                            int.Parse(dr["Balance"].ToString()));
+                        conn.Close();
+                        return accountDTO;
+                    }
+                    conn.Close();
+                    return null;
+                }
+                catch (Exception)
+                {
+
+                    return null;
+                }
+                //return new WithDrawLimitDTO(int.Parse(dr["Value"].ToString()));
+            }
+        }
     }
 }

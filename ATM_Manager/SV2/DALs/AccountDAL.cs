@@ -13,23 +13,34 @@ namespace DALs
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChuoiKetNoi"].ToString());
 
-        public AccountDTO GetCurrentMoney()
-        {
-            conn.Open();
-            string query = "SELECT * FROM tblAccount";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
 
-                AccountDTO accountDTO = new AccountDTO(
-                    int.Parse(dr["Balance"].ToString()));
-                conn.Close();
-                return accountDTO;
+        public AccountDTO GetAccount(string accountNo)
+        {
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM tblAccount WHERE AccountNo=@accNo";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("accNo", accountNo);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+
+                        AccountDTO accountDTO = new AccountDTO(
+                            int.Parse(dr["Balance"].ToString()));
+                        conn.Close();
+                        return accountDTO;
+                    }
+                    conn.Close();
+                    return null;
+                }
+                catch (Exception)
+                {
+
+                    return null;
+                }
             }
-            conn.Close();
-            return null;
-            //return new WithDrawLimitDTO(int.Parse(dr["Value"].ToString()));
         }
     }
 }

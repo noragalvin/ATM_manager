@@ -59,7 +59,7 @@ namespace GUIs
         {
             int status = checkWithDraw(200000);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "45010005597808";
+            string cardNumber = this.accountNo;
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 200000);
         }
@@ -68,7 +68,7 @@ namespace GUIs
         {
             int status = checkWithDraw(500000);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "45010005597808";
+            string cardNumber = this.accountNo;
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 500000);
         }
@@ -77,7 +77,7 @@ namespace GUIs
         {
             int status = checkWithDraw(1000000);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "45010005597808";
+            string cardNumber = this.accountNo;
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 1000000);
         }
@@ -86,7 +86,7 @@ namespace GUIs
         {
             int status = checkWithDraw(2000000);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "45010005597808";
+            string cardNumber = this.accountNo;
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 2000000);
         }
@@ -95,14 +95,14 @@ namespace GUIs
         {
             int status = checkWithDraw(5000000);
             string created_at = DateTime.Now.ToString();
-            string cardNumber = "45010005597808";
+            string cardNumber = this.accountNo;
             int atm_id = 1;
             processWithDraw(status, atm_id, cardNumber, created_at, 5000000);
         }
 
         private int checkWithDraw(int money)
         {
-            return stockBUL.WithDraw(money);
+            return stockBUL.WithDraw(money, this.accountNo);
         }
 
         private void processWithDraw(int status, int atm_id, string cardNumber, string created_at, int amount)
@@ -184,14 +184,13 @@ namespace GUIs
         {
             this.CenterToScreen();
             btnOther.Text = rm.GetString("rutTien_txt1");
-            btnCancel.Text = rm.GetString("rutTien.txt2");
+            btnCancel.Text = rm.GetString("rutTien_txt2");
         }
 
         private void btnSideBar4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Bitmap coTien = Properties.Resources.TienRa;
-            (new Validate(coTien)).Show();
+            (new Validate()).Show();
         }
     }
 }

@@ -54,8 +54,7 @@ namespace GUIs
         private void btnNumberCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Bitmap coTien = Properties.Resources.TienRa;
-            (new Validate(coTien)).Show();
+            (new Validate()).Show();
         }
     }
 }

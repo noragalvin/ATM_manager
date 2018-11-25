@@ -63,9 +63,17 @@ namespace DALs
                 {
                     cmd.Parameters.AddWithValue("des", description).Value = DBNull.Value;
                 }
+                else
+                {
+                    cmd.Parameters.AddWithValue("des", description);
+                }
                 if (toCard == null)
                 {
                     cmd.Parameters.AddWithValue("cardNoTo", toCard).Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("cardNoTo", toCard);
                 }
                 cmd.ExecuteNonQuery();
                 conn.Close();

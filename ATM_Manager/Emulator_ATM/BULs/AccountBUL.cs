@@ -21,5 +21,10 @@ namespace BULs
         {
             return accountDAL.VanTinSoDu(stk);
         }
+
+        public AccountDTO GetAccount(string accountNo)
+        {
+            return accountDAL.GetAccount(accountNo);
+        }
     }
 }

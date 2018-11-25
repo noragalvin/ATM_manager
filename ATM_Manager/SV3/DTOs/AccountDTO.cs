@@ -24,5 +24,10 @@ namespace DTOs
             this.WDID = wdid;
             this.Balance = balance;
         }
+
+        public AccountDTO(int balance)
+        {
+            this.Balance = balance;
+        }
     }
 }

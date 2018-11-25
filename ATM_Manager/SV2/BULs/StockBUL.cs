@@ -56,10 +56,10 @@ namespace BULs
             stockDAL.UpdateNumberOfMoney(value, number);
         }
 
-        public int GetCurrentMoney()
+        public int GetCurrentMoney(string accountNo)
         {
             AccountDTO accountDTO = new AccountDTO();
-            accountDTO = accountDAL.GetCurrentMoney();
+            accountDTO = accountDAL.GetAccount(accountNo);
             return accountDTO.Balance;
         }
 
@@ -68,11 +68,11 @@ namespace BULs
             moneyDAL.UpdateMoney(money);
         }
 
-        public int WithDraw(int money)
+        public int WithDraw(int money, string accountNo)
         {
             int totalMoney = GetTotalMoney();
             int minMoney = GetMinWithDraw();
-            int currentMoney = GetCurrentMoney();
+            int currentMoney = GetCurrentMoney(accountNo);
             int requiredMoney = money;
             if (money % 50000 != 0)
                 return 0; //So tien khong chia het cho 50000

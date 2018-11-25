@@ -15,3 +15,9 @@ D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\DALs.dll
 D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\BULs.pdb
 D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\DALs.pdb
 D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\SV3.Confirmation.resources
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\SV3.BillChuyenTien.resources
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\SV3.InHoaDonChuyenTien.resources
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\RdlCompile.cache
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\obj\Debug\RdlCompile.compiled
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\DTOs.dll
+D:\code\ATM_manager\ATM_Manager\SV3\SV3\bin\Debug\DTOs.pdb

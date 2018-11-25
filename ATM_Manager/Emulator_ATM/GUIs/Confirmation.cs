@@ -33,6 +33,7 @@ namespace GUIs
             this.Hide();
             Feature featureForm = new Feature(this.rm, this.card, this.accountNo);
             featureForm.Show();
+            
         }
 
         private void btnSideBar4_Click(object sender, EventArgs e)
