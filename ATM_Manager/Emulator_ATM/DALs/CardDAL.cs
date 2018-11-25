@@ -82,8 +82,8 @@ namespace DALs
             }
             catch (Exception)
             {
-                throw;
-                //return;
+                //throw;
+                return;
             }
         }
     }
