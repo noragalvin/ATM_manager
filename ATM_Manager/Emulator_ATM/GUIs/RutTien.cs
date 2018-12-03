@@ -164,7 +164,23 @@ namespace GUIs
 
         private void btnSideBar3_Click(object sender, EventArgs e)
         {
+            btn1000.Visible = false;
+            btn200.Visible = false;
+            btn2000.Visible = false;
+            btn500.Visible = false;
+            btn5000.Visible = false;
+            label1.Visible = false;
+            btnOther.Visible = false;
+            btnCancel.Visible = false;
 
+            label2.Visible = true;
+            txtPin.Visible = true;
+            lblCancelLeft.Visible = true;
+            lblCancelRight.Visible = true;
+            lblEnterLeft.Visible = true;
+            lblEnterRight.Visible = true;
+            label9.Visible = true;
+            label12.Visible = true;
         }
 
         private void RutTien_Load(object sender, EventArgs e)
@@ -184,6 +200,72 @@ namespace GUIs
         {
             CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
             return double.Parse(currency).ToString("#,###", cul.NumberFormat) + "đ";
+        }
+
+        private void btnNumberEnter_Click(object sender, EventArgs e)
+        {
+            int status = checkWithDraw(int.Parse(txtPin.Text));
+            processWithDraw(status);
+        }
+
+        private void btnNumberCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            (new Validate()).Show();
+        }
+
+        private void btnNumber1_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("1");
+        }
+
+        private void btnNumber2_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("2");
+        }
+
+        private void btnNumber3_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("3");
+        }
+
+        private void btnNumber4_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("4");
+        }
+
+        private void btnNumber5_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("5");
+        }
+
+        private void btnNumber6_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("6");
+        }
+
+        private void btnNumber7_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("7");
+        }
+
+        private void btnNumber8_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("8");
+        }
+
+        private void btnNumber9_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("9");
+        }
+
+        private void btnNumber0_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("0");
+        }
+        private void btnNumberClear_Click(object sender, EventArgs e)
+        {
+            txtPin.Clear();
         }
     }
 }
