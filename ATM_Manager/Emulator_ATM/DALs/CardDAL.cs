@@ -12,6 +12,37 @@ namespace DALs
     public class CardDAL
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChuoiKetNoi"].ToString());
+
+        public CardDTO CheckCard(string stk)
+        {
+            try
+            {
+                conn.Open();
+                string query = "SELECT * FROM tblCard WHERE CardNo=@card";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("card", stk);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    CardDTO card = new CardDTO(
+                        dr["CardNO"].ToString(),
+                        int.Parse(dr["Status"].ToString()),
+                        int.Parse(dr["AccountID"].ToString()),
+                        dr["PIN"].ToString(),
+                        dr["StartDate"].ToString(),
+                        dr["ExpiredDate"].ToString(),
+                        int.Parse(dr["Attempt"].ToString()));
+                    conn.Close();
+                    return card;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public CardDTO getValidCard(string pin, string stk)
         {
             try

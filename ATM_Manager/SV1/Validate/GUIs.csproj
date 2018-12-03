@@ -109,6 +109,12 @@
     <Compile Include="NewPassword.Designer.cs">
       <DependentUpon>NewPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhapThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapThe.Designer.cs">
+      <DependentUpon>NhapThe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewPassword.resx">
       <DependentUpon>NewPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapThe.resx">
+      <DependentUpon>NhapThe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Term.resx">
       <DependentUpon>Term.cs</DependentUpon>

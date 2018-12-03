@@ -17,9 +17,11 @@ namespace Validate
     {
         private ResourceManager rm;
         private CardDTO card;
+        private string accountNo;
 
-        public ChooseLanguage(CardDTO card = null)
+        public ChooseLanguage(CardDTO card = null, string accountNo = null)
         {
+            this.accountNo = accountNo;
             this.card = card;
             InitializeComponent();
         }

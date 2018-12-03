@@ -80,17 +80,8 @@ namespace GUIs
             CardDTO card = cardBUL.getValidCard(txtPIN.Text, this.accountNo);
             if (card != null)
             {
-                if (card.Attemp > 5)
-                {
-                    MessageBox.Show("Tài khoản của bạn đã bị khóa");
-                    this.Hide();
-                    (new Validate()).Show();
-                }
-                else
-                {
-                    (new ChooseLanguage(card, this.accountNo)).Show();
-                    this.Hide();
-                }
+                (new ChooseLanguage(card, this.accountNo)).Show();
+                this.Hide();
                 
             }
             else

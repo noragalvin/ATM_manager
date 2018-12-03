@@ -41,9 +41,10 @@ namespace GUIs
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            LogDTO log = logBUL.GetLastLog(accountNo);
+
             AccountDTO account = accountBUL.GetAccount(accountNo);
-            double phi = log.Amout*0.05;
+            LogDTO log = logBUL.GetLastLog(accountNo);
+            double phi = log.Amout*0.05/100;
             if (phi < 2000) phi = 2000;
             if (phi > 20000) phi = 20000;
             reportViewer1.LocalReport.SetParameters(new ReportParameter[] {

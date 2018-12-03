@@ -20,6 +20,7 @@ namespace GUIs
         private string accountNo;
         private string newPassword;
         private CardBUL cardBUL = new CardBUL();
+        private LogBUL logBUL = new LogBUL();
 
         public ConfirmationPassword(ResourceManager rm, CardDTO card = null, string accountNo = null, string newPassword = null)
         {
@@ -102,7 +103,8 @@ namespace GUIs
             if (txtPin.Text == this.newPassword)
             {
                 cardBUL.UpdatePIN(card.CardNo, txtPin.Text);
-
+                string created_at = DateTime.Now.ToString();
+                logBUL.StoreLog(1, this.accountNo, created_at, 0, 3, "Đổi pin");
             }
             this.Hide();
             (new Validate()).Show();

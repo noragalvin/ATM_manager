@@ -59,13 +59,13 @@ namespace GUIs
         private void btnSideBar4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            (new Confirmation(this.rm)).Show();
+            (new Confirmation(this.rm, this.card, this.accountNo)).Show();
         }
 
         private void btnNumberCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            (new Confirmation(this.rm)).Show();
+            (new Confirmation(this.rm, this.card, this.accountNo)).Show();
         }
     }
 }

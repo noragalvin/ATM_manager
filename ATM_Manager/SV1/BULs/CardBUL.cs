@@ -20,5 +20,10 @@ namespace BULs
         {
             card.UpdatePIN(stk, pin);
         }
+
+        public CardDTO CheckCard(string stk)
+        {
+            return card.CheckCard(stk);
+        }
     }
 }

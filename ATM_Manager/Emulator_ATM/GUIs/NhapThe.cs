@@ -1,116 +1,121 @@
-﻿using DTOs;
+﻿using BULs;
+using DTOs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUIs
 {
-    public partial class NewPassword : Form
+    public partial class NhapThe : Form
     {
-        private ResourceManager rm;
-        private CardDTO card;
+        Bitmap theRa = Properties.Resources.TheVao;
+        CardBUL cardBUL = new CardBUL();
         private string accountNo;
 
-        public NewPassword(ResourceManager rm, CardDTO card = null, string accountNo = null)
+        public NhapThe()
         {
-            this.accountNo = accountNo;
-            this.rm = rm;
-            this.card = card;
             InitializeComponent();
         }
 
-        private void NewPassword_Load(object sender, EventArgs e)
+        private void NhapThe_Load(object sender, EventArgs e)
         {
-            txtPin.PasswordChar = '*';
             this.CenterToScreen();
-            label1.Text = rm.GetString("confirmPass_txt2");
-            label2.Text = rm.GetString("confirmPass_txt2");
-            label3.Text = rm.GetString("confirmPass_txt3");
-
         }
 
         private void btnNumber1_Click(object sender, EventArgs e)
         {
-            txtPin.AppendText("1");
+            txtPIN.AppendText("1");
         }
 
         private void btnNumber2_Click(object sender, EventArgs e)
         {
-            txtPin.AppendText("2");
+            txtPIN.AppendText("2");
         }
 
         private void btnNumber3_Click(object sender, EventArgs e)
         {
-            txtPin.AppendText("3");
+            txtPIN.AppendText("3");
         }
 
         private void btnNumber4_Click(object sender, EventArgs e)
         {
-            txtPin.AppendText("4");
+            txtPIN.AppendText("4");
         }
 
         private void btnNumber5_Click(object sender, EventArgs e)
         {
-            txtPin.AppendText("5");
+            txtPIN.AppendText("5");
         }
 
         private void btnNumber6_Click(object sender, EventArgs e)
         {
-            txtPin.AppendText("6");
+            txtPIN.AppendText("6");
         }
 
         private void btnNumber7_Click(object sender, EventArgs e)
         {
-            txtPin.AppendText("7");
+            txtPIN.AppendText("7");
         }
 
         private void btnNumber8_Click(object sender, EventArgs e)
         {
-            txtPin.AppendText("8");
+            txtPIN.AppendText("8");
         }
 
         private void btnNumber9_Click(object sender, EventArgs e)
         {
-            txtPin.AppendText("9");
+            txtPIN.AppendText("9");
         }
 
         private void btnNumber0_Click(object sender, EventArgs e)
         {
-            txtPin.AppendText("0");
+            txtPIN.AppendText("0");
         }
 
         private void btnNumberClear_Click(object sender, EventArgs e)
         {
-            txtPin.Clear();
+            txtPIN.Clear();
         }
 
         private void btnNumberCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Bitmap coTien = Properties.Resources.TienRa;
-            (new Validate(coTien)).Show();
+            (new Validate()).Show();
         }
 
         private void btnNumberEnter_Click(object sender, EventArgs e)
         {
-            
-            if (txtPin.Text.Length < 6)
+            this.accountNo = txtPIN.Text;
+
+            CardDTO card = cardBUL.CheckCard(this.accountNo);
+            if (card != null)
             {
-                MessageBox.Show("Mật khẩu phải trên 6 kí tự");
+                if (card.Attemp > 3)
+                {
+                    MessageBox.Show("Tài khoản của bạn đã bị khóa");
+                    this.Hide();
+                    (new Validate()).Show();
+                }
+                else
+                {
+                    (new EnterPin(this.accountNo)).Show();
+                    this.Hide();
+                }
+
             }
             else
             {
                 this.Hide();
-                (new ConfirmationPassword(this.rm, this.card, this.accountNo, txtPin.Text)).Show();
+                Validate validateForm = new Validate();
+                validateForm.Show();
+                validateForm.pbThe.Image = theRa;
             }
-            
         }
     }
 }

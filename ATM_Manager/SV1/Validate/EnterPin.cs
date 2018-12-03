@@ -17,11 +17,13 @@ namespace Validate
     {
         Bitmap theRa = Properties.Resources.TheVao;
         CardBUL cardBUL = new CardBUL();
-        private string stk = "45010005597808";
+
+        private string accountNo;
         
 
-        public EnterPin()
+        public EnterPin(string accountNo)
         {
+            this.accountNo = accountNo;
             InitializeComponent();
         }
 
@@ -77,26 +79,19 @@ namespace Validate
 
         private void btnNumberEnter_Click(object sender, EventArgs e)
         {
-            CardDTO card = cardBUL.getValidCard(txtPIN.Text, this.stk);
+            CardDTO card = cardBUL.getValidCard(txtPIN.Text, this.accountNo);
             if (card != null)
             {
-                if (card.Attemp > 5)
-                {
-                    MessageBox.Show("Tài khoản của bạn đã bị khóa");
-                    this.Hide();
-                    (new Validate()).Show();
-                }
-                else
-                {
-                    (new ChooseLanguage(card)).Show();
-                    this.Hide();
-                }
-                
+                (new ChooseLanguage(card, this.accountNo)).Show();
+                this.Hide();
+
             }
             else
             {
                 this.Hide();
-                (new Validate()).Show();
+                Validate validateForm = new Validate();
+                validateForm.Show();
+                validateForm.pbThe.Image = theRa;
             }
         }
 

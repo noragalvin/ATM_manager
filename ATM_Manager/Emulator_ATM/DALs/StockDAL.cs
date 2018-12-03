@@ -41,13 +41,14 @@ namespace DALs
             }
         }
 
-        public WithDrawLimitDTO GetMinWithDraw()
+        public WithDrawLimitDTO GetMinWithDraw(string stk)
         {
             try
             {
                 conn.Open();
-                string query = "SELECT * FROM tblWithDrawLimit";
+                string query = "SELECT *, tblWithDrawLimit.Value FROM tblWithDrawLimit, tblAccount WHERE AccountNo=@card AND tblAccount.WDID = tblWithDrawLimit.WDID";
                 SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("card", stk);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
@@ -63,6 +64,7 @@ namespace DALs
             }
             catch (Exception)
             {
+                //throw;
                 return null;
             }
             //return new WithDrawLimitDTO(int.Parse(dr["Value"].ToString()));

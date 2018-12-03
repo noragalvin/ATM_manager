@@ -13,6 +13,8 @@ namespace BULs
         StockDAL stockDAL = new StockDAL();
         AccountDAL accountDAL = new AccountDAL();
         MoneyDAL moneyDAL = new MoneyDAL();
+        LogDAL logDAL = new LogDAL();
+        OverDrawftLimitBUL overDrawftBUL = new OverDrawftLimitBUL();
 
         public int GetTotalMoney()
         {
@@ -35,10 +37,10 @@ namespace BULs
             return total;
         }
 
-        public int GetMinWithDraw()
+        public int GetMinWithDraw(string stk)
         {
             WithDrawLimitDTO minDraw = new WithDrawLimitDTO();
-            minDraw = stockDAL.GetMinWithDraw();
+            minDraw = stockDAL.GetMinWithDraw(stk);
             return minDraw.Value;
         }
 
@@ -61,26 +63,40 @@ namespace BULs
             return accountDTO.Balance;
         }
 
-        public void UpdateMoney(int money)
+        public void UpdateMoney(int money, string stk)
         {
-            moneyDAL.UpdateMoney(money);
+            moneyDAL.UpdateMoney(money, stk);
         }
 
         public int WithDraw(int money, string accountNo)
         {
             int totalMoney = GetTotalMoney();
-            int minMoney = GetMinWithDraw();
+            int minMoney = GetMinWithDraw(accountNo);
             int currentMoney = GetCurrentMoney(accountNo);
             int requiredMoney = money;
+            int thauChi = overDrawftBUL.GetThauChi(accountNo).Value;
+
+            List<LogDTO> listLog = logDAL.GetLogToDay(accountNo);
+            int soTienDaRut = 0;
+
+            //So tien da rut trong ngay hom nay
+            foreach (LogDTO item in listLog)
+            {
+                soTienDaRut += item.Amout;
+            }
+
             if (money % 50000 != 0)
+            {
                 return 0; //So tien khong chia het cho 50000
-            if (money > currentMoney)
+            }
+            if (money > currentMoney + thauChi)
             {
                 return 1; //So tien trong tai khoan khong du
             }
-            if (money > minMoney)
+
+            if (soTienDaRut + requiredMoney > minMoney)
             {
-                return 2; //Chi duoc rut toi da 5000000
+                return 2; //Chi duoc rut toi da minMoney/1ngay
             }
 
             if (money > totalMoney)
@@ -88,11 +104,13 @@ namespace BULs
                 return 3; //So tien trong cay ATM khong du
             }
 
+            //So luong to tien cac loai
             int number20 = GetNumberOfMoney(20);
             int number50 = GetNumberOfMoney(50);
             int number100 = GetNumberOfMoney(100);
             int number200 = GetNumberOfMoney(200);
             int number500 = GetNumberOfMoney(500);
+
             if (money / 500000 > 0 && number500 > 0)
             {
                 int soToTienTieuThu = money / 500000;
@@ -169,7 +187,7 @@ namespace BULs
                 }
             }
 
-            UpdateMoney(currentMoney - requiredMoney);
+            UpdateMoney(currentMoney - requiredMoney - 1000 - 100, accountNo);
 
             return 4; //Thanh cong
         }

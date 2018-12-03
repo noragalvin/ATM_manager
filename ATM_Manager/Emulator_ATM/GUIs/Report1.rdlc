@@ -128,14 +128,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="LogDate1">
+                    <Textbox Name="Amout">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!LogDate.Value</Value>
+                              <Value>=Fields!Amout.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -145,7 +145,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>LogDate1</rd:DefaultName>
+                      <rd:DefaultName>Amout</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -157,6 +157,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -182,7 +183,7 @@
         <DataSetName>LogData</DataSetName>
         <Top>0.36458in</Top>
         <Height>0.5in</Height>
-        <Width>4.59375in</Width>
+        <Width>4.59376in</Width>
         <Style>
           <Border>
             <Style>None</Style>

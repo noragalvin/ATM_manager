@@ -24,7 +24,7 @@ namespace Validate
         {
             pbThe.Image = theVao;
             this.Hide();
-            (new EnterPin()).Show();
+            (new NhapThe()).Show();
         }
 
         private void Validate_Load(object sender, EventArgs e)

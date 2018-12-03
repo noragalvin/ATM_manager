@@ -14,7 +14,7 @@ namespace GUIs
     {
         Bitmap theVao = Properties.Resources.TheRa;
         Bitmap coTien;
-        private string accountNo = "11111111";
+        //private string accountNo = "45010005597808";
 
         public Validate(Bitmap coTien = null)
         {
@@ -26,7 +26,7 @@ namespace GUIs
         {
             pbThe.Image = theVao;
             this.Hide();
-            (new EnterPin(this.accountNo)).Show();
+            (new NhapThe()).Show();
         }
 
         private void Validate_Load(object sender, EventArgs e)

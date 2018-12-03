@@ -113,7 +113,7 @@ namespace DALs
 
             try
             {
-                string query = "SELECT TOP 10 * FROM tblLog WHERE CardNo=@card ORDER BY LogID DESC";
+                string query = "SELECT TOP 5 * FROM tblLog WHERE CardNo=@card ORDER BY LogID DESC";
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 da.SelectCommand.Parameters.AddWithValue("card", cardNumber);
                 da.Fill(data, data.Tables[0].TableName);
@@ -122,6 +122,40 @@ namespace DALs
             {
                 //throw;
                 return;
+            }
+        }
+
+        public List<LogDTO> GetLogToDay(string stk)
+        {
+            try
+            {
+                conn.Open();
+                List<LogDTO> list = new List<LogDTO>();
+                string query = "SELECT * FROM tblLog WHERE CardNo=@card AND CONVERT(DATE, LogDate)=CONVERT(DATE,GETDATE()) AND LogTypeID=1";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("card", stk);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    LogDTO log = new LogDTO(
+                        int.Parse(dr["LogID"].ToString()),
+                        int.Parse(dr["LogTypeID"].ToString()),
+                        int.Parse(dr["ATMID"].ToString()),
+                        dr["CardNo"].ToString(),
+                        dr["LogDate"].ToString(),
+                        int.Parse(dr["Amout"].ToString()),
+                        dr["Details"].ToString(),
+                        dr["CardNoTo"].ToString()
+                        );
+                    list.Add(log);
+                }
+                conn.Close();
+                return list;
+            }
+            catch (Exception)
+            {
+                //throw;
+                return null;
             }
         }
     }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Resources;
 using System.Text;
@@ -131,7 +132,8 @@ namespace GUIs
                     break;
                 case 2:
                     this.Hide();
-                    errorMessage = "Quý khách chỉ được rút tối đa 5.000.000đ";
+                    int minMoney = stockBUL.GetMinWithDraw(this.accountNo);
+                    errorMessage = "Quý khách chỉ được rút tối đa " + CurrencyFormat(minMoney.ToString()) + "/1 ngày";
                     loadingForm = new Loading(this.rm, this.card, this.accountNo);
                     loadingForm.Show();
                     myTimer.Tick += new EventHandler(TimerEventProcessor);
@@ -157,7 +159,7 @@ namespace GUIs
                     myTimer.Tick += new EventHandler(TimerEventProcessor);
                     myTimer.Interval = 2000;
                     myTimer.Start();
-                    logBUL.StoreLog(atm_id, cardNumber, created_at, amount, 1);
+                    logBUL.StoreLog(atm_id, cardNumber, created_at, amount, 1, "Rút tiền");
                     break;
             }
         }
@@ -191,6 +193,12 @@ namespace GUIs
         {
             this.Hide();
             (new Validate()).Show();
+        }
+
+        public static string CurrencyFormat(string currency)
+        {
+            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+            return double.Parse(currency).ToString("#,###", cul.NumberFormat) + "đ";
         }
     }
 }

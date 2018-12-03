@@ -31,8 +31,7 @@ namespace GUIs
         private void btnSideBar3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Feature featureForm = new Feature(this.rm, this.card, this.accountNo);
-            featureForm.Show();
+            (new Feature(this.rm, this.card, this.accountNo)).Show();
             
         }
 

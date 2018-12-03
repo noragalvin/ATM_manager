@@ -48,6 +48,7 @@ namespace GUIs
         {
             Bitmap coTien = Properties.Resources.TienRa;
             (new Validate(coTien)).Show();
+            this.Hide();
         }
 
         private bool CheckOpened(string name)
