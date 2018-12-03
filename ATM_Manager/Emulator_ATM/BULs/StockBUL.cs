@@ -14,6 +14,8 @@ namespace BULs
         AccountDAL accountDAL = new AccountDAL();
         MoneyDAL moneyDAL = new MoneyDAL();
         LogDAL logDAL = new LogDAL();
+        LogBUL logBUL = new LogBUL();
+
         OverDrawftLimitBUL overDrawftBUL = new OverDrawftLimitBUL();
 
         public int GetTotalMoney()
@@ -188,7 +190,9 @@ namespace BULs
             }
 
             UpdateMoney(currentMoney - requiredMoney - 1000 - 100, accountNo);
-
+            string created_at = DateTime.Now.ToString();
+            int atm_id = 1;
+            logBUL.StoreLog(atm_id, accountNo, created_at, requiredMoney, 1, "Rút tiền");
             return 4; //Thanh cong
         }
     }

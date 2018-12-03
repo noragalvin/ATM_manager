@@ -51,7 +51,11 @@ namespace DALs
         {
             try
             {
-                conn.Open();
+                if (conn != null && conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
                 string query = "INSERT INTO tblLog(LogTypeID, ATMID, CardNo, LogDate, Amout, Details, CardNoTo) VALUES(@type, @atmID, @cardNo, @logDate, @amout, @des, @cardNoTo)";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("type", type);
@@ -76,11 +80,9 @@ namespace DALs
                     cmd.Parameters.AddWithValue("cardNoTo", toCard);
                 }
                 cmd.ExecuteNonQuery();
-                conn.Close();
             }
             catch (Exception)
             {
-
                 return;
             }
         }

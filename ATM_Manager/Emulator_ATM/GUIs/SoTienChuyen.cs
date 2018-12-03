@@ -47,13 +47,20 @@ namespace GUIs
 
         private void btnNumberEnter_Click(object sender, EventArgs e)
         {
-            accountBUL.ChuyenKhoan(stk_chuyen_tien, stk_nhan_tien, int.Parse(txtMoney.Text));
-            this.Hide();
-            loadingForm = new Loading(this.rm, this.card, this.stk_chuyen_tien);
-            loadingForm.Show();
-            myTimer.Tick += new EventHandler(TimerEventProcessor);
-            myTimer.Interval = 2000;
-            myTimer.Start();
+            if (accountBUL.ChuyenKhoan(stk_chuyen_tien, stk_nhan_tien, int.Parse(txtMoney.Text)) == true)
+            {
+                this.Hide();
+                loadingForm = new Loading(this.rm, this.card, this.stk_chuyen_tien);
+                loadingForm.Show();
+                myTimer.Tick += new EventHandler(TimerEventProcessor);
+                myTimer.Interval = 2000;
+                myTimer.Start();
+            }
+            else
+            {
+                MessageBox.Show("Số tiền trong tài khoản không đủ");
+            }
+            
 
         }
 

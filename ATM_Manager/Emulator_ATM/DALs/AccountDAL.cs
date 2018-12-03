@@ -40,7 +40,7 @@ namespace DALs
             //return new WithDrawLimitDTO(int.Parse(dr["Value"].ToString()));
         }
 
-        public void ChuyenKhoan(string stkChuyen, string stkNhan, int soTien)
+        public bool ChuyenKhoan(string stkChuyen, string stkNhan, int soTien)
         {
             try
             {
@@ -84,17 +84,17 @@ namespace DALs
                     else
                     {
                         conn.Close();
-                        return;
+                        return false;
                     }
                     
                 }
 
                 conn.Close();
+                return true;
             }
             catch (Exception)
             {
-
-                return;
+                return false;
             }
         }
 

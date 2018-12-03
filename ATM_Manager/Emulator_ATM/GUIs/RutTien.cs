@@ -59,46 +59,31 @@ namespace GUIs
         private void btnSideBar5_Click(object sender, EventArgs e)
         {
             int status = checkWithDraw(200000);
-            string created_at = DateTime.Now.ToString();
-            string cardNumber = this.accountNo;
-            int atm_id = 1;
-            processWithDraw(status, atm_id, cardNumber, created_at, 200000);
+            processWithDraw(status);
         }
 
         private void btnSideBar6_Click(object sender, EventArgs e)
         {
             int status = checkWithDraw(500000);
-            string created_at = DateTime.Now.ToString();
-            string cardNumber = this.accountNo;
-            int atm_id = 1;
-            processWithDraw(status, atm_id, cardNumber, created_at, 500000);
+            processWithDraw(status);
         }
 
         private void btnSideBar7_Click(object sender, EventArgs e)
         {
             int status = checkWithDraw(1000000);
-            string created_at = DateTime.Now.ToString();
-            string cardNumber = this.accountNo;
-            int atm_id = 1;
-            processWithDraw(status, atm_id, cardNumber, created_at, 1000000);
+            processWithDraw(status);
         }
 
         private void btnSideBar1_Click(object sender, EventArgs e)
         {
             int status = checkWithDraw(2000000);
-            string created_at = DateTime.Now.ToString();
-            string cardNumber = this.accountNo;
-            int atm_id = 1;
-            processWithDraw(status, atm_id, cardNumber, created_at, 2000000);
+            processWithDraw(status);
         }
 
         private void btnSideBar2_Click(object sender, EventArgs e)
         {
             int status = checkWithDraw(5000000);
-            string created_at = DateTime.Now.ToString();
-            string cardNumber = this.accountNo;
-            int atm_id = 1;
-            processWithDraw(status, atm_id, cardNumber, created_at, 5000000);
+            processWithDraw(status);
         }
 
         private int checkWithDraw(int money)
@@ -106,7 +91,7 @@ namespace GUIs
             return stockBUL.WithDraw(money, this.accountNo);
         }
 
-        private void processWithDraw(int status, int atm_id, string cardNumber, string created_at, int amount)
+        private void processWithDraw(int status)
         {
             switch (status)
             {
@@ -159,7 +144,7 @@ namespace GUIs
                     myTimer.Tick += new EventHandler(TimerEventProcessor);
                     myTimer.Interval = 2000;
                     myTimer.Start();
-                    logBUL.StoreLog(atm_id, cardNumber, created_at, amount, 1, "Rút tiền");
+                    
                     break;
             }
         }
