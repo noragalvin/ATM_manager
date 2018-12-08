@@ -46,8 +46,7 @@ namespace GUIs
 
         private void btnSideBar4_Click(object sender, EventArgs e)
         {
-            Bitmap coTien = Properties.Resources.TienRa;
-            (new Validate(coTien)).Show();
+            (new Confirmation(this.rm, this.card, this.accountNo)).Show();
             this.Hide();
         }
 
