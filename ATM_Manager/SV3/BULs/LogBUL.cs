@@ -12,9 +12,9 @@ namespace BULs
     {
         LogDAL logDAL = new LogDAL();
 
-        public void StoreLog(int atm_id, string cardNumber, string created_at, int amount, string description, string toCard)
+        public void StoreLog(int atm_id, string cardNumber, string created_at, int amount = 0, int type = 1, string description = null, string toCard = null)
         {
-            logDAL.StoreLog(atm_id, cardNumber, created_at, amount, description, toCard);
+            logDAL.StoreLog(atm_id, cardNumber, created_at, amount, type, description, toCard);
         }
 
 

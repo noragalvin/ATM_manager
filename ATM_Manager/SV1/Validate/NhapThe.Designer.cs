@@ -482,6 +482,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "NhapThe";
             this.Text = "NhapThe";
+            this.Load += new System.EventHandler(this.NhapThe_Load_1);
             this.pnTopTen.ResumeLayout(false);
             this.pnTopTen.PerformLayout();
             this.pnTop.ResumeLayout(false);

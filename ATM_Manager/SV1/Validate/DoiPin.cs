@@ -16,9 +16,11 @@ namespace Validate
     {
         private ResourceManager rm;
         private CardDTO card;
+        private string accountNo;
 
-        public DoiPin(ResourceManager rm, CardDTO card = null)
+        public DoiPin(ResourceManager rm, CardDTO card = null, string accountNo = null)
         {
+            this.accountNo = accountNo;
             this.rm = rm;
             this.card = card;
             InitializeComponent();
@@ -98,7 +100,7 @@ namespace Validate
             if (txtPin.Text == card.PIN)
             {
                 this.Hide();
-                (new NewPassword(this.rm, this.card)).Show();
+                (new NewPassword(this.rm, this.accountNo, this.card)).Show();
             }
             else
             {

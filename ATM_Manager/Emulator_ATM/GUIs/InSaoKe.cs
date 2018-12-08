@@ -32,34 +32,48 @@ namespace GUIs
         private void InSaoKe_Load(object sender, EventArgs e)
         {
             btnNext.Text = rm.GetString("next");
-            ATMManagerDataSet data = new ATMManagerDataSet();
             string cardNumber = this.accountNo;
+            ATMManagerDataSet data = new ATMManagerDataSet();
             logBUL.GetLog(data, cardNumber);
 
-            for (int i = 0; i < data.Tables[0].Rows.Count; i++)
+            var empList = data.Tables[0].AsEnumerable().Select(dataRow => new LogDTO
             {
-                if (data.Tables[0].Rows[i]["LogTypeID"].ToString() == "2")
-                {
-                    data.Tables[0].Rows[i]["Amout"] = -int.Parse(data.Tables[0].Rows[i]["Amout"].ToString());
-                }
+                LogID = dataRow.Field<int>("LogID"),
+                LogTypeID = dataRow.Field<int>("LogTypeID"),
+                ATMID = dataRow.Field<int>("ATMID"),
+                CardNo = dataRow.Field<string>("CardNo"),
+                LogDate = (dataRow.Field<DateTime>("LogDate")).ToString(),
+                Amout = dataRow.Field<int>("Amout"),
+                Details = dataRow.Field<string>("Details"),
+                CardNoTo = dataRow.Field<string>("CardNoTo")
+            }).ToList();
 
+            List<LogDTO> list = empList;
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Ngày", typeof(string));
+            dt.Columns.Add("Giờ", typeof(string));
+            dt.Columns.Add("Nợ", typeof(int));
+            dt.Columns.Add("Có", typeof(int));
+            foreach (LogDTO item in list)
+            {
+                DataRow dr = dt.NewRow();
+                dr["Ngày"] = item.LogDate.Split(' ')[0];
+                dr["Giờ"] = item.LogDate.Split(' ')[1];
+                dr["Nợ"] = item.LogTypeID == 2 ? 0 : -item.Amout;
+                dr["Có"] = item.LogTypeID == 2 ? item.Amout : 0;
+                dt.Rows.Add(dr);
             }
 
-            data.Tables[0].AcceptChanges();
+            dataGridView1.DataSource = dt;
 
-
-            ReportDataSource rds = new ReportDataSource("LogData", data.Tables[0]);
-            this.reportViewer1.LocalReport.DataSources.Clear();
-            this.reportViewer1.LocalReport.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
             this.CenterToScreen();
-            this.reportViewer1.RefreshReport();
+
         }
 
         private void btnSideBar4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            (new Confirmation(this.rm, this.card, this.accountNo)).Show();
+            (new InSaoKeConfirm(this.rm, this.card, this.accountNo)).Show();
         }
 
         private void btnNumberCancel_Click(object sender, EventArgs e)

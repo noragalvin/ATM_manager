@@ -37,3 +37,5 @@ D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.VanTinSoDu.reso
 D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.BillChuyenTien.resources
 D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.InHoaDonChuyenTien.resources
 D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.NhapThe.resources
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.InSaoKeConfirm.resources
+D:\code\ATM_manager\ATM_Manager\Emulator_ATM\GUIs\obj\Debug\GUIs.BillSaoKe.resources

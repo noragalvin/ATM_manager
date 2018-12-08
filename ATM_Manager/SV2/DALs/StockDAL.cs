@@ -33,23 +33,32 @@ namespace DALs
             return list;
         }
 
-        public WithDrawLimitDTO GetMinWithDraw()
+        public WithDrawLimitDTO GetMinWithDraw(string stk)
         {
-            conn.Open();
-            string query = "SELECT * FROM tblWithDrawLimit";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
+            try
             {
-                
-                WithDrawLimitDTO widthDrawLimitDTO = new WithDrawLimitDTO(
-                    int.Parse(dr["WDID"].ToString()),
-                    int.Parse(dr["Value"].ToString()));
+                conn.Open();
+                string query = "SELECT *, tblWithDrawLimit.Value FROM tblWithDrawLimit, tblAccount WHERE AccountNo=@card AND tblAccount.WDID = tblWithDrawLimit.WDID";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("card", stk);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+
+                    WithDrawLimitDTO widthDrawLimitDTO = new WithDrawLimitDTO(
+                        int.Parse(dr["WDID"].ToString()),
+                        int.Parse(dr["Value"].ToString()));
+                    conn.Close();
+                    return widthDrawLimitDTO;
+                }
                 conn.Close();
-                return widthDrawLimitDTO;
+                return null;
             }
-            conn.Close();
-            return null;
+            catch (Exception)
+            {
+                //throw;
+                return null;
+            }
             //return new WithDrawLimitDTO(int.Parse(dr["Value"].ToString()));
         }
 

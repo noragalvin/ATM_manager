@@ -13,22 +13,23 @@ namespace DALs
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChuoiKetNoi"].ToString());
 
-        public void UpdateMoney(int money)
+        public void UpdateMoney(int money, string stk)
         {
             try
             {
                 conn.Open();
-                string query = "UPDATE tblAccount SET Balance=@value WHERE AccountNO=45010005597808";
+                string query = "UPDATE tblAccount SET Balance=@value WHERE AccountNO=@card";
                 SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("card", stk);
                 cmd.Parameters.AddWithValue("value", money);
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
             catch (Exception)
             {
-                throw;
+                return;
             }
-            
+
         }
     }
 }

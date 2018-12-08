@@ -19,7 +19,7 @@ namespace SV3
 
         private void NhapSTK_Load(object sender, EventArgs e)
         {
-            lblStk.Text = "45010005597808";
+            lblStk.Text = "11111111";
             this.CenterToScreen();
         }
 

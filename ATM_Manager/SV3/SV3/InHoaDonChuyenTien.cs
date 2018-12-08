@@ -12,10 +12,11 @@ namespace SV3
 {
     public partial class InHoaDonChuyenTien : Form
     {
-        string accountNo = "45010005597808";
+        private string accountNo;
 
-        public InHoaDonChuyenTien()
+        public InHoaDonChuyenTien(string accountNo = null)
         {
+            this.accountNo = accountNo;
             InitializeComponent();
         }
 

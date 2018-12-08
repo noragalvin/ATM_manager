@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -46,19 +47,78 @@ namespace DALs
             }
         }
 
-        public void StoreLog(int atm_id, string cardNumber, string created_at, int amount, string description = "", int toCard = 0)
+        public void StoreLog(int atm_id, string cardNumber, string created_at, int amount, int type = 1, string description = null, string toCard = null)
         {
-            conn.Open();
-            string query = "INSERT INTO tblLog(LogTypeID, ATMID, CardNo, LogDate, Amout, Details, CardNoTo) VALUES(1, @atmID, @cardNo, @logDate, @amout, @details, @cardNoTo)";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("atmID", atm_id);
-            cmd.Parameters.AddWithValue("cardNo", cardNumber);
-            cmd.Parameters.AddWithValue("logDate", created_at);
-            cmd.Parameters.AddWithValue("amout", amount);
-            cmd.Parameters.AddWithValue("details", description);
-            cmd.Parameters.AddWithValue("cardNoTo", toCard);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                if (conn != null && conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                string query = "INSERT INTO tblLog(LogTypeID, ATMID, CardNo, LogDate, Amout, Details, CardNoTo) VALUES(@type, @atmID, @cardNo, @logDate, @amout, @des, @cardNoTo)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("type", type);
+                cmd.Parameters.AddWithValue("atmID", atm_id);
+                cmd.Parameters.AddWithValue("cardNo", cardNumber);
+                cmd.Parameters.AddWithValue("logDate", created_at);
+                cmd.Parameters.AddWithValue("amout", amount);
+                if (description == null)
+                {
+                    cmd.Parameters.AddWithValue("des", description).Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("des", description);
+                }
+                if (toCard == null)
+                {
+                    cmd.Parameters.AddWithValue("cardNoTo", toCard).Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("cardNoTo", toCard);
+                }
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                return;
+            }
+        }
+
+        public List<LogDTO> GetLogToDay(string stk)
+        {
+            try
+            {
+                conn.Open();
+                List<LogDTO> list = new List<LogDTO>();
+                string query = "SELECT * FROM tblLog WHERE CardNo=@card AND CONVERT(DATE, LogDate)=CONVERT(DATE,GETDATE()) AND LogTypeID=1";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("card", stk);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    LogDTO log = new LogDTO(
+                        int.Parse(dr["LogID"].ToString()),
+                        int.Parse(dr["LogTypeID"].ToString()),
+                        int.Parse(dr["ATMID"].ToString()),
+                        dr["CardNo"].ToString(),
+                        dr["LogDate"].ToString(),
+                        int.Parse(dr["Amout"].ToString()),
+                        dr["Details"].ToString(),
+                        dr["CardNoTo"].ToString()
+                        );
+                    list.Add(log);
+                }
+                conn.Close();
+                return list;
+            }
+            catch (Exception)
+            {
+                //throw;
+                return null;
+            }
         }
     }
 }

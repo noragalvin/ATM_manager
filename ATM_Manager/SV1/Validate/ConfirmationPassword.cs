@@ -19,9 +19,12 @@ namespace Validate
         private CardDTO card;
         private string newPassword;
         private CardBUL cardBUL = new CardBUL();
+        private LogBUL logBUL = new LogBUL();
+        private string accountNo;
 
-        public ConfirmationPassword(ResourceManager rm, CardDTO card, string newPassword)
+        public ConfirmationPassword(ResourceManager rm, CardDTO card, string newPassword, string accountNo)
         {
+            this.accountNo = accountNo;
             this.rm = rm;
             this.card = card;
             this.newPassword = newPassword;
@@ -98,7 +101,8 @@ namespace Validate
             if (txtPin.Text == this.newPassword)
             {
                 cardBUL.UpdatePIN(card.CardNo, txtPin.Text);
-                
+                string created_at = DateTime.Now.ToString();
+                logBUL.StoreLog(1, this.accountNo, created_at, 0, 3, "Đổi pin");
             }
             this.Hide();
             (new Validate()).Show();

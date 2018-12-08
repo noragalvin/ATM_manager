@@ -12,7 +12,7 @@ namespace SV4
 {
     public partial class Feature : Form
     {
-        string stk = "45010005597808";
+        string stk = "11111111";
         public Feature()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace SV4
         private void btnSideBar2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            (new InSaoKe()).Show();
+            (new InSaoKe(this.stk)).Show();
         }
 
         private void Feature_Load(object sender, EventArgs e)

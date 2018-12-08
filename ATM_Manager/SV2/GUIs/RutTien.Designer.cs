@@ -70,6 +70,14 @@
             this.lbTopTen1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
+            this.lblCancelRight = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtPin = new System.Windows.Forms.TextBox();
+            this.lblCancelLeft = new System.Windows.Forms.Label();
+            this.lblEnterRight = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblEnterLeft = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnUnderScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
@@ -178,6 +186,7 @@
             this.btnNumberCancel.TabIndex = 2;
             this.btnNumberCancel.Text = "Cancel";
             this.btnNumberCancel.UseVisualStyleBackColor = false;
+            this.btnNumberCancel.Click += new System.EventHandler(this.btnNumberCancel_Click);
             // 
             // btnNumber9
             // 
@@ -187,6 +196,7 @@
             this.btnNumber9.TabIndex = 3;
             this.btnNumber9.Text = "9";
             this.btnNumber9.UseVisualStyleBackColor = true;
+            this.btnNumber9.Click += new System.EventHandler(this.btnNumber9_Click);
             // 
             // btnNumberEnter
             // 
@@ -197,6 +207,7 @@
             this.btnNumberEnter.TabIndex = 4;
             this.btnNumberEnter.Text = "Enter";
             this.btnNumberEnter.UseVisualStyleBackColor = false;
+            this.btnNumberEnter.Click += new System.EventHandler(this.btnNumberEnter_Click);
             // 
             // btnNumber6
             // 
@@ -206,6 +217,7 @@
             this.btnNumber6.TabIndex = 5;
             this.btnNumber6.Text = "6";
             this.btnNumber6.UseVisualStyleBackColor = true;
+            this.btnNumber6.Click += new System.EventHandler(this.btnNumber6_Click);
             // 
             // btnNumberClear
             // 
@@ -216,6 +228,7 @@
             this.btnNumberClear.TabIndex = 6;
             this.btnNumberClear.Text = "Clear";
             this.btnNumberClear.UseVisualStyleBackColor = false;
+            this.btnNumberClear.Click += new System.EventHandler(this.btnNumberClear_Click);
             // 
             // btnNumber3
             // 
@@ -225,6 +238,7 @@
             this.btnNumber3.TabIndex = 7;
             this.btnNumber3.Text = "3";
             this.btnNumber3.UseVisualStyleBackColor = true;
+            this.btnNumber3.Click += new System.EventHandler(this.btnNumber3_Click);
             // 
             // btnNumber0
             // 
@@ -234,6 +248,7 @@
             this.btnNumber0.TabIndex = 8;
             this.btnNumber0.Text = "0";
             this.btnNumber0.UseVisualStyleBackColor = true;
+            this.btnNumber0.Click += new System.EventHandler(this.btnNumber0_Click);
             // 
             // btnNumber8
             // 
@@ -243,6 +258,7 @@
             this.btnNumber8.TabIndex = 9;
             this.btnNumber8.Text = "8";
             this.btnNumber8.UseVisualStyleBackColor = true;
+            this.btnNumber8.Click += new System.EventHandler(this.btnNumber8_Click);
             // 
             // btnNumber5
             // 
@@ -252,6 +268,7 @@
             this.btnNumber5.TabIndex = 10;
             this.btnNumber5.Text = "5";
             this.btnNumber5.UseVisualStyleBackColor = true;
+            this.btnNumber5.Click += new System.EventHandler(this.btnNumber5_Click);
             // 
             // btnNumber2
             // 
@@ -261,6 +278,7 @@
             this.btnNumber2.TabIndex = 11;
             this.btnNumber2.Text = "2";
             this.btnNumber2.UseVisualStyleBackColor = true;
+            this.btnNumber2.Click += new System.EventHandler(this.btnNumber2_Click);
             // 
             // btnNumber7
             // 
@@ -270,6 +288,7 @@
             this.btnNumber7.TabIndex = 12;
             this.btnNumber7.Text = "7";
             this.btnNumber7.UseVisualStyleBackColor = true;
+            this.btnNumber7.Click += new System.EventHandler(this.btnNumber7_Click);
             // 
             // btnNumber4
             // 
@@ -279,6 +298,7 @@
             this.btnNumber4.TabIndex = 13;
             this.btnNumber4.Text = "4";
             this.btnNumber4.UseVisualStyleBackColor = true;
+            this.btnNumber4.Click += new System.EventHandler(this.btnNumber4_Click);
             // 
             // btnNumber1
             // 
@@ -288,6 +308,7 @@
             this.btnNumber1.TabIndex = 14;
             this.btnNumber1.Text = "1";
             this.btnNumber1.UseVisualStyleBackColor = true;
+            this.btnNumber1.Click += new System.EventHandler(this.btnNumber1_Click);
             // 
             // btnSideBar8
             // 
@@ -339,6 +360,14 @@
             // 
             this.pnMainBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnMainBg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnMainBg.Controls.Add(this.lblCancelRight);
+            this.pnMainBg.Controls.Add(this.label2);
+            this.pnMainBg.Controls.Add(this.label12);
+            this.pnMainBg.Controls.Add(this.txtPin);
+            this.pnMainBg.Controls.Add(this.lblCancelLeft);
+            this.pnMainBg.Controls.Add(this.lblEnterRight);
+            this.pnMainBg.Controls.Add(this.label9);
+            this.pnMainBg.Controls.Add(this.lblEnterLeft);
             this.pnMainBg.Controls.Add(this.label1);
             this.pnMainBg.Controls.Add(this.btnCancel);
             this.pnMainBg.Controls.Add(this.btnOther);
@@ -520,6 +549,97 @@
             this.lbLogo.TabIndex = 0;
             this.lbLogo.Text = "BIDV";
             // 
+            // lblCancelRight
+            // 
+            this.lblCancelRight.AutoSize = true;
+            this.lblCancelRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCancelRight.ForeColor = System.Drawing.Color.Blue;
+            this.lblCancelRight.Location = new System.Drawing.Point(270, 267);
+            this.lblCancelRight.Name = "lblCancelRight";
+            this.lblCancelRight.Size = new System.Drawing.Size(59, 13);
+            this.lblCancelRight.TabIndex = 57;
+            this.lblCancelRight.Text = "để thoát.";
+            this.lblCancelRight.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(140, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(235, 13);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Quý khách vui lòng nhập số tiền cần rút";
+            this.label2.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(218, 267);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(55, 13);
+            this.label12.TabIndex = 56;
+            this.label12.Text = "CANCEL";
+            this.label12.Visible = false;
+            // 
+            // txtPin
+            // 
+            this.txtPin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtPin.Location = new System.Drawing.Point(206, 185);
+            this.txtPin.Name = "txtPin";
+            this.txtPin.Size = new System.Drawing.Size(100, 20);
+            this.txtPin.TabIndex = 50;
+            this.txtPin.Visible = false;
+            // 
+            // lblCancelLeft
+            // 
+            this.lblCancelLeft.AutoSize = true;
+            this.lblCancelLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCancelLeft.ForeColor = System.Drawing.Color.Blue;
+            this.lblCancelLeft.Location = new System.Drawing.Point(185, 267);
+            this.lblCancelLeft.Name = "lblCancelLeft";
+            this.lblCancelLeft.Size = new System.Drawing.Size(35, 13);
+            this.lblCancelLeft.TabIndex = 55;
+            this.lblCancelLeft.Text = "chọn";
+            this.lblCancelLeft.Visible = false;
+            // 
+            // lblEnterRight
+            // 
+            this.lblEnterRight.AutoSize = true;
+            this.lblEnterRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnterRight.ForeColor = System.Drawing.Color.Blue;
+            this.lblEnterRight.Location = new System.Drawing.Point(294, 249);
+            this.lblEnterRight.Name = "lblEnterRight";
+            this.lblEnterRight.Size = new System.Drawing.Size(69, 13);
+            this.lblEnterRight.TabIndex = 54;
+            this.lblEnterRight.Text = "để tiếp tục";
+            this.lblEnterRight.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(247, 249);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.TabIndex = 53;
+            this.label9.Text = "ENTER";
+            this.label9.Visible = false;
+            // 
+            // lblEnterLeft
+            // 
+            this.lblEnterLeft.AutoSize = true;
+            this.lblEnterLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnterLeft.ForeColor = System.Drawing.Color.Blue;
+            this.lblEnterLeft.Location = new System.Drawing.Point(150, 249);
+            this.lblEnterLeft.Name = "lblEnterLeft";
+            this.lblEnterLeft.Size = new System.Drawing.Size(104, 13);
+            this.lblEnterLeft.TabIndex = 52;
+            this.lblEnterLeft.Text = "Quý khách chọn ";
+            this.lblEnterLeft.Visible = false;
+            // 
             // RutTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -589,5 +709,13 @@
         private System.Windows.Forms.Label lbLogo;
         private System.Windows.Forms.PictureBox pbTien;
         private System.Windows.Forms.PictureBox pbThe;
+        private System.Windows.Forms.Label lblCancelRight;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtPin;
+        private System.Windows.Forms.Label lblCancelLeft;
+        private System.Windows.Forms.Label lblEnterRight;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblEnterLeft;
     }
 }

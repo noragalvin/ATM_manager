@@ -117,5 +117,10 @@ namespace Validate
                 validateForm.pbThe.Image = theRa;
             }
         }
+
+        private void NhapThe_Load_1(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
     }
 }

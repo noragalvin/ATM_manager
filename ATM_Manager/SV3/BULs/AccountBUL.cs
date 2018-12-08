@@ -12,9 +12,9 @@ namespace BULs
     {
         AccountDAL accountDAL = new AccountDAL();
 
-        public void ChuyenKhoan(string stkChuyen, string stkNhan, int soTien)
+        public bool ChuyenKhoan(string stkChuyen, string stkNhan, int soTien)
         {
-            accountDAL.ChuyenKhoan(stkChuyen, stkNhan, soTien);
+            return accountDAL.ChuyenKhoan(stkChuyen, stkNhan, soTien);
         }
 
         public AccountDTO GetAccount(string accountNo)

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace GUIs
         System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
         Loading loadingForm;
         LogBUL logBUL = new LogBUL();
-        string accountNo = "45010005597808";
+        string accountNo = "44444444";
         
 
         private void TimerEventProcessor(Object myObject, EventArgs myEventArgs) {
@@ -49,55 +50,40 @@ namespace GUIs
 
         private void btnSideBar5_Click(object sender, EventArgs e)
         {
-            int status = checkWithDraw(200000, this.accountNo);
-            string created_at = DateTime.Now.ToString();
-            string cardNumber = this.accountNo;
-            int atm_id = 1;
-            processWithDraw(status, atm_id, cardNumber, created_at, 200000);
+            int status = checkWithDraw(200000);
+            processWithDraw(status);
         }
 
         private void btnSideBar6_Click(object sender, EventArgs e)
         {
-            int status = checkWithDraw(500000, this.accountNo);
-            string created_at = DateTime.Now.ToString();
-            string cardNumber = this.accountNo;
-            int atm_id = 1;
-            processWithDraw(status, atm_id, cardNumber, created_at, 500000);
+            int status = checkWithDraw(500000);
+            processWithDraw(status);
         }
 
         private void btnSideBar7_Click(object sender, EventArgs e)
         {
-            int status = checkWithDraw(1000000, this.accountNo);
-            string created_at = DateTime.Now.ToString();
-            string cardNumber = this.accountNo;
-            int atm_id = 1;
-            processWithDraw(status, atm_id, cardNumber, created_at, 1000000);
+            int status = checkWithDraw(1000000);
+            processWithDraw(status);
         }
 
         private void btnSideBar1_Click(object sender, EventArgs e)
         {
-            int status = checkWithDraw(2000000, this.accountNo);
-            string created_at = DateTime.Now.ToString();
-            string cardNumber = this.accountNo;
-            int atm_id = 1;
-            processWithDraw(status, atm_id, cardNumber, created_at, 2000000);
+            int status = checkWithDraw(2000000);
+            processWithDraw(status);
         }
 
         private void btnSideBar2_Click(object sender, EventArgs e)
         {
-            int status = checkWithDraw(5000000, this.accountNo);
-            string created_at = DateTime.Now.ToString();
-            string cardNumber = this.accountNo;
-            int atm_id = 1;
-            processWithDraw(status, atm_id, cardNumber, created_at, 5000000);
+            int status = checkWithDraw(5000000);
+            processWithDraw(status);
         }
 
-        private int checkWithDraw(int money, string accountNo)
+        private int checkWithDraw(int money)
         {
-            return stockBUL.WithDraw(money, accountNo);
+            return stockBUL.WithDraw(money, this.accountNo);
         }
 
-        private void processWithDraw(int status, int atm_id, string cardNumber, string created_at, int amount)
+        private void processWithDraw(int status)
         {
             switch (status)
             {
@@ -123,7 +109,8 @@ namespace GUIs
                     break;
                 case 2:
                     this.Hide();
-                    errorMessage = "Quý khách chỉ được rút tối đa 5.000.000đ";
+                    int minMoney = stockBUL.GetMinWithDraw(this.accountNo);
+                    errorMessage = "Quý khách chỉ được rút tối đa " + CurrencyFormat(minMoney.ToString()) + "/1 ngày";
                     loadingForm = new Loading();
                     loadingForm.Show();
                     myTimer.Tick += new EventHandler(TimerEventProcessor);
@@ -149,7 +136,7 @@ namespace GUIs
                     myTimer.Tick += new EventHandler(TimerEventProcessor);
                     myTimer.Interval = 2000;
                     myTimer.Start();
-                    logBUL.StoreLog(atm_id, cardNumber, created_at, amount);
+                    
                     break;
             }
         }
@@ -169,7 +156,94 @@ namespace GUIs
 
         private void btnSideBar3_Click(object sender, EventArgs e)
         {
+            btn1000.Visible = false;
+            btn200.Visible = false;
+            btn2000.Visible = false;
+            btn500.Visible = false;
+            btn5000.Visible = false;
+            label1.Visible = false;
+            btnOther.Visible = false;
+            btnCancel.Visible = false;
 
+            label2.Visible = true;
+            txtPin.Visible = true;
+            lblCancelLeft.Visible = true;
+            lblCancelRight.Visible = true;
+            lblEnterLeft.Visible = true;
+            lblEnterRight.Visible = true;
+            label9.Visible = true;
+            label12.Visible = true;
+        }
+
+        private void btnNumberEnter_Click(object sender, EventArgs e)
+        {
+            int status = checkWithDraw(int.Parse(txtPin.Text));
+            processWithDraw(status);
+        }
+
+        public static string CurrencyFormat(string currency)
+        {
+            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+            return double.Parse(currency).ToString("#,###", cul.NumberFormat) + "đ";
+        }
+
+        private void btnNumberCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnNumber1_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("1");
+        }
+
+        private void btnNumber2_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("2");
+        }
+
+        private void btnNumber3_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("3");
+        }
+
+        private void btnNumber4_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("4");
+        }
+
+        private void btnNumber5_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("5");
+        }
+
+        private void btnNumber6_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("6");
+        }
+
+        private void btnNumber7_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("7");
+        }
+
+        private void btnNumber8_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("8");
+        }
+
+        private void btnNumber9_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("9");
+        }
+
+        private void btnNumber0_Click(object sender, EventArgs e)
+        {
+            txtPin.AppendText("0");
+        }
+        private void btnNumberClear_Click(object sender, EventArgs e)
+        {
+            txtPin.Clear();
         }
     }
 }

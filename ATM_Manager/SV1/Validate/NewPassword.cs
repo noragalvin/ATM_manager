@@ -16,9 +16,11 @@ namespace Validate
     {
         private ResourceManager rm;
         private CardDTO card;
+        private string accountNo;
 
-        public NewPassword(ResourceManager rm, CardDTO card = null)
+        public NewPassword(ResourceManager rm, string accountNo, CardDTO card = null)
         {
+            this.accountNo = accountNo;
             this.rm = rm;
             this.card = card;
             InitializeComponent();
@@ -28,7 +30,6 @@ namespace Validate
         {
             txtPin.PasswordChar = '*';
             this.CenterToScreen();
-            label1.Text = rm.GetString("confirmPass_txt2");
             label2.Text = rm.GetString("confirmPass_txt2");
             label3.Text = rm.GetString("confirmPass_txt3");
         }
@@ -96,8 +97,15 @@ namespace Validate
 
         private void btnNumberEnter_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            (new ConfirmationPassword(this.rm, this.card, txtPin.Text)).Show();
+            if (txtPin.Text.Length < 6)
+            {
+                MessageBox.Show("Mật khẩu phải trên 6 kí tự");
+            }
+            else
+            {
+                this.Hide();
+                (new ConfirmationPassword(this.rm, this.card, txtPin.Text, this.accountNo)).Show();
+            }
         }
     }
 }

@@ -17,39 +17,18 @@ namespace DALs
 
         public void GetLog(DataSet data, string cardNumber)
         {
-            /*
-            conn.Open();
-            List<LogDTO> list = new List<LogDTO>();
-            string query = "SELECT TOP 10 * FROM tblLog ORDER BY LogID DESC";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            SqlDataReader dr =  cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                LogDTO log = new LogDTO(
-                    int.Parse(dr["LogID"].ToString()),
-                    int.Parse(dr["LogTypeID"].ToString()),
-                    int.Parse(dr["ATMID"].ToString()),
-                    dr["CardNo"].ToString(),
-                    dr["LogDate"].ToString(),
-                    int.Parse(dr["Amout"].ToString()),
-                    dr["Details"].ToString(),
-                    dr["CardNoTo"].ToString()
-                    );
-                list.Add(log);
-            }
-            conn.Close();
-            return list;
-             * */
 
             try
             {
-                string query = "SELECT TOP 10 * FROM tblLog WHERE CardNo=@card ORDER BY LogID DESC";
+                string query = "SELECT TOP 5 * FROM tblLog WHERE CardNo=@card OR CardNoTo=@cardNoTo ORDER BY LogID DESC";
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 da.SelectCommand.Parameters.AddWithValue("card", cardNumber);
+                da.SelectCommand.Parameters.AddWithValue("cardNoTo", cardNumber);
                 da.Fill(data, data.Tables[0].TableName);
             }
             catch (Exception)
             {
+                throw;
                 return;
             }
         }

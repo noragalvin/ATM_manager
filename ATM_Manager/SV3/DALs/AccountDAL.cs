@@ -13,11 +13,14 @@ namespace DALs
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChuoiKetNoi"].ToString());
 
-        public void ChuyenKhoan(string stkChuyen, string stkNhan, int soTien)
+        public bool ChuyenKhoan(string stkChuyen, string stkNhan, int soTien)
         {
             try
             {
                 conn.Open();
+                LogDAL logDAL = new LogDAL();
+                AccountDAL accountDAL = new AccountDAL();
+                OverDrawftLimitDAL overDrawftDAL = new OverDrawftLimitDAL();
                 string query = "SELECT Balance FROM tblAccount WHERE AccountNo=@stk";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("stk", stkChuyen);
@@ -25,31 +28,46 @@ namespace DALs
 
                 if (dr.Read())
                 {
-                    int soTienConLai = int.Parse(dr["Balance"].ToString()) - soTien;
-                    UpdateMoney(stkChuyen, soTienConLai);
 
-
-                    cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("stk", stkNhan);
-                    dr = cmd.ExecuteReader();
-                    if (dr.Read())
+                    LogDTO log = logDAL.GetLastLog(stkChuyen);
+                    double phi = log.Amout * 0.05 / 100;
+                    if (phi < 2000) phi = 2000;
+                    if (phi > 20000) phi = 20000;
+                    int currentMoney = accountDAL.GetAccount(stkChuyen).Balance;
+                    int thauChi = overDrawftDAL.GetThauChi(stkChuyen).Value;
+                    if (soTien <= currentMoney + thauChi)
                     {
-                        int soTienNhan = int.Parse(dr["Balance"].ToString()) + soTien;
-                        UpdateMoney(stkNhan, soTienNhan);
+                        int soTienConLai = int.Parse(dr["Balance"].ToString()) - soTien - Convert.ToInt32(phi) - 500;
+                        UpdateMoney(stkChuyen, soTienConLai);
 
-                        LogDAL logDAL = new LogDAL();
-                        string description = "";
-                        string created_at = DateTime.Now.ToString();
-                        logDAL.StoreLog(1, stkChuyen, created_at, soTien, description, stkNhan);
+
+                        cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("stk", stkNhan);
+                        dr = cmd.ExecuteReader();
+                        if (dr.Read())
+                        {
+                            int soTienNhan = int.Parse(dr["Balance"].ToString()) + soTien;
+                            UpdateMoney(stkNhan, soTienNhan);
+
+                            string description = "Chuyển tiền";
+                            string created_at = DateTime.Now.ToString();
+                            logDAL.StoreLog(1, stkChuyen, created_at, soTien, 2, description, stkNhan);
+                        }
                     }
+                    else
+                    {
+                        conn.Close();
+                        return false;
+                    }
+
                 }
 
                 conn.Close();
+                return true;
             }
             catch (Exception)
             {
-                
-                throw;
+                return false;
             }
         }
 

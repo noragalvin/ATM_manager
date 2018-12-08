@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InSaoKe));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tblLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ATMManagerDataSet = new GUIs.ATMManagerDataSet();
             this.btnNumberCancel = new System.Windows.Forms.Button();
@@ -44,6 +43,8 @@
             this.btnSideBar6 = new System.Windows.Forms.Button();
             this.btnSideBar5 = new System.Windows.Forms.Button();
             this.pnUnderScreen = new System.Windows.Forms.Panel();
+            this.pbTien = new System.Windows.Forms.PictureBox();
+            this.pbThe = new System.Windows.Forms.PictureBox();
             this.btnNumber9 = new System.Windows.Forms.Button();
             this.btnNumber6 = new System.Windows.Forms.Button();
             this.btnNumberClear = new System.Windows.Forms.Button();
@@ -60,25 +61,25 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
             this.pnMainBg = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnSideBar3 = new System.Windows.Forms.Button();
             this.btnSideBar1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSideBar4 = new System.Windows.Forms.Button();
             this.btnSideBar2 = new System.Windows.Forms.Button();
             this.tblLogTableAdapter = new GUIs.ATMManagerDataSetTableAdapters.tblLogTableAdapter();
-            this.pbTien = new System.Windows.Forms.PictureBox();
-            this.pbThe = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tblLogBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ATMManagerDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnUnderScreen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
             this.pnTopTen.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnMainBg.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tblLogBindingSource
@@ -204,6 +205,26 @@
             this.pnUnderScreen.Name = "pnUnderScreen";
             this.pnUnderScreen.Size = new System.Drawing.Size(517, 127);
             this.pnUnderScreen.TabIndex = 31;
+            // 
+            // pbTien
+            // 
+            this.pbTien.Image = global::GUIs.Properties.Resources.ChuaCoTien;
+            this.pbTien.Location = new System.Drawing.Point(312, 67);
+            this.pbTien.Name = "pbTien";
+            this.pbTien.Size = new System.Drawing.Size(174, 50);
+            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTien.TabIndex = 28;
+            this.pbTien.TabStop = false;
+            // 
+            // pbThe
+            // 
+            this.pbThe.Image = global::GUIs.Properties.Resources.TheRa;
+            this.pbThe.Location = new System.Drawing.Point(312, 11);
+            this.pbThe.Name = "pbThe";
+            this.pbThe.Size = new System.Drawing.Size(174, 50);
+            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbThe.TabIndex = 29;
+            this.pbThe.TabStop = false;
             // 
             // btnNumber9
             // 
@@ -359,7 +380,8 @@
             // 
             this.pnMainBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnMainBg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnMainBg.Controls.Add(this.reportViewer1);
+            this.pnMainBg.Controls.Add(this.label1);
+            this.pnMainBg.Controls.Add(this.dataGridView1);
             this.pnMainBg.Controls.Add(this.btnNext);
             this.pnMainBg.Controls.Add(this.pnTop);
             this.pnMainBg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -368,17 +390,6 @@
             this.pnMainBg.Name = "pnMainBg";
             this.pnMainBg.Size = new System.Drawing.Size(517, 349);
             this.pnMainBg.TabIndex = 30;
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "LogData";
-            reportDataSource1.Value = this.tblLogBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "GUIs.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(3, 51);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(512, 263);
-            this.reportViewer1.TabIndex = 34;
             // 
             // btnSideBar3
             // 
@@ -428,25 +439,23 @@
             // 
             this.tblLogTableAdapter.ClearBeforeFill = true;
             // 
-            // pbTien
+            // dataGridView1
             // 
-            this.pbTien.Image = global::GUIs.Properties.Resources.ChuaCoTien;
-            this.pbTien.Location = new System.Drawing.Point(312, 67);
-            this.pbTien.Name = "pbTien";
-            this.pbTien.Size = new System.Drawing.Size(174, 50);
-            this.pbTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTien.TabIndex = 28;
-            this.pbTien.TabStop = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 94);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(492, 210);
+            this.dataGridView1.TabIndex = 2;
             // 
-            // pbThe
+            // label1
             // 
-            this.pbThe.Image = global::GUIs.Properties.Resources.TheRa;
-            this.pbThe.Location = new System.Drawing.Point(312, 11);
-            this.pbThe.Name = "pbThe";
-            this.pbThe.Size = new System.Drawing.Size(174, 50);
-            this.pbThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThe.TabIndex = 29;
-            this.pbThe.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(185, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 22);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "In sao kê rút gọn";
             // 
             // InSaoKe
             // 
@@ -464,14 +473,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.ATMManagerDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.pnUnderScreen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
             this.pnTopTen.ResumeLayout(false);
             this.pnTopTen.PerformLayout();
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.pnMainBg.ResumeLayout(false);
+            this.pnMainBg.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbTien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -510,11 +521,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSideBar4;
         private System.Windows.Forms.Button btnSideBar2;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource tblLogBindingSource;
         private ATMManagerDataSet ATMManagerDataSet;
         private ATMManagerDataSetTableAdapters.tblLogTableAdapter tblLogTableAdapter;
         private System.Windows.Forms.PictureBox pbTien;
         private System.Windows.Forms.PictureBox pbThe;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
