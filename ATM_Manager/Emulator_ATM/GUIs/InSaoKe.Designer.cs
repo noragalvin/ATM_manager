@@ -61,14 +61,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
             this.pnMainBg = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSideBar3 = new System.Windows.Forms.Button();
             this.btnSideBar1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSideBar4 = new System.Windows.Forms.Button();
             this.btnSideBar2 = new System.Windows.Forms.Button();
             this.tblLogTableAdapter = new GUIs.ATMManagerDataSetTableAdapters.tblLogTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tblLogBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ATMManagerDataSet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -78,8 +78,8 @@
             this.pnTopTen.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnMainBg.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblLogBindingSource
@@ -391,6 +391,25 @@
             this.pnMainBg.Size = new System.Drawing.Size(517, 349);
             this.pnMainBg.TabIndex = 30;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(185, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 22);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "In sao kê rút gọn";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 94);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(492, 210);
+            this.dataGridView1.TabIndex = 2;
+            // 
             // btnSideBar3
             // 
             this.btnSideBar3.Location = new System.Drawing.Point(4, 259);
@@ -439,24 +458,6 @@
             // 
             this.tblLogTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 94);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(492, 210);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(185, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 22);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "In sao kê rút gọn";
-            // 
             // InSaoKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,8 +482,8 @@
             this.pnTop.PerformLayout();
             this.pnMainBg.ResumeLayout(false);
             this.pnMainBg.PerformLayout();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

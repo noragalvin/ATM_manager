@@ -173,7 +173,7 @@ namespace BULs
                     UpdateNumberOfMoney(50, number50);
                 }
             }
-            if (money / 50000 > 0 && number20 > 0)
+            if (money / 20000 > 0 && number20 > 0)
             {
                 int soToTienTieuThu = money / 20000;
                 if (soToTienTieuThu >= number50)

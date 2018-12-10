@@ -38,7 +38,7 @@ namespace GUIs
 
             for (int i = 0; i < data.Tables[0].Rows.Count; i++)
             {
-                if (data.Tables[0].Rows[i]["LogTypeID"].ToString() == "2")
+                if (data.Tables[0].Rows[i]["LogTypeID"].ToString() == "1")
                 {
                     data.Tables[0].Rows[i]["Amout"] = -int.Parse(data.Tables[0].Rows[i]["Amout"].ToString());
                 }
