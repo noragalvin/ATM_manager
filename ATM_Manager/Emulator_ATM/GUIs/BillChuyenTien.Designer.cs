@@ -50,6 +50,9 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.AutoSize = true;
+            this.reportViewer1.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.reportViewer1.ImeMode = System.Windows.Forms.ImeMode.On;
             reportDataSource1.Name = "ChuyenTienDataSet";
             reportDataSource1.Value = this.tblAccountBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
@@ -76,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblAccountBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ATMManagerDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

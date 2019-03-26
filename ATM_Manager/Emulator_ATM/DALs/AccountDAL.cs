@@ -151,8 +151,12 @@ namespace DALs
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
-
                         AccountDTO accountDTO = new AccountDTO(
+                            int.Parse(dr["AccountID"].ToString()),
+                            int.Parse(dr["CustID"].ToString()),
+                            dr["AccountNo"].ToString(),
+                            int.Parse(dr["ODID"].ToString()),
+                            int.Parse(dr["WDID"].ToString()),
                             int.Parse(dr["Balance"].ToString()));
                         conn.Close();
                         return accountDTO;
@@ -162,10 +166,8 @@ namespace DALs
                 }
                 catch (Exception)
                 {
-
                     return null;
                 }
-                //return new WithDrawLimitDTO(int.Parse(dr["Value"].ToString()));
             }
         }
     }

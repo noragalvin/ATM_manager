@@ -1,4 +1,5 @@
-﻿using DTOs;
+﻿using BULs;
+using DTOs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,6 +65,16 @@ namespace GUIs
 
         private void btnSideBar3_Click(object sender, EventArgs e)
         {
+            LogBUL logBUL = new LogBUL();
+            StockBUL stockBUL = new StockBUL();
+            AccountBUL accountBUL = new AccountBUL();
+            
+            string created_at = DateTime.Now.ToString();
+            logBUL.StoreLog(1, this.accountNo, created_at, 550, 4, "Vấn tin số dư");
+            int money = accountBUL.GetAccount(this.accountNo).Balance - 550;
+            stockBUL.UpdateMoney(money, this.accountNo);
+
+
             (new Confirmation(this.rm, this.card, this.accountNo)).Show();
             this.Hide();
             myTimer.Tick += new EventHandler(TimerEventProcessor);

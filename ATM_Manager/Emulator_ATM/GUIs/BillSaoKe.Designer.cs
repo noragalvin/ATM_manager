@@ -50,7 +50,7 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Name = "LogData";
             reportDataSource1.Value = this.tblLogBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "GUIs.ReportSaoKe.rdlc";

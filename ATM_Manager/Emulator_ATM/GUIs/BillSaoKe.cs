@@ -48,7 +48,7 @@ namespace GUIs
             data.Tables[0].AcceptChanges();
 
 
-            ReportDataSource rds = new ReportDataSource("LogData", data.Tables[0]);
+            ReportDataSource rds = new ReportDataSource("DataSet2", data.Tables[0]);
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();

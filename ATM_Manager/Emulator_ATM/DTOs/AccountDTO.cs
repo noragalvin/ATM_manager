@@ -24,5 +24,15 @@ namespace DTOs
             this.AccountNo = accountNo;
             this.Balance = balance;
         }
+
+        public AccountDTO(int accountID, int custID, string accountNo, int odid, int wdid, int balance)
+        {
+            this.AccountID = accountID;
+            this.CustID = custID;
+            this.AccountNo = accountNo;
+            this.ODID = odid;
+            this.WDID = wdid;
+            this.Balance = balance;
+        }
     }
 }

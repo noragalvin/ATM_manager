@@ -32,5 +32,6 @@ namespace BULs
         {
             return logDAL.GetLogToDay(stk);
         }
+        
     }
 }
